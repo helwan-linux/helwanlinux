@@ -1,0 +1,35 @@
+/* style.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: #d3d3d3; /* لون رصاصي فاتح للخلفية */
+  color: #333;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #005fa3;
+}
+
+h1, h2 {
+  color: #222;
+}
+
+footer {
+  font-size: small;
+  margin-top: 40px;
+  color: #666;
+}
+
+/* يمكن تضيف هنا تأثيرات أخرى لو تحب */
