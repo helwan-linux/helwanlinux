@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Helwan Assistant</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .qa-box {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      padding: 12px;
+      cursor: pointer;
+      background: #f9f9f9;
+      transition: background 0.2s;
+    }
+    .qa-box:hover { background: #eef; }
+    .qa-answer {
+      display: none;
+      padding-top: 6px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo -->
+  <div style="text-align:center; margin-top:20px;">
+    <img src="https://raw.githubusercontent.com/helwan-linux/Helwan-Artwork/main/icons/logo.png"
+         alt="Helwan Linux Logo" width="120">
+  </div>
+
+  <!-- Navigation -->
+  <nav style="text-align:center; margin:20px 0;">
+    <a href="index.html">Home</a> |
+    <a href="news.html">News</a> |
+    <a href="download.html">Download</a> |
+    <a href="documentation.html">Documentation</a> |
+    <a href="packages.html">Packages</a> |
+    <a href="assistant.html">Assistant</a> |
+    <a href="Contributing.html">Join Us</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="about.html">About</a> |
+    <a href="credits.html">Credits</a> |
+    <a href="donate.html">Donate</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main style="max-width:800px; margin:auto; padding:10px;">
+    <h1>🤖 Helwan Assistant</h1>
+    <p>Start with real questions, then scroll down for a bit of fun!</p>
+
+    <hr>
+    <h2>🧑‍💻 Real Questions About Helwan Linux</h2>
+
+    <div class="qa-box" onclick="toggleAnswer(this)">
+      ❓ <strong>How do I install Helwan Linux?</strong>
+      <div class="qa-answer">
+        Download the ISO from the <a href="download.html">Download</a> page and follow the guide in the <a href="documentation.html">Documentation</a>.
+      </div>
+    </div>
+
+    <div class="qa-box" onclick="toggleAnswer(this)">
+      ❓ <strong>What is hel-sec-audit?</strong>
+      <div class="qa-answer">
+        A tool that performs a quick system security scan and shows potential risks.
+      </div>
+    </div>
+
+    <div class="qa-box" onclick="toggleAnswer(this)">
+      ❓ <strong>What is hel-process?</strong>
+      <div class="qa-answer">
+        A graphical process manager to monitor and kill running processes.
+      </div>
+    </div>
+
+    <div class="qa-box" onclick="toggleAnswer(this)">
+      ❓ <strong>Is Arabic supported?</strong>
+      <div class="qa-answer">
+        Yes. Helwan Linux supports right-to-left languages like Arabic, Hebrew, and Persian.
+      </div>
+    </div>
+
+    <div class="qa-box" onclick="toggleAnswer(this)">
+      ❓ <strong>Can I contribute to Helwan Linux?</strong>
+      <div class="qa-answer">
+        Absolutely! See the <a href="Contributing.html">Join Us</a> page for how to get involved.
+      </div>
+    </div>
+
+    <div class="qa-box" onclick="toggleAnswer(this)">
+      ❓ <strong>What is hel-store?</strong>
+      <div class="qa-answer">
+        A simple GUI app store to browse and install official Helwan packages.
+      </div>
+    </div>
+
+    <div class="qa-box" onclick="toggleAnswer(this)">
+      ❓ <strong>How do I burn the ISO to USB?</strong>
+      <div class="qa-answer">
+        Use <code>hel-usb-writer</code> to flash the ISO to a USB drive safely.
+      </div>
+    </div>
+
+    <hr style="margin-top: 40px;">
+    <h2>😂 Helwan Humor AI Section</h2>
+    <p>Some lighthearted questions that may or may not help 😅</p>
+
+    <div class="qa-box" onclick="toggleAnswer(this)">
+      ❓ <strong>Why is it called "Helwan" Linux?</strong>
+      <div class="qa-answer">
+        Because "Cairo Linux" was too mainstream and "Giza Linux" too ancient. Helwan is where real devs chill 😎.
+      </div>
+    </div>
+
+    <div class="qa-box" onclick="toggleAnswer(this)">
+      ❓ <strong>Can Helwan run Doom?</strong>
+      <div class="qa-answer">
+        If it can compile, it can run Doom. That's a law of Linux nature.
+      </div>
+    </div>
+
+    <div class="qa-box" onclick="toggleAnswer(this)">
+      ❓ <strong>I broke my install. What now?</strong>
+      <div class="qa-answer">
+        Congratulations! You've unlocked the full Linux experience: fixing it.
+      </div>
+    </div>
+
+    <div class="qa-box" onclick="toggleAnswer(this)">
+      ❓ <strong>Why is my fan so loud?</strong>
+      <div class="qa-answer">
+        It's cheering for you. You're using a real OS now!
+      </div>
+    </div>
+
+    <div class="qa-box" onclick="toggleAnswer(this)">
+      ❓ <strong>Is hel-ai-gate a real AI?</strong>
+      <div class="qa-answer">
+        It listens, it responds, it nods politely. That counts.
+      </div>
+    </div>
+
+    <p style="font-size: small; margin-top: 40px;">Last updated: 10 July 2025</p>
+  </main>
+
+  <script>
+    function toggleAnswer(box) {
+      const ans = box.querySelector('.qa-answer');
+      ans.style.display = ans.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
+
