@@ -6,14 +6,14 @@ body {
   max-width: 900px;
   margin: auto;
   padding: 20px;
-  background: #5a6a75; /* لون رصاصي فاتح للخلفية */
+  background: #d3d3d3; /* لون رصاصي فاتح للخلفية */
   color: #333;
 }
 
 nav a {
   margin: 0 10px;
   text-decoration: none;
-  color: #000000;
+  color: #0077cc;
   font-weight: 600;
 }
 
@@ -29,7 +29,7 @@ h1, h2 {
 footer {
   font-size: small;
   margin-top: 40px;
-  color: #000000;
+  color: #666;
 }
 
 /* يمكن تضيف هنا تأثيرات أخرى لو تحب */
