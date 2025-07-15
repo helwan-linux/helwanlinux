@@ -6,11 +6,21 @@ helwanlinux/
 ├── 📄 assistant.html
 ├── 📄 contact.html
 ├── 📄 credits.html
+├── 📄 diagram.txt
 ├── 📄 documentation.html
 ├── 📄 donate.html
 ├── 📄 download.html
+├── 📄 googleda0f2160c1f20e74.html
+├── 📄 helwan-comparison.html
 ├── 📁 img
-│   └── 📄 logo.png
+│   ├── 📄 apple-touch-icon.png
+│   ├── 📄 favicon-96x96.png
+│   ├── 📄 favicon.ico
+│   ├── 📄 favicon.svg
+│   ├── 📄 logo.png
+│   ├── 📄 site.webmanifest
+│   ├── 📄 web-app-manifest-192x192.png
+│   └── 📄 web-app-manifest-512x512.png
 ├── 📄 index.html
 ├── 📄 news.html
 ├── 📄 nostalgia.html
