@@ -117,6 +117,7 @@ async function fetchAURPackages() {
 
 // Fetches packages from your Helwan repo on GitHub
 async function fetchHelwanPackages() {
+    // Please replace with the correct raw URL to your package list if it's not a JSON file
     try {
         const res = await fetch('https://raw.githubusercontent.com/Saeed-Badrelden/HelwanStore/main/helwan-packages.json');
         const data = await res.json();
@@ -135,8 +136,12 @@ async function fetchHelwanPackages() {
 async function loadPackages() {
     statusMessage.textContent = 'Loading packages from repositories...';
     try {
-        const [arch, aur, helwan] = await Promise.all([fetchArchPackages(), fetchAURPackages(), fetchHelwanPackages()]);
-        allPackages = [...arch, ...aur, ...helwan];
+        const [arch, aur] = await Promise.all([fetchArchPackages(), fetchAURPackages()]);
+        // The Helwan repo is commented out as you stated you don't need a JSON file
+        // Or if you have a public list, you can uncomment this and replace the URL
+        // const [arch, aur, helwan] = await Promise.all([fetchArchPackages(), fetchAURPackages(), fetchHelwanPackages()]);
+        // allPackages = [...arch, ...aur, ...helwan];
+        allPackages = [...arch, ...aur];
         statusMessage.textContent = '';
         applyFiltersAndSearch();
     } catch (e) {
