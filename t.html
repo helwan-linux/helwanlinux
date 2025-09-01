@@ -89,19 +89,22 @@ const categoriesKeywords = {
     'Graphics':['graphic','image','photo','gimp','inkscape','blender'], 'Education':['edu','math','science','chemistry','physics'], 'Other':[]
 };
 
-// Fetches a list of ALL packages from the Arch Linux public API
+// URL للخادم الوكيل
+const PROXY_URL = 'https://corsproxy.io/?';
+
+// Fetches a list of ALL packages from the Arch Linux public API via proxy
 async function fetchArchPackages() {
     try {
-        const res = await fetch('https://www.archlinux.org/packages/json/');
+        const res = await fetch(PROXY_URL + encodeURIComponent('https://www.archlinux.org/packages/json/'));
         const data = await res.json();
         return data.map(p => ({name: p.pkgname, version: p.pkgver, repo: p.repo, source: 'Arch'}));
     } catch(e) { console.error('Arch fetch error', e); return []; }
 }
 
-// Fetches a list of ALL packages from the AUR public API
+// Fetches a list of ALL packages from the AUR public API via proxy
 async function fetchAURPackages() {
     try {
-        const res = await fetch('https://aur.archlinux.org/packages.gz');
+        const res = await fetch(PROXY_URL + encodeURIComponent('https://aur.archlinux.org/packages.gz'));
         const buffer = await res.arrayBuffer();
         const packages = pako.inflate(buffer, { to: 'string' })
                            .split('\n')
