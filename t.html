@@ -115,10 +115,10 @@ async function fetchAURPackages() {
     } catch(e) { console.error('AUR fetch error', e); return []; }
 }
 
-// Fetches packages from your Helwan repo
+// Fetches packages from your Helwan repo on GitHub
 async function fetchHelwanPackages() {
     try {
-        const res = await fetch('./helwan-packages.json');
+        const res = await fetch('https://raw.githubusercontent.com/Saeed-Badrelden/HelwanStore/main/helwan-packages.json');
         const data = await res.json();
         return data.packages.map(p => ({
             name: p.name,
