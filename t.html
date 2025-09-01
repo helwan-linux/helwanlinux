@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Helwan Package Store</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:20px; background:#f0f2f5; color:#333; max-width:1200px; margin:auto; }
+h1 { text-align:center; padding:1em; background:#2c3e50; color:white; margin:0; }
+#controls { padding:1em; display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+#searchInput, #categorySelect, #repoFilterSelect { padding:8px 12px; border-radius:5px; border:1px solid #ccc; }
+#packages { margin-top:1em; background:white; padding:1em; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.1); overflow-x:auto; }
+table { width:100%; border-collapse:collapse; }
+th, td { padding:10px; border-bottom:1px solid #eee; text-align:left; }
+th { background:#34495e; color:white; position:sticky; top:0; }
+tr:nth-child(even){ background:#f8f9fa; }
+tr:hover{ background:#e2f0ff; }
+.install-btn { padding:6px 12px; border:none; border-radius:4px; cursor:pointer; background:#3498db; color:white; }
+button:disabled { background:#ccc; cursor:not-allowed; }
+#paginationControls { display:flex; justify-content:center; gap:10px; margin-top:10px; }
+#statusMessage { text-align:center; margin-top:10px; font-weight:bold; }
+.copy-button {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+.copy-button:hover { background: #229954; }
+</style>
+</head>
+<body>
+<h1>Helwan Package Store</h1>
+
+<div id="controls">
+<input type="text" id="searchInput" placeholder="Search package...">
+<select id="categorySelect">
+  <option value="all">All Categories</option>
+  <option value="Multimedia">Multimedia</option>
+  <option value="Games">Games</option>
+  <option value="Development">Development</option>
+  <option value="System Tools">System Tools</option>
+  <option value="Networking">Networking</option>
+  <option value="Office">Office</option>
+  <option value="Graphics">Graphics</option>
+  <option value="Education">Education</option>
+  <option value="Other">Other</option>
+</select>
+<select id="repoFilterSelect">
+  <option value="all">All Repositories</option>
+  <option value="Arch">Arch Repos</option>
+  <option value="AUR">AUR</option>
+  <option value="Helwan">Helwan Repos</option>
+</select>
+</div>
+
+<div id="statusMessage">Loading packages...</div>
+<div id="packages"></div>
+<div id="paginationControls">
+<button id="prevPageBtn">Previous</button>
+<span id="pageInfo"></span>
+<button id="nextPageBtn">Next</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/pako@2.0.4/dist/pako.min.js"></script>
+<script>
+const searchInput = document.getElementById('searchInput');
+const categorySelect = document.getElementById('categorySelect');
+const repoFilterSelect = document.getElementById('repoFilterSelect');
+const packagesDiv = document.getElementById('packages');
+const statusMessage = document.getElementById('statusMessage');
+const prevPageBtn = document.getElementById('prevPageBtn');
+const nextPageBtn = document.getElementById('nextPageBtn');
+const pageInfoSpan = document.getElementById('pageInfo');
+
+let allPackages = [];
+let filteredPackages = [];
+let currentPage = 1;
+const itemsPerPage = 20;
+
+const categoriesKeywords = {
+    'all': [], 'Multimedia':['audio','video','media','vlc','gimp'], 'Games':['game','steam','lutris','openra'],
+    'Development':['dev','code','editor','vscode','ide','compiler','python','rust','java','node'], 
+    'System Tools':['system','tool','admin','monitor','manager','config','cli','terminal'],
+    'Networking':['net','vpn','ssh','browser'], 'Office':['office','document','pdf','libreoffice'], 
+    'Graphics':['graphic','image','photo','gimp','inkscape','blender'], 'Education':['edu','math','science','chemistry','physics'], 'Other':[]
+};
+
+// Fetches a list of ALL packages from the Arch Linux public API
+async function fetchArchPackages() {
+    console.log("Fetching packages from Arch...");
+    try {
+        const res = await fetch('https://www.archlinux.org/packages/json/');
+        if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        const data = await res.json();
+        console.log(`Successfully fetched ${data.length} packages from Arch.`);
+        return data.map(p => ({name: p.pkgname, version: p.pkgver, repo: p.repo, source: 'Arch'}));
+    } catch(e) { 
+        console.error('Arch fetch error:', e); 
+        return []; 
+    }
+}
+
+// Fetches a list of ALL packages from the AUR public API
+async function fetchAURPackages() {
+    console.log("Fetching packages from AUR...");
+    try {
+        const res = await fetch('https://aur.archlinux.org/packages.gz');
+        if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        const buffer = await res.arrayBuffer();
+        const packages = pako.inflate(buffer, { to: 'string' })
+                           .split('\n')
+                           .filter(Boolean)
+                           .map(line => {
+                               const parts = line.split('/');
+                               return {name: parts[0], version: parts[1], repo: 'AUR', source: 'AUR'};
+                           });
+        console.log(`Successfully fetched ${packages.length} packages from AUR.`);
+        return packages;
+    } catch(e) { 
+        console.error('AUR fetch error:', e); 
+        return []; 
+    }
+}
+
+// Fetches packages from your Helwan repo
+async function fetchHelwanPackages() {
+    console.log("Fetching packages from Helwan...");
+    try {
+        const res = await fetch('./helwan-packages.json');
+        if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        const data = await res.json();
+        console.log(`Successfully fetched ${data.packages.length} packages from Helwan.`);
+        return data.packages.map(p => ({
+            name: p.name,
+            version: p.version,
+            repo: 'Helwan',
+            source: 'Helwan'
+        }));
+    } catch (e) {
+        console.error('Helwan fetch error:', e);
+        return [];
+    }
+}
+
+async function loadPackages() {
+    statusMessage.textContent = 'Loading packages from repositories...';
+    try {
+        const [arch, aur, helwan] = await Promise.all([fetchArchPackages(), fetchAURPackages(), fetchHelwanPackages()]);
+        allPackages = [...arch, ...aur, ...helwan];
+        console.log(`Total packages loaded: ${allPackages.length}`);
+        statusMessage.textContent = '';
+        applyFiltersAndSearch();
+    } catch (e) {
+        statusMessage.textContent = 'Failed to load packages. Please check the console for errors.';
+        console.error('Initial load failed:', e);
+    }
+}
+
+function getInstallCommand(pkg) {
+    if (pkg.source === 'Arch') {
+        return `sudo pacman -S ${pkg.name}`;
+    } else if (pkg.source === 'AUR') {
+        return `yay -S ${pkg.name}`;
+    } else if (pkg.source === 'Helwan') {
+        return `sudo helwan-install ${pkg.name}`;
+    }
+    return '';
+}
+
+function applyFiltersAndSearch() {
+    let packages = [...allPackages];
+    const searchTerm = searchInput.value.toLowerCase();
+    const selectedCategory = categorySelect.value;
+    const selectedRepo = repoFilterSelect.value;
+
+    if(selectedRepo!=='all'){ packages = packages.filter(p=>p.source===selectedRepo); }
+    if(selectedCategory!=='all'){ 
+        const kws = categoriesKeywords[selectedCategory];
+        packages = packages.filter(p=> kws.some(k=>p.name.toLowerCase().includes(k)));
+    }
+    if(searchTerm){ packages = packages.filter(p=> p.name.toLowerCase().includes(searchTerm)); }
+
+    filteredPackages = packages;
+    currentPage=1;
+    displayPackages();
+}
+
+function displayPackages() {
+    packagesDiv.innerHTML='';
+    if(filteredPackages.length===0){ packagesDiv.innerHTML='<p>No packages found.</p>'; pageInfoSpan.textContent=''; prevPageBtn.disabled=true; nextPageBtn.disabled=true; return;}
+    const start=(currentPage-1)*itemsPerPage;
+    const end=Math.min(start+itemsPerPage, filteredPackages.length);
+    const toShow = filteredPackages.slice(start,end);
+
+    const table=document.createElement('table');
+    const thead=document.createElement('thead');
+    const headerRow=document.createElement('tr');
+    ['Name','Version','Repo','Source','Install Command'].forEach(h=>{
+        const th=document.createElement('th'); th.textContent=h; headerRow.appendChild(th);
+    });
+    thead.appendChild(headerRow); table.appendChild(thead);
+    const tbody=document.createElement('tbody');
+
+    toShow.forEach(p=>{
+        const tr=document.createElement('tr');
+        ['name','version','repo','source'].forEach(key=>{
+            const td=document.createElement('td'); td.textContent=p[key]; tr.appendChild(td);
+        });
+        const installTd = document.createElement('td');
+        const installCommand = getInstallCommand(p);
+        installTd.textContent = installCommand;
+        tr.appendChild(installTd);
+        tbody.appendChild(tr);
+    });
+
+    table.appendChild(tbody);
+    packagesDiv.appendChild(table);
+
+    const totalPages = Math.ceil(filteredPackages.length/itemsPerPage);
+    pageInfoSpan.textContent=`Page ${currentPage} of ${totalPages} (${filteredPackages.length} total)`;
+    prevPageBtn.disabled = currentPage===1;
+    nextPageBtn.disabled = currentPage===totalPages;
+}
+
+prevPageBtn.addEventListener('click',()=>{if(currentPage>1){currentPage--; displayPackages();}});
+nextPageBtn.addEventListener('click',()=>{const totalPages=Math.ceil(filteredPackages.length/itemsPerPage); if(currentPage<totalPages){currentPage++; displayPackages();}});
+searchInput.addEventListener('input',applyFiltersAndSearch);
+categorySelect.addEventListener('change',applyFiltersAndSearch);
+repoFilterSelect.addEventListener('change',applyFiltersAndSearch);
+
+loadPackages();
+</script>
+</body>
+</html>
