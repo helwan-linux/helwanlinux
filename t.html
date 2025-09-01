@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Helwan Package Store</title>
+<title>Package Store</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:20px; background:#f0f2f5; color:#333; max-width:1200px; margin:auto; }
@@ -54,7 +54,6 @@ button:disabled { background:#ccc; cursor:not-allowed; }
   <option value="all">All Repositories</option>
   <option value="Arch">Arch Repos</option>
   <option value="AUR">AUR</option>
-  <option value="Helwan">Helwan Repos</option>
 </select>
 </div>
 
@@ -115,32 +114,10 @@ async function fetchAURPackages() {
     } catch(e) { console.error('AUR fetch error', e); return []; }
 }
 
-// Fetches packages from your Helwan repo on GitHub
-async function fetchHelwanPackages() {
-    // Please replace with the correct raw URL to your package list if it's not a JSON file
-    try {
-        const res = await fetch('https://raw.githubusercontent.com/Saeed-Badrelden/HelwanStore/main/helwan-packages.json');
-        const data = await res.json();
-        return data.packages.map(p => ({
-            name: p.name,
-            version: p.version,
-            repo: 'Helwan',
-            source: 'Helwan'
-        }));
-    } catch (e) {
-        console.error('Helwan fetch error', e);
-        return [];
-    }
-}
-
 async function loadPackages() {
     statusMessage.textContent = 'Loading packages from repositories...';
     try {
         const [arch, aur] = await Promise.all([fetchArchPackages(), fetchAURPackages()]);
-        // The Helwan repo is commented out as you stated you don't need a JSON file
-        // Or if you have a public list, you can uncomment this and replace the URL
-        // const [arch, aur, helwan] = await Promise.all([fetchArchPackages(), fetchAURPackages(), fetchHelwanPackages()]);
-        // allPackages = [...arch, ...aur, ...helwan];
         allPackages = [...arch, ...aur];
         statusMessage.textContent = '';
         applyFiltersAndSearch();
@@ -155,8 +132,6 @@ function getInstallCommand(pkg) {
         return `sudo pacman -S ${pkg.name}`;
     } else if (pkg.source === 'AUR') {
         return `yay -S ${pkg.name}`;
-    } else if (pkg.source === 'Helwan') {
-        return `sudo helwan-install ${pkg.name}`;
     }
     return '';
 }
