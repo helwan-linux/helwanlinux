@@ -67,6 +67,30 @@ code:hover {
 }
 
 
+/*
+   هذا الكود يضيف تأثير توهج متحرك لإطار العرض.
+*/
+
+/* تأثير التوهج النيون المتحرك */
+@keyframes neon-glow {
+    0% { box-shadow: 0 0 5px #42acee, 0 0 10px #42acee, 0 0 15px #42acee; }
+    50% { box-shadow: 0 0 10px #ff00de, 0 0 20px #ff00de, 0 0 30px #ff00de; }
+    100% { box-shadow: 0 0 5px #42acee, 0 0 10px #42acee, 0 0 15px #42acee; }
+}
+
+/* التنسيقات الأساسية وتطبيق التوهج والتحريك */
+iframe[src*="archiso-book"] {
+    border: 2px solid #30363d !important;
+    border-radius: 10px !important;
+    animation: neon-glow 2s ease-in-out infinite alternate !important;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important;
+}
+
+/* تأثير الرفع عند مرور الفأرة */
+iframe[src*="archiso-book"]:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6) !important;
+}
 
 
 
