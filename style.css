@@ -44,7 +44,7 @@ footer {
 
 code {
   display: block;
-  background: #1e1e1e;       /* خلفية داكنة للكود */
+  background: #8cb6fa;       /* خلفية داكنة للكود */
   color: #f8f8f2;            /* نص فاتح للقراءة */
   padding: 10px;
   border-radius: 6px;
@@ -58,7 +58,7 @@ code {
 
 /* تأثير عند مرور الماوس */
 code:hover {
-  background: #005fa3;        /* خلفية أزرق جميل */
+  background: #808080;        /* خلفية أزرق جميل */
   color: #fff;                /* نص أبيض واضح */
   box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* ظل للخارج */
   transform: translateY(-2px); /* حركة صغيرة للأعلى */
