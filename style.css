@@ -43,7 +43,7 @@ footer {
 
 
 code {
-  background: #738600;      /* خلفية داكنة */
+  background: #738699;      /* خلفية داكنة */
   color: #f8f8f2;           /* نص فاتح */
   display: block;
   margin: 10px 0;
@@ -53,4 +53,5 @@ code {
   font-size: 0.95em;
   overflow-x: auto;         /* يسمح بالتمرير الأفقي للكود الطويل */
 }
+
 
