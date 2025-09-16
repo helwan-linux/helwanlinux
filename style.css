@@ -52,6 +52,8 @@ code {
   font-family: 'Courier New', monospace;
   font-size: 0.95em;
   overflow-x: auto;         /* يسمح بالتمرير الأفقي للكود الطويل */
+  transition: background 0.3s ease, color 0.3s ease;
 }
+
 
 
