@@ -76,27 +76,76 @@
     <hr>
 
     <!-- the book -->
-  <h2>📚 Custom Linux Distro Building Book</h2>
-  <p>
-   A comprehensive guide to building your own Arch-based distro, featuring an inside look at how Helwan Linux is made.
-  </p>
-  
-  <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
-   <a href="https://raw.githubusercontent.com/helwan-linux/archiso-book/main/helwan%20book.pdf" target="_blank"
-    style="display: inline-block; background: #30363d; color: white; padding: 12px 25px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 16px;">
-    ⬇️ Download Book
-   </a>
-  </div>
-  
-  <div style="margin-top: 30px; text-align: center;">
-   <iframe src="https://raw.githack.com/helwan-linux/archiso-book/main/helwan%20book.pdf"
-        width="90%" height="600px" style="border: 1px solid #ddd; border-radius: 6px;">
-    Your browser does not support PDFs.
-    <a href="https://raw.githack.com/helwan-linux/archiso-book/main/helwan%20book.pdf">Download the PDF</a>.
-   </iframe>
-  </div>
-  
-  <hr>
+<h2>📚 Custom Linux Distro Building Book</h2>
+<p>
+  A comprehensive guide to building your own Arch-based distro, featuring an inside look at how Helwan Linux is made.
+</p>
+
+<div>
+  <label for="language-select">Choose language:</label>
+  <select id="language-select" onchange="updateBookDisplay()">
+    <option value="en">English</option>
+    <option value="ar">العربية</option>
+  </select>
+</div>
+
+<div id="download-button-container" style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+  <a id="download-link" href="#" target="_blank" style="display: inline-block; background: #30363d; color: white; padding: 12px 25px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 16px;">
+    ⬇️ Download Book
+  </a>
+</div>
+
+<div id="pdf-viewer-container" style="margin-top: 30px; text-align: center;">
+  <iframe id="book-iframe" src="" width="90%" height="600px" style="border: 1px solid #ddd; border-radius: 6px;">
+    Your browser does not support PDFs.
+    <a id="iframe-download-link" href="#">Download the PDF</a>.
+  </iframe>
+</div>
+
+<script>
+  // تعريف الروابط للنسختين
+  const bookUrls = {
+    en: {
+      pdf: "https://raw.githubusercontent.com/helwan-linux/archiso-book/main/helwan%20book.pdf",
+      githack: "https://raw.githack.com/helwan-linux/archiso-book/main/helwan%20book.pdf"
+    },
+    ar: {
+      pdf: "https://raw.githubusercontent.com/helwan-linux/archiso-book/main/archiso%20Ar.pdf", // الرابط الذي قدمته للنسخة العربية
+      githack: "https://raw.githack.com/helwan-linux/archiso-book/main/archiso%20Ar.pdf" // تأكد من صحة رابط githack للنسخة العربية إذا كان مختلفًا
+    }
+  };
+
+  const downloadLink = document.getElementById('download-link');
+  const iframe = document.getElementById('book-iframe');
+  const iframeDownloadLink = document.getElementById('iframe-download-link');
+  const languageSelect = document.getElementById('language-select');
+
+  function updateBookDisplay() {
+    const selectedLanguage = languageSelect.value;
+    const urls = bookUrls[selectedLanguage];
+
+    // تحديث رابط التنزيل الرئيسي
+    downloadLink.href = urls.pdf;
+
+    // تحديث رابط الـ iframe ورابط التنزيل الخاص به
+    iframe.src = urls.githack;
+    iframeDownloadLink.href = urls.pdf; // رابط التنزيل داخل الـ iframe
+
+    // تحديث نص رابط التنزيل ليناسب اللغة المختارة (اختياري)
+    if (selectedLanguage === 'ar') {
+      downloadLink.innerHTML = '⬇️ تحميل الكتاب';
+      document.querySelector('label[for="language-select"]').textContent = 'اختر اللغة:';
+    } else {
+      downloadLink.innerHTML = '⬇️ Download Book';
+      document.querySelector('label[for="language-select"]').textContent = 'Choose language:';
+    }
+  }
+
+  // استدعاء الدالة عند تحميل الصفحة لتعيين اللغة الافتراضية (الإنجليزية)
+  window.onload = updateBookDisplay;
+</script>
+
+<hr>
 
  <!-- Stable v 1.1-->
   <h2>✅ Helwan Linux Stable v1.1</h2>
@@ -262,6 +311,7 @@
   </div>
 </body>
 </html>
+
 
 
 
