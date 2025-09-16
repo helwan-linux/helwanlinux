@@ -34,9 +34,11 @@ footer {
 
     header { text-align:center; margin-bottom:20px; }
     table { width:100%; border-collapse:collapse; margin-top:20px; }
+    tr:hover { background: rgba(30,136,229,0.1); }
     th, td { border:1px solid #ccc; padding:8px; text-align:center; }
     th { background:#1e88e5; color:white; }
     code { background:#eee; display:block; margin:5px 0; padding:3px 6px; border-radius:4px; text-align:left; }
     .examples { background:#738698; padding:15px; border-radius:6px; box-shadow:0 2px 5px rgba(0,0,0,0.1); margin-top:20px; }
     h2 { color:#000000; }
+
 
