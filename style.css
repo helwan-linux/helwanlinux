@@ -43,17 +43,29 @@ footer {
 
 
 code {
-  background: #738699;      /* خلفية داكنة */
-  color: #f8f8f2;           /* نص فاتح */
   display: block;
-  margin: 10px 0;
+  background: #1e1e1e;       /* خلفية داكنة للكود */
+  color: #f8f8f2;            /* نص فاتح للقراءة */
   padding: 10px;
   border-radius: 6px;
+  margin: 8px 0;
   font-family: 'Courier New', monospace;
   font-size: 0.95em;
-  overflow-x: auto;         /* يسمح بالتمرير الأفقي للكود الطويل */
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease; /* تأثير سلس عند التحويم */
+  cursor: default;
+  overflow-x: auto;          /* تمرير أفقي للكود الطويل */
 }
+
+/* تأثير عند مرور الماوس */
+code:hover {
+  background: #005fa3;        /* خلفية أزرق جميل */
+  color: #fff;                /* نص أبيض واضح */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* ظل للخارج */
+  transform: translateY(-2px); /* حركة صغيرة للأعلى */
+  cursor: pointer;             /* شكل اليد عند المرور */
+}
+
+
 
 
 
