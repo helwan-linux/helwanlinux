@@ -44,22 +44,23 @@ footer {
 
 code {
   display: block;
-  background: #8cb6fa;       /* خلفية داكنة للكود */
-  color: #f8f8f2;            /* نص فاتح للقراءة */
+  background: #8cb6fa;
+  color: #000000;
   padding: 10px;
   border-radius: 6px;
   margin: 8px 0;
   font-family: 'Courier New', monospace;
   font-size: 0.95em;
-  transition: all 0.3s ease; /* تأثير سلس عند التحويم */
+  font-weight: 600; /* الخط أصبح أثخن قليلًا */
+  transition: all 0.3s ease;
   cursor: default;
-  overflow-x: auto;          /* تمرير أفقي للكود الطويل */
+  overflow-x: auto;
 }
 
 /* تأثير عند مرور الماوس */
 code:hover {
   background: #808080;        /* خلفية أزرق جميل */
-  color: #fff;                /* نص أبيض واضح */
+  color: #8cbdfa;                /* نص أبيض واضح */
   box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* ظل للخارج */
   transform: translateY(-2px); /* حركة صغيرة للأعلى */
   cursor: pointer;             /* شكل اليد عند المرور */
