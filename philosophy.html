@@ -11,13 +11,21 @@
   <link rel="icon" type="image/png" sizes="192x192" href="img/web-app-manifest-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="img/web-app-manifest-512x512.png">
   <link rel="manifest" href="img/site.webmanifest">
-    <style>
-        /* CSS أساسي لدعم هيكل محتوى الفلسفة */
-        .intro-box { background-color: #f8f9fa; border-left: 5px solid #007bff; padding: 15px; margin-bottom: 30px; }
-        .tool-category { margin-top: 30px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .tool-list dt { font-weight: bold; color: #333; margin-top: 15px; }
-        .tool-list dd { margin-left: 0; padding-bottom: 5px; border-bottom: 1px dotted #eee; font-size: 0.95em; }
-    </style>
+    <style>
+        /* CSS أساسي لدعم هيكل محتوى الفلسفة */
+        .intro-box { background-color: #f8f9fa; border-left: 5px solid #007bff; padding: 15px; margin-bottom: 30px; }
+        .tool-category { margin-top: 30px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .tool-list dt { font-weight: bold; color: #333; margin-top: 15px; }
+        .tool-list dd { margin-left: 0; padding-bottom: 5px; border-bottom: 1px dotted #eee; font-size: 0.95em; }
+        /* تنسيق خاص لفقرة الإرث لتبدو مميزة */
+        .legacy-section {
+            background-color: #e3f2fd; /* لون خلفية خفيف */
+            border: 1px solid #90caf9;
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
 
@@ -55,92 +63,105 @@
 
 <main style="max-width: 800px; margin: auto; padding: 10px; text-align: left;">
 
-    <h1>Arch Power, Helwan Simplicity: The Helwan Linux Design Philosophy</h1>
+    <h1>Arch Power, Helwan Simplicity: The Helwan Linux Design Philosophy</h1>
 
-    <div class="intro-box">
-        <p>Helwan Linux believes that the power and flexibility of <strong>Arch Linux</strong> should be accessible to everyone, regardless of their experience level. Our philosophy is not about fundamentally changing the core system, but rather <strong>building a reliable bridge</strong> between the power of the command line and the ease of a graphical interface.</p>
-        <p>Our primary goal is to <strong>remove the barrier of complexity</strong> by developing a comprehensive suite of <strong>local GUI tools</strong> designed to encapsulate complex system commands into simple clicks. This provides a reliable and streamlined system maintenance and management experience for both beginners and experts.</p>
-    </div>
+    <div class="intro-box">
+        <p>Helwan Linux believes that the power and flexibility of <strong>Arch Linux</strong> should be accessible to everyone, regardless of their experience level. Our philosophy is not about fundamentally changing the core system, but rather <strong>building a reliable bridge</strong> between the power of the command line and the ease of a graphical interface.</p>
+        <p>Our primary goal is to <strong>remove the barrier of complexity</strong> by developing a comprehensive suite of <strong>local GUI tools</strong> designed to encapsulate complex system commands into simple clicks. This provides a reliable and streamlined system maintenance and management experience for both beginners and experts.</p>
+    </div>
 
-    <h2>The Core Helwan Linux Tool Suite</h2>
-    <p>This collection of tools is the practical proof of our philosophy. Each application is designed to be lightweight, simple, and effective at its specific task.</p>
+    <h2>The Core Helwan Linux Tool Suite</h2>
+    <p>This collection of tools is the practical proof of our philosophy. Each application is designed to be lightweight, simple, and effective at its specific task.</p>
 
-    <div class="tool-category">
-        <h3>1. Administration and System Maintenance</h3>
-        <dl class="tool-list">
-            <dt>hpm — Helwan Package Manager</dt>
-            <dd>A user-friendly package manager frontend for Pacman, simplifying package management with clear and intuitive commands while retaining full Arch power.</dd>
+    <div class="tool-category">
+        <h3>1. Administration and System Maintenance</h3>
+        <dl class="tool-list">
+            <dt>hpm — Helwan Package Manager</dt>
+            <dd>A user-friendly package manager frontend for Pacman, simplifying package management with clear and intuitive commands while retaining full Arch power.</dd>
 
-            <dt>hel-netfix</dt>
-            <dd>Graphical network and system repair tool. Condenses critical maintenance commands (like cache clearing and dependency fixing) into single-click operations.</dd>
+            <dt>hel-netfix</dt>
+            <dd>Graphical network and system repair tool. Condenses critical maintenance commands (like cache clearing and dependency fixing) into single-click operations.</dd>
 
-            <dt>helufw</dt>
-            <dd>GUI firewall configuration tool. Provides a simple interface to manage UFW rules without relying on the command line.</dd>
-            
-            <dt>hel-process</dt>
-            <dd>GUI task and process manager. Allows monitoring, analysis, and management of running system processes easily and effectively.</dd>
+            <dt>helufw</dt>
+            <dd>GUI firewall configuration tool. Provides a simple interface to manage UFW rules without relying on the command line.</dd>
+            
+            <dt>hel-process</dt>
+            <dd>GUI task and process manager. Allows monitoring, analysis, and management of running system processes easily and effectively.</dd>
 
-            <dt>helfetch-ng</dt>
-            <dd>Enhanced system info fetch tool. Provides system information and statistics in an organized and straightforward manner.</dd>
-            
-            <dt>hel-sec-audit</dt>
-            <dd>Quick system security scan. Helps users perform a basic, periodic security check on their system.</dd>
-        </dl>
-    </div>
+            <dt>helfetch-ng</dt>
+            <dd>Enhanced system info fetch tool. Provides system information and statistics in an organized and straightforward manner.</dd>
+            
+            <dt>hel-sec-audit</dt>
+            <dd>Quick system security scan. Helps users perform a basic, periodic security check on their system.</dd>
+        </dl>
+    </div>
 
-    <div class="tool-category">
-        <h3>2. Education and User Onboarding</h3>
-        <dl class="tool-list">
-            <dt>hel-welcome-app</dt>
-            <dd>First-time user guide and tips. A welcome application that provides essential tips and guidance for the first steps in using the distribution.</dd>
+    <div class="tool-category">
+        <h3>2. Education and User Onboarding</h3>
+        <dl class="tool-list">
+            <dt>hel-welcome-app</dt>
+            <dd>First-time user guide and tips. A welcome application that provides essential tips and guidance for the first steps in using the distribution.</dd>
 
-            <dt>hel-tutorial</dt>
-            <dd>Interactive Linux tutorials for beginners. A set of interactive, guided lessons to help new users understand and utilize Linux fundamentals.</dd>
-        </dl>
-    </div>
+            <dt>hel-tutorial</dt>
+            <dd>Interactive Linux tutorials for beginners. A set of interactive, guided lessons to help new users understand and utilize Linux fundamentals.</dd>
+        </dl>
+    </div>
 
-    <div class="tool-category">
-        <h3>3. Development and General Utilities</h3>
-        <dl class="tool-list">
-            <dt>hel-builder</dt>
-            <dd>Tool to create and edit PKGBUILD files. A graphical utility that simplifies the package compilation and editing process for developers.</dd>
-            
-            <dt>hel-text-editor</dt>
-            <dd>Lightweight code and text editor, designed for quick editing and documentation tasks.</dd>
+    <div class="tool-category">
+        <h3>3. Development and General Utilities</h3>
+        <dl class="tool-list">
+            <dt>hel-builder</dt>
+            <dd>Tool to create and edit PKGBUILD files. A graphical utility that simplifies the package compilation and editing process for developers.</dd>
+            
+            <dt>hel-text-editor</dt>
+            <dd>Lightweight code and text editor, designed for quick editing and documentation tasks.</dd>
 
-            <dt>hel-markdown</dt>
-            <dd>Simple markdown editor for documentation, used for creating and editing technical documents and blogs efficiently.</dd>
+            <dt>hel-markdown</dt>
+            <dd>Simple markdown editor for documentation, used for creating and editing technical documents and blogs efficiently.</dd>
 
-            <dt>hel-diagram</dt>
-            <dd>Diagram creation tool for developers and students, useful for simple chart and diagram creation.</dd>
+            <dt>hel-diagram</dt>
+            <dd>Diagram creation tool for developers and students, useful for simple chart and diagram creation.</dd>
 
-            <dt>hel-web-server</dt>
-            <dd>Local dev server tool with a GUI, facilitating the quick setup of basic development environments.</dd>
-            
-            <dt>hel-usb-writer</dt>
-            <dd>Graphical tool to safely and intuitively burn ISO images to USB drives.</dd>
+            <dt>hel-web-server</dt>
+            <dd>Local dev server tool with a GUI, facilitating the quick setup of basic development environments.</dd>
+            
+            <dt>hel-usb-writer</dt>
+            <dd>Graphical tool to safely and intuitively burn ISO images to USB drives.</dd>
 
-            <dt>hel-store</dt>
-            <dd>Minimal GUI app store, providing an easy interface for browsing and installing packages.</dd>
-            
-            <dt>hel-ai-gate</dt>
-            <dd>Lightweight AI assistant bridge, providing access to basic AI functionality.</dd>
-            
-            <dt>hel-terminal</dt>
-            <dd>Customizable terminal emulator (demo version), offering a comfortable and aesthetic terminal environment.</dd>
-            
-            <dt>hel-insight</dt>
-            <dd>Tool to view and analyze statistics from CSV and Excel files, useful for simple data analysis work.</dd>
-            
-            <dt>hel-blocks</dt>
-            <dd>Simple Tetris game, to provide some light entertainment.</dd>
-        </dl>
-    </div>
-    <hr style="margin: 40px 0;">
-    <p style="margin-top: 40px; font-size: small;">Last updated: September 2025</p>
+            <dt>hel-store</dt>
+            <dd>Minimal GUI app store, providing an easy interface for browsing and installing packages.</dd>
+            
+            <dt>hel-ai-gate</dt>
+            <dd>Lightweight AI assistant bridge, providing access to basic AI functionality.</dd>
+            
+            <dt>hel-terminal</dt>
+            <dd>Customizable terminal emulator (demo version), offering a comfortable and aesthetic terminal environment.</dd>
+            
+            <dt>hel-insight</dt>
+            <dd>Tool to view and analyze statistics from CSV and Excel files, useful for simple data analysis work.</dd>
+            
+            <dt>hel-blocks</dt>
+            <dd>Simple Tetris game, to provide some light entertainment.</dd>
+        </dl>
+    </div>
+    
+    <section id="global-legacy" class="legacy-section">
+        <h2 style="text-align: center; color: #007bff; margin-bottom: 20px;">The Global Legacy: A Call to Shared Stewardship</h2>
+        <p style="font-size: 1.1em; line-height: 1.6;">
+            <strong>Helwan Linux</strong> was founded on an individual dream to build a technical and cultural bridge. Today, following its launch and the documentation of its philosophy in a comprehensive, multilingual book, this project is no longer the property of a single founder. It has become a <strong>shared global technological legacy</strong>.
+        </p>
+        <p style="font-size: 1.1em; line-height: 1.6;">
+            To ensure the <strong>sustainability</strong> of this legacy and empower it to stand alongside the giants, we ask you not just to be users, but to become <strong>stewards of this inheritance</strong>. Every line of code reviewed, every bug report submitted, and every small financial contribution is a vital guarantee that this philosophy <strong>will continue to thrive</strong> for future generations of developers and enthusiasts worldwide.
+        </p>
+        <p style="font-size: 1.1em; line-height: 1.6; font-weight: bold; color: #d32f2f;">
+            Your participation is our only strength.
+        </p>
+    </section>
 
-    </main>
+    <hr style="margin: 40px 0;">
+    <p style="margin-top: 40px; font-size: small;">Last updated: September 2025</p>
 
+</main>
 <script src="script.js"></script>
 
 <div style="background-color: #0d1117; color: #c9d1d9; padding: 12px 20px; text-align: center; font-family: sans-serif; font-size: 16px;">
@@ -156,4 +177,3 @@
 </body>
 
 </html>
-
