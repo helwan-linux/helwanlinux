@@ -43,19 +43,18 @@ footer {
 
 
 code {
-  display: block;
+  display: inline; /* بدل block */
   background: #8cb6fa;
   color: #000000;
-  padding: 10px;
-  border-radius: 6px;
-  margin: 8px 0;
+  padding: 2px 4px; /* أقل padding */
+  border-radius: 3px;
   font-family: 'Courier New', monospace;
   font-size: 0.95em;
-  font-weight: 600; /* الخط أصبح أثخن قليلًا */
-  transition: all 0.3s ease;
+  font-weight: 600;
   cursor: default;
-  overflow-x: auto;
+  overflow-x: visible; /* لا شريط تمرير أفقي */
 }
+
 
 
 /*الصورة*/
@@ -95,3 +94,4 @@ img[src*="logo"]:hover {
     box-shadow: none !important;
   }
 }
+
