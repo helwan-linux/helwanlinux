@@ -122,32 +122,23 @@ iframe[src*="archiso-book"]:hover {
         }
 
 /*Mouse Rolling*/
-/* apply to any <img> whose src contains "logo" (e.g. img/logo.png) */
-img[src*="logo"] {
+img[src$="logo.png"] {
   display: inline-block;
   border-radius: 50%;
   transform-origin: 50% 50%;
   transition: box-shadow 200ms ease;
-  /* ensure transform is possible */
   will-change: transform, box-shadow;
 }
 
-/* continuous spin + glowing circle while hovered or focused */
-img[src*="logo"]:hover,
-img[src*="logo"]:focus {
+img[src$="logo.png"]:hover,
+img[src$="logo.png"]:focus {
   animation: spin 1.8s linear infinite;
   box-shadow:
-    0 0 0 6px rgba(88,166,255,0.08),   /* soft outer ring */
-    0 0 18px rgba(88,166,255,0.45);     /* glow */
+    0 0 0 6px rgba(88,166,255,0.08),
+    0 0 18px rgba(88,166,255,0.45);
 }
 
-/* keyframes for continuous spinning */
 @keyframes spin {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
-}
-
-/* accessibility: turn animations off if user requests reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  img[src*="logo"] { animation: none !important; transition: none !important; transform: none !important; box-shadow: none !important; }
 }
