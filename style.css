@@ -57,88 +57,41 @@ code {
   overflow-x: auto;
 }
 
-/* تأثير عند مرور الماوس */
-code:hover {
-  background: #808080;        /* خلفية أزرق جميل */
-  color: #8cbdfa;                /* نص أبيض واضح */
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* ظل للخارج */
-  transform: translateY(-2px); /* حركة صغيرة للأعلى */
-  cursor: pointer;             /* شكل اليد عند المرور */
-}
 
+/*الصورة*/
+/* style-logo.css - Glow + continuous spin on hover */
 
-/*
-   هذا الكود يضيف تأثير توهج متحرك لإطار العرض.
-*/
-
-/* تأثير التوهج النيون المتحرك */
-@keyframes neon-glow {
-    0% { box-shadow: 0 0 5px #42acee, 0 0 10px #42acee, 0 0 15px #42acee; }
-    50% { box-shadow: 0 0 10px #ff00de, 0 0 20px #ff00de, 0 0 30px #ff00de; }
-    100% { box-shadow: 0 0 5px #42acee, 0 0 10px #42acee, 0 0 15px #42acee; }
-}
-
-/* التنسيقات الأساسية وتطبيق التوهج والتحريك */
-iframe[src*="archiso-book"] {
-    border: 2px solid #30363d !important;
-    border-radius: 10px !important;
-    animation: neon-glow 2s ease-in-out infinite alternate !important;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important;
-}
-
-/* تأثير الرفع عند مرور الفأرة */
-iframe[src*="archiso-book"]:hover {
-    transform: translateY(-5px) !important;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6) !important;
-}
-
-
-
- .tribute-container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
-        }
-        .tribute-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        .tribute-card {
-            background-color: #778899;
-            color: #0F0B0A;
-            border-radius: 10px;
-            padding: 16px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
-        }
-        .tribute-card h3 {
-            margin-top: 0;
-            color: #000000;
-        }
-        .tribute-card p {
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-/*Mouse Rolling*/
-img[src$="logo.png"] {
+/* استهداف أي صورة باسم يحتوي "logo" */
+img[src*="logo"] {
   display: inline-block;
   border-radius: 50%;
   transform-origin: 50% 50%;
   transition: box-shadow 200ms ease;
   will-change: transform, box-shadow;
+  max-width: 140px;
+  height: auto;
 }
 
-img[src$="logo.png"]:hover,
-img[src$="logo.png"]:focus {
+/* دوران مستمر + توهج عند hover */
+img[src*="logo"]:hover {
   animation: spin 1.8s linear infinite;
   box-shadow:
-    0 0 0 6px rgba(88,166,255,0.08),
-    0 0 18px rgba(88,166,255,0.45);
+    0 0 0 6px rgba(88,166,255,0.06),   /* حلقة خارجية خفيفة */
+    0 0 14px rgba(88,166,255,0.25);     /* توهج */
 }
 
+/* keyframes للدوران المستمر */
 @keyframes spin {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
+}
+
+/* Accessibility: احترم تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+  img[src*="logo"] {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
 }
