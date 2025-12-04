@@ -1,1 +1,121 @@
 
+/* style.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: #738698; /* لون رصاصي فاتح للخلفية */
+  color: #333;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #005fa3;
+}
+
+h1{
+  color: #222;
+}
+
+footer {
+  font-size: small;
+  margin-top: 40px;
+  color: #000000;
+}
+
+    header { text-align:center; margin-bottom:20px; }
+    table { width:100%; border-collapse:collapse; margin-top:20px; }
+    tr:hover { background: rgba(30,136,229,0.1); }
+    th, td { border:1px solid #ccc; padding:8px; text-align:center; }
+    th { background:#1e88e5; color:white; }
+    code { background:#eee; display:block; margin:5px 0; padding:3px 6px; border-radius:4px; text-align:left; }
+    .examples { background:#738698; padding:15px; border-radius:6px; box-shadow:0 2px 5px rgba(0,0,0,0.1); margin-top:20px; }
+    h2 { color:#000000; }
+
+
+code {
+  display: inline; /* بدل block */
+  background: #8cb6fa;
+  color: #000000;
+  padding: 2px 4px; /* أقل padding */
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95em;
+  font-weight: 600;
+  cursor: default;
+  overflow-x: visible; /* لا شريط تمرير أفقي */
+}
+
+
+
+/*الصورة*/
+/* style-logo.css - Glow + continuous spin on hover */
+
+/* استهداف أي صورة باسم يحتوي "logo" */
+img[src*="logo"] {
+  display: inline-block;
+  border-radius: 50%;
+  transform-origin: 50% 50%;
+  transition: box-shadow 200ms ease;
+  will-change: transform, box-shadow;
+  max-width: 140px;
+  height: auto;
+}
+
+/* دوران مستمر + توهج عند hover */
+img[src*="logo"]:hover {
+  animation: spin 1.8s linear infinite;
+  box-shadow:
+    0 0 0 6px rgba(88,166,255,0.06),   /* حلقة خارجية خفيفة */
+    0 0 14px rgba(88,166,255,0.25);     /* توهج */
+}
+
+/* keyframes للدوران المستمر */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Accessibility: احترم تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+  img[src*="logo"] {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.hover-rotate {
+  transition: transform 0.8s ease-in-out;
+}
+
+.hover-rotate:hover {
+  transform: rotateY(360deg);
+}
+
+img {
+  border: none !important;
+}
+
+.hover-3d {
+  transition: transform 0.4s ease;
+}
+
+.hover-3d:hover {
+  transform: perspective(800px) rotateX(3deg) rotateY(-3deg);
+}
+
+
+
+
