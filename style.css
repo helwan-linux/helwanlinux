@@ -95,3 +95,25 @@ img[src*="logo"]:hover {
   }
 }
 
+.hover-rotate {
+  transition: transform 0.8s ease-in-out;
+}
+
+.hover-rotate:hover {
+  transform: rotateY(360deg);
+}
+
+img {
+  border: none !important;
+}
+
+.hover-3d {
+  transition: transform 0.4s ease;
+}
+
+.hover-3d:hover {
+  transform: perspective(800px) rotateX(3deg) rotateY(-3deg);
+}
+
+
+
