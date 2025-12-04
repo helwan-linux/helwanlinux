@@ -1,5 +1,6 @@
-
 /* style.css */
+
+/* === GENERAL PAGE STYLES === */
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -7,14 +8,14 @@ body {
   max-width: 900px;
   margin: auto;
   padding: 20px;
-  background: #738698; /* لون رصاصي فاتح للخلفية */
+  background: #738698;
   color: #333;
 }
 
 nav a {
   margin: 0 10px;
   text-decoration: none;
-  color: #000000;
+  color: #000;
   font-weight: 600;
 }
 
@@ -23,45 +24,48 @@ nav a:hover {
   color: #005fa3;
 }
 
-h1{
+h1 {
   color: #222;
 }
 
 footer {
   font-size: small;
   margin-top: 40px;
-  color: #000000;
+  color: #000;
 }
 
-    header { text-align:center; margin-bottom:20px; }
-    table { width:100%; border-collapse:collapse; margin-top:20px; }
-    tr:hover { background: rgba(30,136,229,0.1); }
-    th, td { border:1px solid #ccc; padding:8px; text-align:center; }
-    th { background:#1e88e5; color:white; }
-    code { background:#eee; display:block; margin:5px 0; padding:3px 6px; border-radius:4px; text-align:left; }
-    .examples { background:#738698; padding:15px; border-radius:6px; box-shadow:0 2px 5px rgba(0,0,0,0.1); margin-top:20px; }
-    h2 { color:#000000; }
+header { text-align:center; margin-bottom:20px; }
+table { width:100%; border-collapse:collapse; margin-top:20px; }
+tr:hover { background: rgba(30,136,229,0.1); }
+th, td { border:1px solid #ccc; padding:8px; text-align:center; }
+th { background:#1e88e5; color:white; }
 
+.examples {
+  background:#738698;
+  padding:15px;
+  border-radius:6px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+  margin-top:20px;
+}
 
+h2 { color:#000; }
+
+/* === CODE BLOCK === */
 code {
-  display: inline; /* بدل block */
+  display: inline;
   background: #8cb6fa;
-  color: #000000;
-  padding: 2px 4px; /* أقل padding */
+  color: #000;
+  padding: 2px 4px;
   border-radius: 3px;
   font-family: 'Courier New', monospace;
   font-size: 0.95em;
   font-weight: 600;
   cursor: default;
-  overflow-x: visible; /* لا شريط تمرير أفقي */
+  overflow-x: visible;
 }
 
+/* === LOGO EFFECT === */
 
-
-/*الصورة*/
-/* style-logo.css - Glow + continuous spin on hover */
-
-/* استهداف أي صورة باسم يحتوي "logo" */
 img[src*="logo"] {
   display: inline-block;
   border-radius: 50%;
@@ -72,21 +76,18 @@ img[src*="logo"] {
   height: auto;
 }
 
-/* دوران مستمر + توهج عند hover */
 img[src*="logo"]:hover {
   animation: spin 1.8s linear infinite;
   box-shadow:
-    0 0 0 6px rgba(88,166,255,0.06),   /* حلقة خارجية خفيفة */
-    0 0 14px rgba(88,166,255,0.25);     /* توهج */
+    0 0 0 6px rgba(88,166,255,0.06),
+    0 0 14px rgba(88,166,255,0.25);
 }
 
-/* keyframes للدوران المستمر */
 @keyframes spin {
   from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+  to { transform: rotate(360deg); }
 }
 
-/* Accessibility: احترم تقليل الحركة */
 @media (prefers-reduced-motion: reduce) {
   img[src*="logo"] {
     animation: none !important;
@@ -96,13 +97,7 @@ img[src*="logo"]:hover {
   }
 }
 
-.hover-rotate {
-  transition: transform 0.8s ease-in-out;
-}
-
-.hover-rotate:hover {
-  transform: rotateY(360deg);
-}
+/* === IMAGE EFFECTS === */
 
 img {
   border: none !important;
@@ -116,6 +111,10 @@ img {
   transform: perspective(800px) rotateX(3deg) rotateY(-3deg);
 }
 
+.hover-rotate {
+  transition: transform 0.8s ease-in-out;
+}
 
-
-
+.hover-rotate:hover {
+  transform: rotateY(360deg);
+}
