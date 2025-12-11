@@ -35,22 +35,89 @@
 </div>
 
 <!-- Logo -->
-<div style="margin-top: 20px;">
+<div style="margin-top: 20px; position: relative; display: inline-block;">
   <img src="https://raw.githubusercontent.com/helwan-linux/helwanlinux/main/img/hee.png" alt="helwanBSD Logo" class="logo">
 </div>
 
 <style>
 .logo {
   width: 250px;
-  transition: all 0.3s ease;
-  filter: drop-shadow(0 0 0px #58a6ff);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
 
 .logo:hover {
   transform: scale(1.1) rotate(5deg);
   filter: drop-shadow(0 0 20px #58a6ff) drop-shadow(0 0 40px #58a6ff);
 }
+
+.bit {
+  position: absolute;
+  color: black;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 14px;
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+}
 </style>
+
+<script>
+const logo = document.querySelector('.logo');
+let intervalId;
+const bitsArray = [];
+
+logo.addEventListener('mouseenter', () => {
+  intervalId = setInterval(() => {
+    const bit = document.createElement('div');
+    bit.className = 'bit';
+    bit.textContent = Math.random() > 0.5 ? '0' : '1';
+
+    // موقع البداية: مركز الشعار
+    const rect = logo.getBoundingClientRect();
+    const startX = rect.left + rect.width / 2;
+    const startY = rect.top + rect.height / 2;
+    bit.style.left = startX + 'px';
+    bit.style.top = startY + 'px';
+
+    // سرعة واتجاه عشوائي
+    const xSpeed = (Math.random() - 0.5) * 6;
+    const ySpeed = (Math.random() - 0.5) * 6;
+
+    document.body.appendChild(bit);
+    bitsArray.push({el: bit, xSpeed, ySpeed});
+
+    // إزالة البت بعد 4 ثواني لتفادي تراكم العناصر
+    setTimeout(() => {
+      bit.remove();
+    }, 4000);
+
+  }, 50); // يولد بت جديد كل 50ms
+});
+
+logo.addEventListener('mouseleave', () => {
+  clearInterval(intervalId);
+});
+
+// تحريك البتات
+function animateBits() {
+  bitsArray.forEach(b => {
+    let x = parseFloat(b.el.style.left);
+    let y = parseFloat(b.el.style.top);
+    x += b.xSpeed;
+    y += b.ySpeed;
+    b.el.style.left = x + 'px';
+    b.el.style.top = y + 'px';
+  });
+  requestAnimationFrame(animateBits);
+}
+
+animateBits();
+</script>
+
 
 
 
