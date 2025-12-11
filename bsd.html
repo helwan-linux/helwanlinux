@@ -36,8 +36,22 @@
 
 <!-- Logo -->
 <div style="margin-top: 20px;">
-  <img src="https://raw.githubusercontent.com/helwan-linux/helwanlinux/main/img/hee.png" alt="helwanBSD Logo" width="250">
+  <img src="https://raw.githubusercontent.com/helwan-linux/helwanlinux/main/img/hee.png" alt="helwanBSD Logo" class="logo">
 </div>
+
+<style>
+.logo {
+  width: 250px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 0px #58a6ff);
+}
+
+.logo:hover {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 0 20px #58a6ff) drop-shadow(0 0 40px #58a6ff);
+}
+</style>
+
 
 
 <!-- Navigation -->
