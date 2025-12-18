@@ -4,26 +4,95 @@
   <meta charset="UTF-8">
   <title>Donate - Helwan Linux</title>
   <link rel="stylesheet" href="style.css">
- <!-- Favicon Standard -->
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
-    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
-    
-    <!-- Apple Devices -->
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-    
-    <!-- Android / PWA -->
-    <link rel="icon" type="image/png" sizes="192x192" href="img/web-app-manifest-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="img/web-app-manifest-512x512.png">
-    
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="img/site.webmanifest">
+  
+  <!-- Favicon Standard -->
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  
+  <!-- Apple Devices -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  
+  <!-- Android / PWA -->
+  <link rel="icon" type="image/png" sizes="192x192" href="img/web-app-manifest-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="img/web-app-manifest-512x512.png">
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="img/site.webmanifest">
+
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+    nav a {
+      margin: 0 6px;
+      text-decoration: none;
+      color: #0366d6;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    h1, h3 { color: #222; }
+
+    .donate-buttons a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin: 5px;
+      transition: 0.2s ease;
+    }
+    .donate-buttons a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+    .paypal { background: #ffc439; color: black; }
+    .kofi { background: #29abe0; color: white; }
+
+    .progress-bar {
+      background: #ddd;
+      border-radius: 12px;
+      overflow: hidden;
+      max-width: 600px;
+      margin: 20px auto;
+      height: 20px;
+    }
+    .progress {
+      background: #4caf50;
+      height: 100%;
+      width: 0%;
+      transition: width 0.5s ease;
+    }
+
+    .honor-roll {
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: left;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .honor-roll h2 { text-align: center; }
+    .honor-roll ul { list-style: none; padding: 0; }
+    .honor-roll li { padding: 5px 0; border-bottom: 1px solid #eee; }
+
+    footer { font-size: small; margin-top: 50px; color: #555; }
+  </style>
 </head>
-<body style="text-align:center; font-family:sans-serif; max-width:800px; margin:auto;">
+<body>
 
-<!-- https://www.youtube.com/@HelwanO.S -->
-
-<div style="background-color: #0d1117; color: #c9d1d9; padding: 12px 20px; text-align: center; font-family: sans-serif; font-size: 16px;">
+<!-- YouTube Channel Banner -->
+<div style="background-color: #0d1117; color: #c9d1d9; padding: 12px 20px; text-align: center; font-size: 16px;">
   📡 This is the <strong style="color: #58a6ff;">official YouTube channel</strong> of Helwan Linux — get the latest updates, system demos, and exclusive features.
   <span style="white-space: nowrap; margin-left: 10px;">
     <a href="https://www.youtube.com/@HelwanO.S" target="_blank" style="display: inline-flex; align-items: center; background: #ff0000; color: white; padding: 6px 12px; border-radius: 6px; text-decoration: none; font-weight: bold;">
@@ -32,60 +101,78 @@
     </a>
   </span>
 </div>
-  <!-- Logo -->
-  <div style="text-align:center; margin-top: 20px;">
-    
-    <img src="img/logo.png" alt="Helwan Linux Logo" width="150" />
-    
-  </div>
+
+<!-- Logo -->
+<div style="margin-top: 20px;">
+  <img src="img/logo.png" alt="Helwan Linux Logo" width="150" />
+</div>
 
 <!-- Navigation -->
-<nav style="text-align:center; margin:20px 0;">
-  <a href="index.html">Home</a> |
+<nav style="margin:20px 0;">
+  <a href="index.html">Home</a> |
   <a href="bsd.html">BSD</a> |
-  <a href="download.html">Download</a> |
-  <a href="philosophy.html">Philosophy</a> |
-  <a href="helwan-comparison.html">Helwan vs Others</a> |
-  <a href="documentation.html">Documentation</a> |
-  <a href="packages.html">Packages</a> |
-  <a href="news.html">News</a> |
-  <a href="assistant.html">Assistant</a> |
-  <a href="about.html">About</a> |
-  <a href="Contributing.html">Join Us</a> |
-  <a href="donate.html">Donate</a> |
-  <a href="contact.html">Contact</a> |
-  <a href="nostalgia.html">Nostalgia</a> |
-  <a href="hel-tribute-hall.html">Tribute Hall</a> |
-  <a href="credits.html">Credits</a> |
-  <a href="archive.html">archive</a> |
+  <a href="download.html">Download</a> |
+  <a href="philosophy.html">Philosophy</a> |
+  <a href="helwan-comparison.html">Helwan vs Others</a> |
+  <a href="documentation.html">Documentation</a> |
+  <a href="packages.html">Packages</a> |
+  <a href="news.html">News</a> |
+  <a href="assistant.html">Assistant</a> |
+  <a href="about.html">About</a> |
+  <a href="Contributing.html">Join Us</a> |
+  <a href="donate.html">Donate</a> |
+  <a href="contact.html">Contact</a> |
+  <a href="nostalgia.html">Nostalgia</a> |
+  <a href="hel-tribute-hall.html">Tribute Hall</a> |
+  <a href="credits.html">Credits</a> |
+  <a href="archive.html">Archive</a>
 </nav>
-  <!-- Content -->
- <h1>Support Helwan Linux</h1>
+
+<!-- Donation Section -->
+<h1>Support Helwan Linux</h1>
 <p>Helwan Linux is developed with passion and dedication — entirely by volunteers.</p>
 <p>If you find our work useful and want to help us stay independent, please consider making a donation.</p>
 
-<h3>💳 Donate via PayPal</h3>
-<p>
-  You can support us securely through PayPal:<br>
-  <strong>
-    <a href="https://paypal.me/SaeedMohamed080" target="_blank">
-      paypal.me/SaeedMohamed080
-    </a>
-  </strong>
-</p>
+<div class="donate-buttons">
+  <a href="https://paypal.me/SaeedMohamed080" target="_blank" class="paypal">
+    <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal" style="height:18px;">
+    Donate via PayPal
+  </a>
+  <a href="https://ko-fi.com/helwanlinux" target="_blank" class="kofi">
+  ☕ Support us on Ko-fi
+</a>
 
-<p style="margin-top:40px;">
-  Your contribution helps us pay for servers, build tools, and expand our mission. ❤️
-</p>
+</div>
 
+<!-- Progress Bar -->
+<div class="progress-bar">
+  <div class="progress" id="progress"></div>
+</div>
+<p id="progress-text">$0 / $1000 collected</p>
 
-  <footer style="font-size: small; margin-top: 50px;">
-    Made with love by the Helwan Linux Team.
-  </footer>
-<script src="script.js"></script>
-<!-- https://www.youtube.com/@sma-coding -->
+<!-- Honor Roll -->
+<div class="honor-roll">
+  <h2>🌟 Honor Roll of Supporters 🌟</h2>
+  <ul id="supporters-list">
+    <!-- Add supporter names here -->
+    <li>No supporters yet — be the first! ❤️</li>
+  </ul>
+</div>
 
-<div style="background-color: #0d1117; color: #c9d1d9; padding: 12px 20px; text-align: center; font-family: sans-serif; font-size: 16px;">
+<footer>
+  Made with love by the Helwan Linux Team.
+</footer>
+
+<script>
+  // Progress Bar Logic
+  const current = 0; // المبلغ الحالي
+  const goal = 1000; // الهدف
+  const percent = (current / goal) * 100;
+  document.getElementById('progress').style.width = percent + '%';
+</script>
+
+<!-- SMA Coding Banner -->
+<div style="background-color: #0d1117; color: #c9d1d9; padding: 12px 20px; text-align: center; font-size: 16px;">
   📺 Learn programming and advanced Linux scripting on 
   <strong style="color: #58a6ff;">SMA Coding</strong> — the YouTube channel for coders, hackers, and open-source enthusiasts. 
    <span style="white-space: nowrap;">
@@ -93,11 +180,7 @@
       Watch Now
     </a>
    </span>
-  </div>
+</div>
+
 </body>
 </html>
-
-
-
-
-
