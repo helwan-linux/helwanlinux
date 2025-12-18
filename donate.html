@@ -4,92 +4,17 @@
   <meta charset="UTF-8">
   <title>Donate - Helwan Linux</title>
   <link rel="stylesheet" href="style.css">
-  
-  <!-- Favicon Standard -->
+
+  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
-  
-  <!-- Apple Devices -->
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-  
-  <!-- Android / PWA -->
   <link rel="icon" type="image/png" sizes="192x192" href="img/web-app-manifest-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="img/web-app-manifest-512x512.png">
-  
-  <!-- PWA Manifest -->
   <link rel="manifest" href="img/site.webmanifest">
-
-  <style>
-    body {
-      text-align: center;
-      font-family: sans-serif;
-      max-width: 800px;
-      margin: auto;
-      line-height: 1.6;
-      background: #f9f9f9;
-      color: #333;
-    }
-    nav a {
-      margin: 0 6px;
-      text-decoration: none;
-      color: #0366d6;
-    }
-    nav a:hover { text-decoration: underline; }
-
-    h1, h3 { color: #222; }
-
-    .donate-buttons a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 10px 20px;
-      border-radius: 6px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      margin: 5px;
-      transition: 0.2s ease;
-    }
-    .donate-buttons a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    }
-    .paypal { background: #ffc439; color: black; }
-    .kofi { background: #29abe0; color: white; }
-
-    .progress-bar {
-      background: #ddd;
-      border-radius: 12px;
-      overflow: hidden;
-      max-width: 600px;
-      margin: 20px auto;
-      height: 20px;
-    }
-    .progress {
-      background: #4caf50;
-      height: 100%;
-      width: 0%;
-      transition: width 0.5s ease;
-    }
-
-    .honor-roll {
-      max-width: 600px;
-      margin: 20px auto;
-      text-align: left;
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .honor-roll h2 { text-align: center; }
-    .honor-roll ul { list-style: none; padding: 0; }
-    .honor-roll li { padding: 5px 0; border-bottom: 1px solid #eee; }
-
-    footer { font-size: small; margin-top: 50px; color: #555; }
-  </style>
 </head>
-<body>
+<body style="text-align:center; font-family:sans-serif; max-width:800px; margin:auto;">
 
 <!-- YouTube Channel Banner -->
 <div style="background-color: #0d1117; color: #c9d1d9; padding: 12px 20px; text-align: center; font-size: 16px;">
@@ -108,24 +33,24 @@
 </div>
 
 <!-- Navigation -->
-<nav style="margin:20px 0;">
-  <a href="index.html">Home</a> |
+<nav style="text-align:center; margin:20px 0;">
+  <a href="index.html">Home</a> |
   <a href="bsd.html">BSD</a> |
-  <a href="download.html">Download</a> |
-  <a href="philosophy.html">Philosophy</a> |
-  <a href="helwan-comparison.html">Helwan vs Others</a> |
-  <a href="documentation.html">Documentation</a> |
-  <a href="packages.html">Packages</a> |
-  <a href="news.html">News</a> |
-  <a href="assistant.html">Assistant</a> |
-  <a href="about.html">About</a> |
-  <a href="Contributing.html">Join Us</a> |
-  <a href="donate.html">Donate</a> |
-  <a href="contact.html">Contact</a> |
-  <a href="nostalgia.html">Nostalgia</a> |
-  <a href="hel-tribute-hall.html">Tribute Hall</a> |
-  <a href="credits.html">Credits</a> |
-  <a href="archive.html">Archive</a>
+  <a href="download.html">Download</a> |
+  <a href="philosophy.html">Philosophy</a> |
+  <a href="helwan-comparison.html">Helwan vs Others</a> |
+  <a href="documentation.html">Documentation</a> |
+  <a href="packages.html">Packages</a> |
+  <a href="news.html">News</a> |
+  <a href="assistant.html">Assistant</a> |
+  <a href="about.html">About</a> |
+  <a href="Contributing.html">Join Us</a> |
+  <a href="donate.html">Donate</a> |
+  <a href="contact.html">Contact</a> |
+  <a href="nostalgia.html">Nostalgia</a> |
+  <a href="hel-tribute-hall.html">Tribute Hall</a> |
+  <a href="credits.html">Credits</a> |
+  <a href="archive.html">Archive</a> |
 </nav>
 
 <!-- Donation Section -->
@@ -134,32 +59,30 @@
 <p>If you find our work useful and want to help us stay independent, please consider making a donation.</p>
 
 <div class="donate-buttons">
-  <a href="https://paypal.me/SaeedMohamed080" target="_blank" class="paypal">
+  <a href="https://paypal.me/SaeedMohamed080" target="_blank" style="background:#ffc439; color:black; padding:10px 20px; border-radius:6px; font-weight:bold; text-decoration:none; display:inline-flex; align-items:center; gap:8px;">
     <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal" style="height:18px;">
     Donate via PayPal
   </a>
-  <a href="https://ko-fi.com/helwanlinux" target="_blank" class="kofi">
-  ☕ Support us on Ko-fi
-</a>
-
+  <a href="https://ko-fi.com/helwanlinux" target="_blank" style="background:#29abe0; color:white; padding:10px 20px; border-radius:6px; font-weight:bold; text-decoration:none; display:inline-flex; align-items:center;">
+    ☕ Support us on Ko-fi
+  </a>
 </div>
 
 <!-- Progress Bar -->
-<div class="progress-bar">
-  <div class="progress" id="progress"></div>
+<div style="background:#ddd; border-radius:12px; overflow:hidden; max-width:600px; margin:20px auto; height:20px;">
+  <div id="progress" style="background:#4caf50; height:100%; width:0%; transition:width 0.5s;"></div>
 </div>
 <p id="progress-text">$0 / $1000 collected</p>
 
 <!-- Honor Roll -->
-<div class="honor-roll">
-  <h2>🌟 Honor Roll of Supporters 🌟</h2>
-  <ul id="supporters-list">
-    <!-- Add supporter names here -->
+<div style="max-width:600px; margin:20px auto; text-align:left; background:white; padding:20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+  <h2 style="text-align:center;">🌟 Honor Roll of Supporters 🌟</h2>
+  <ul id="supporters-list" style="list-style:none; padding:0;">
     <li>No supporters yet — be the first! ❤️</li>
   </ul>
 </div>
 
-<footer>
+<footer style="font-size:small; margin-top:50px; color:#555;">
   Made with love by the Helwan Linux Team.
 </footer>
 
@@ -172,14 +95,14 @@
 </script>
 
 <!-- SMA Coding Banner -->
-<div style="background-color: #0d1117; color: #c9d1d9; padding: 12px 20px; text-align: center; font-size: 16px;">
+<div style="background-color: #0d1117; color: #c9d1d9; padding: 12px 20px; text-align:center; font-size:16px;">
   📺 Learn programming and advanced Linux scripting on 
   <strong style="color: #58a6ff;">SMA Coding</strong> — the YouTube channel for coders, hackers, and open-source enthusiasts. 
-   <span style="white-space: nowrap;">
-    <a href="https://www.youtube.com/@sma-coding" target="_blank" style="margin-left: 10px; background: #238636; color: white; padding: 6px 12px; border-radius: 6px; text-decoration: none; font-weight: bold;">
+  <span style="white-space: nowrap;">
+    <a href="https://www.youtube.com/@sma-coding" target="_blank" style="margin-left:10px; background:#238636; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
       Watch Now
     </a>
-   </span>
+  </span>
 </div>
 
 </body>
