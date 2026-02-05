@@ -4,25 +4,40 @@
   <meta charset="UTF-8">
   <title>Credits - Helwan Linux</title>
    <link rel="stylesheet" href="style.css">
-
-  <!-- Favicon Standard -->
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
-    
-    <!-- Apple Devices -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-    
-    <!-- Android / PWA -->
     <link rel="icon" type="image/png" sizes="192x192" href="img/web-app-manifest-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="img/web-app-manifest-512x512.png">
-    
-    <!-- PWA Manifest -->
     <link rel="manifest" href="img/site.webmanifest">
   
+  <style>
+    /* تنسيق الكروت: نفس لون الخلفية والكلام أسود */
+    .credit-section {
+        border: 1px solid #30363d;
+        border-radius: 12px;
+        padding: 25px;
+        margin-bottom: 25px;
+        background: transparent; /* للحفاظ على لون خلفيتك الأصلية */
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .credit-section:hover {
+        transform: translateY(-5px);
+        border-color: #58a6ff;
+    }
+    /* جعل كل النصوص داخل الكروت باللون الأسود كما طلبت */
+    .credit-section h2, 
+    .credit-section h3, 
+    .credit-section p, 
+    .credit-section li,
+    .credit-section strong {
+        color: #000000 !important;
+    }
+    main { max-width: 900px; margin: auto; padding: 20px; }
+  </style>
 </head>
 <body>
-<!-- https://www.youtube.com/@HelwanO.S -->
 
 <div style="background-color: #0d1117; color: #c9d1d9; padding: 12px 20px; text-align: center; font-family: sans-serif; font-size: 16px;">
   📡 This is the <strong style="color: #58a6ff;">official YouTube channel</strong> of Helwan Linux — get the latest updates, system demos, and exclusive features.
@@ -33,12 +48,11 @@
     </a>
   </span>
 </div>
-  <!-- Logo -->
+
   <div style="text-align:center; margin-top: 20px;">
     <img src="img/logo.png" alt="Helwan Linux Logo" width="150" />
   </div>
   
-<!-- Navigation -->
 <nav style="text-align:center; margin:20px 0;">
   <a href="index.html">Home</a> |
   <a href="bsd.html">BSD</a> |
@@ -58,77 +72,89 @@
   <a href="credits.html">Credits</a> |
   <a href="archive.html">archive</a> |
 </nav>
-  <!-- Content -->
-  <main style="max-width: 900px; margin: auto;">
 
-    <h1>📄 Helwan Linux — Credits & Acknowledgements</h1>
-    <p><em>Because great projects stand on the shoulders of giants.</em></p>
+  <main>
+    <h1 style="text-align:center;">📄 Helwan Linux — Credits & Acknowledgements</h1>
+    <p style="text-align:center;"><em>Because great projects stand on the shoulders of giants.</em></p>
 
-    <h2>🥇 Core Projects</h2>
-    <h3>🐧 Arch Linux</h3>
-    <p>
-      We would like to express our deepest gratitude to the Arch Linux team for building and maintaining one of the most powerful, flexible, and cutting-edge Linux distributions in the world.
-      Without their tireless work in developing Arch Linux and its outstanding package manager pacman, Helwan Linux would not have been possible.
-      Their commitment to simplicity, elegance, and transparency has inspired millions — including our team.
-      We proudly stand on the shoulders of Arch Linux and its vibrant community. Thank you.
-    </p>
+    <div class="credit-section">
+        <h2>🥇 Core Projects</h2>
+        <h3>🐧 Arch Linux</h3>
+        <p>
+          We would like to express our deepest gratitude to the Arch Linux team for building and maintaining one of the most powerful, flexible, and cutting-edge Linux distributions in the world.
+          Without their tireless work in developing Arch Linux and its outstanding package manager pacman, Helwan Linux would not have been possible.
+          Their commitment to simplicity, elegance, and transparency has inspired millions — including our team.
+          We proudly stand on the shoulders of Arch Linux and its vibrant community. Thank you.
+        </p>
+    </div>
 
-    <h3>📦 Pacman & Yay</h3>
-    <p>
-      Special thanks to the developers of pacman, the backbone of software management on Arch-based systems.
-      We also extend our appreciation to the creators and maintainers of yay, the advanced AUR helper that simplifies package management from both official repositories and the Arch User Repository.
-    </p>
+    <div class="credit-section">
+        <h3>📦 Pacman & Yay</h3>
+        <p>
+          Special thanks to the developers of pacman, the backbone of software management on Arch-based systems.
+          We also extend our appreciation to the creators and maintainers of yay, the advanced AUR helper that simplifies package management from both official repositories and the Arch User Repository.
+        </p>
+    </div>
 
-    <h3>🛠️ Pamac</h3>
-    <p>
-      We acknowledge and appreciate the developers behind Pamac, the graphical package manager that simplifies software management on Arch-based systems.
-      Their work has made it easier for users to interact with the powerful pacman engine through a modern and intuitive interface.
-    </p>
+    <div class="credit-section">
+        <h3>🛠️ Pamac</h3>
+        <p>
+          We acknowledge and appreciate the developers behind Pamac, the graphical package manager that simplifies software management on Arch-based systems.
+          Their work has made it easier for users to interact with the powerful pacman engine through a modern and intuitive interface.
+        </p>
+    </div>
 
-    <h2>🖥️ Calamares Installer</h2>
-    <p>
-      We thank the developers of the Calamares Installer for providing a flexible, modular, and user-friendly graphical installer framework.
-      Their contribution makes the installation process of Helwan Linux smooth and accessible to users of all levels.
-    </p>
+    <div class="credit-section">
+        <h2>🖥️ Calamares Installer</h2>
+        <p>
+          We thank the developers of the Calamares Installer for providing a flexible, modular, and user-friendly graphical installer framework.
+          Their contribution makes the installation process of Helwan Linux smooth and accessible to users of all levels.
+        </p>
+    </div>
 
-    <h2>🖥️ Desktop Environment</h2>
-    <p>
-      Helwan Linux offers a clean, efficient, and user-friendly desktop experience thanks to the dedicated developers behind modern desktop environments:
-    </p>
-    <ul>
-      <li><strong>Cinnamon</strong> — Elegant, intuitive, and traditional desktop layout</li>
-      <li><strong>GNOME</strong> — Modern, streamlined user experience</li>
-      <li><strong>XFCE</strong>  — Lightweight, fast, and highly customizable</li>
-    </ul>
+    <div class="credit-section">
+        <h2>🖥️ Desktop Environment</h2>
+        <p>
+          Helwan Linux offers a clean, efficient, and user-friendly desktop experience thanks to the dedicated developers behind modern desktop environments:
+        </p>
+        <ul>
+          <li><strong>Cinnamon</strong> — Elegant, intuitive, and traditional desktop layout</li>
+          <li><strong>GNOME</strong> — Modern, streamlined user experience</li>
+          <li><strong>XFCE</strong>  — Lightweight, fast, and highly customizable</li>
+        </ul>
+    </div>
 
-    <h2>✨ Special Acknowledgements</h2>
-    <h3>Erik Dubois (ArcoLinux & ALCI)</h3>
-    <p>
-      We extend our warmest thanks to Erik Dubois for generously sharing his knowledge through countless tutorials, videos, and projects like ArcoLinux and ALCI.
-      His contributions to the Arch-based community have inspired many — including the Helwan Linux team.
-      Without Erik’s work and resources, Helwan Linux would not have achieved its current shape.
-      We are honored to acknowledge his influence and mentorship.
-    </p>
+    <div class="credit-section">
+        <h2>✨ Special Acknowledgements</h2>
+        <h3>Erik Dubois (ArcoLinux & ALCI)</h3>
+        <p>
+          We extend our warmest thanks to Erik Dubois for generously sharing his knowledge through countless tutorials, videos, and projects like ArcoLinux and ALCI.
+          His contributions to the Arch-based community have inspired many — including the Helwan Linux team.
+          Without Erik’s work and resources, Helwan Linux would not have achieved its current shape.
+          We are honored to acknowledge his influence and mentorship.
+        </p>
+    </div>
 
-    <h2>🌍 Community</h2>
-    <h3>Arch User Repository (AUR) Maintainers</h3>
-    <p>
-      A big thank you to all AUR maintainers who contribute and maintain thousands of packages, expanding the power and flexibility of Arch-based systems.
-      Your dedication fuels the ecosystem that Helwan Linux thrives on.
-    </p>
+    <div class="credit-section">
+        <h2>🌍 Community</h2>
+        <h3>Arch User Repository (AUR) Maintainers</h3>
+        <p>
+          A big thank you to all AUR maintainers who contribute and maintain thousands of packages, expanding the power and flexibility of Arch-based systems.
+          Your dedication fuels the ecosystem that Helwan Linux thrives on.
+        </p>
+    </div>
 
-    <h3>The Global Open Source Community</h3>
-    <p>
-      Finally, our gratitude extends to the entire global open-source community — developers, maintainers, documenters, translators, testers, and enthusiasts — whose endless contributions make projects like Helwan Linux possible.
-      Your spirit of collaboration and innovation drives us forward.
-      Thank you for empowering us all.
-    </p>
+    <div class="credit-section">
+        <h3>The Global Open Source Community</h3>
+        <p>
+          Finally, our gratitude extends to the entire global open-source community — developers, maintainers, documenters, translators, testers, and enthusiasts — whose endless contributions make projects like Helwan Linux possible.
+          Your spirit of collaboration and innovation drives us forward.
+          Thank you for empowering us all.
+        </p>
+    </div>
 
-    <p style="margin-top: 40px; font-size: small;">— The Helwan Linux Team</p>
-
+    <p style="margin-top: 40px; font-size: small; text-align: center;">— The Helwan Linux Team</p>
   </main>
- <script src="script.js"></script>
- <!-- https://www.youtube.com/@sma-coding -->
 
 <div style="background-color: #0d1117; color: #c9d1d9; padding: 12px 20px; text-align: center; font-family: sans-serif; font-size: 16px;">
   📺 Learn programming and advanced Linux scripting on 
@@ -138,12 +164,7 @@
       Watch Now
     </a>
    </span>
-  </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
