@@ -4,125 +4,102 @@
   <meta charset="UTF-8">
   <title>Nostalgia – Helwan Linux</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- Favicon Standard -->
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
-    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
-    
-    <!-- Apple Devices -->
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-    
-    <!-- Android / PWA -->
-    <link rel="icon" type="image/png" sizes="192x192" href="img/web-app-manifest-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="img/web-app-manifest-512x512.png">
-    
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="img/site.webmanifest">
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/web-app-manifest-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="img/web-app-manifest-512x512.png">
+  <link rel="manifest" href="img/site.webmanifest">
+  <style>
+    .nostalgia-card {
+        background: transparent;
+        border: 1px solid #30363d;
+        border-radius: 12px;
+        padding: 25px;
+        margin-bottom: 25px;
+        transition: transform 0.3s ease;
+    }
+    .nostalgia-card:hover {
+        transform: scale(1.01);
+        border-color: #58a6ff;
+    }
+    /* جعل نصوص الكروت باللون الأسود */
+    .nostalgia-card h2, .nostalgia-card p, .nostalgia-card span {
+        color: #000000 !important;
+    }
+    pre { background: #161b22; padding: 15px; border-radius: 8px; overflow-x: auto; }
+    code { color: #e6edf3; }
+  </style>
 </head>
 <body>
-	
-	<!-- https://www.youtube.com/@HelwanO.S -->
-
 <div style="background-color: #0d1117; color: #c9d1d9; padding: 12px 20px; text-align: center; font-family: sans-serif; font-size: 16px;">
-  📡 This is the <strong style="color: #58a6ff;">official YouTube channel</strong> of Helwan Linux — get the latest updates, system demos, and exclusive features.
+  📡 This is the <strong style="color: #58a6ff;">official YouTube channel</strong> of Helwan Linux — get the latest updates.
   <span style="white-space: nowrap; margin-left: 10px;">
-    <a href="https://www.youtube.com/@HelwanO.S" target="_blank" style="display: inline-flex; align-items: center; background: #ff0000; color: white; padding: 6px 12px; border-radius: 6px; text-decoration: none; font-weight: bold;">
-      <img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube" style="width: 20px; height: 20px; margin-right: 8px;">
-      Visit Channel
-    </a>
+    <a href="https://www.youtube.com/@HelwanO.S" target="_blank" style="background: #ff0000; color: white; padding: 6px 12px; border-radius: 6px; text-decoration: none; font-weight: bold;">Visit Channel</a>
   </span>
 </div>
 
-  <!-- Logo -->
-  <div style="text-align:center; margin-top: 20px;">
-    <img src="img/logo.png" alt="Helwan Linux Logo" width="150" />
-  </div>
+<div style="text-align:center; margin-top: 20px;"><img src="img/logo.png" alt="Helwan Linux Logo" width="150" /></div>
 
-<!-- Navigation -->
 <nav style="text-align:center; margin:20px 0;">
-  <a href="index.html">Home</a> |
-	<a href="bsd.html">BSD</a> |
-  <a href="download.html">Download</a> |
-  <a href="philosophy.html">Philosophy</a> |
-  <a href="helwan-comparison.html">Helwan vs Others</a> |
-  <a href="documentation.html">Documentation</a> |
-  <a href="packages.html">Packages</a> |
-  <a href="news.html">News</a> |
-  <a href="assistant.html">Assistant</a> |
-  <a href="about.html">About</a> |
-  <a href="Contributing.html">Join Us</a> |
-  <a href="donate.html">Donate</a> |
-  <a href="contact.html">Contact</a> |
-  <a href="nostalgia.html">Nostalgia</a> |
-  <a href="hel-tribute-hall.html">Tribute Hall</a> |
-  <a href="credits.html">Credits</a> |
-  <a href="archive.html">archive</a> |
+  <a href="index.html">Home</a> | <a href="bsd.html">BSD</a> | <a href="download.html">Download</a> | <a href="philosophy.html">Philosophy</a> | <a href="helwan-comparison.html">Helwan vs Others</a> | <a href="documentation.html">Documentation</a> | <a href="packages.html">Packages</a> | <a href="news.html">News</a> | <a href="assistant.html">Assistant</a> | <a href="about.html">About</a> | <a href="Contributing.html">Join Us</a> | <a href="donate.html">Donate</a> | <a href="contact.html">Contact</a> | <a href="nostalgia.html">Nostalgia</a> | <a href="hel-tribute-hall.html">Tribute Hall</a> | <a href="credits.html">Credits</a> | <a href="archive.html">archive</a> |
 </nav>
 
-  <!-- Main Content -->
-  <main style="max-width: 800px; margin: auto; padding: 10px; text-align: left;">
+<main style="max-width: 800px; margin: auto; padding: 10px;">
     <h1>🕰️ Nostalgia from the World of Programming</h1>
-    <p>In the ever-evolving world of software, where new languages and frameworks emerge daily, it's easy to forget the roots upon which all these modern technologies are built. This page is a humble tribute to those "older" languages that shaped my consciousness as a developer and opened the doors to the world of computing for me.</p>
-    <blockquote>"To understand the present, we must delve into the past."</blockquote>
-
-    <h2>💻 BASIC (Beginner's All-purpose Symbolic Instruction Code)</h2>
-    <p>Ah, <span class="highlight">BASIC</span>! This was the very first programming language I ever touched. I vividly remember my old computer and its monochrome screen. The simplicity of its commands like <code>PRINT</code> and <code>GOTO</code> felt like pure magic. My journey began here, understanding how simple instructions could make the machine do amazing things.</p>
-    <pre><code>10 PRINT "Welcome to the world of programming!"
+    <p>In the ever-evolving world of software, where new languages and frameworks emerge daily, it's easy to forget the roots upon which all these modern technologies are built.</p>
+    
+    <div class="nostalgia-card">
+        <h2>💻 BASIC</h2>
+        <p>Ah, <span>BASIC</span>! This was the very first programming language I ever touched. My journey began here, understanding how simple instructions could make the machine do amazing things.</p>
+        <pre><code>10 PRINT "Welcome to the world of programming!"
 20 INPUT "What is your name? "; N$
 30 PRINT "Hello, "; N$; " in Helwan Linux!"
 40 END</code></pre>
-    <p>This was the beginning, the spark that ignited my lifelong passion for programming.</p>
+    </div>
 
-    <h2>📏 Fortran (Formula Translation)</h2>
-    <p>Though I may not have written much in it, I spent hours reading and trying to comprehend <span class="highlight">Fortran</span> code. As one of the oldest high-level programming languages, it was and still is a giant in scientific and engineering computing. The idea of translating complex mathematical formulas into computer instructions was astonishing in itself.</p>
-    <pre><code>      PROGRAM HELLO
+    <div class="nostalgia-card">
+        <h2>📏 Fortran</h2>
+        <p>Though I may not have written much in it, I spent hours reading and trying to comprehend <span>Fortran</span> code. As one of the oldest high-level programming languages, it was and still is a giant in scientific computing.</p>
+        <pre><code>      PROGRAM HELLO
       PRINT *, 'Hello from Fortran!'
       END PROGRAM HELLO</code></pre>
+    </div>
 
-    <h2>📍 Pascal</h2>
-    <p><span class="highlight">Pascal</span> was the language where I felt I was taking my first steps towards "structured" programming. With its strictness and clear rules, it forced me to think about code structure and organization, a lesson that stays with me to this day..</p>
-    <pre><code>program HelloWorld;
+    <div class="nostalgia-card">
+        <h2>📍 Pascal</h2>
+        <p><span>Pascal</span> was the language where I felt I was taking my first steps towards "structured" programming. It forced me to think about code structure and organization.</p>
+        <pre><code>program HelloWorld;
 begin
   writeln('Hello world, from Pascal!');
 end.</code></pre>
+    </div>
 
-    <h2>📈 Perl</h2>
-    <p>When I started exploring scripting and early web development, <span class="highlight">Perl</span> was the star! "The Swiss Army knife of scripting languages," as it was known. It was incredibly powerful for text manipulation and regular expressions (Regex). I remember spending hours writing Perl scripts to automate tasks, or even to create simple dynamic web pages. Its flexibility allowed me to solve problems in creative (and sometimes slightly messy!) ways.</p>
-    <pre><code>#!/usr/bin/perl
+    <div class="nostalgia-card">
+        <h2>📈 Perl</h2>
+        <p>"The Swiss Army knife of scripting languages," as it was known. It was incredibly powerful for text manipulation and regular expressions (Regex).</p>
+        <pre><code>#!/usr/bin/perl
 use strict;
 use warnings;
-
 print "Hello and welcome to the world of Perl!\n";</code></pre>
+    </div>
 
-    <h2>🐢 Logo (Language of Turtles and Imagination)</h2>
-    <p><span class="highlight">Logo</span> was one of the first programming languages I encountered during school. It was designed to teach children the basics of programming, and it did so in a fun and visual way.</p>
-    <p>I still remember controlling the little turtle with commands that made it draw shapes on the screen. One of my earliest 'aha!' moments came when I saw this code draw a perfect square:</p>
-    <pre><code>REPEAT 4 [FORWARD 100 RIGHT 90]</code></pre>
-    <p>It was through Logo that I first understood the power of repetition and geometry in programming. It wasn't just code — it was art, logic, and play all in one. Logo gave me the joy of watching logic come to life visually.</p>
+    <div class="nostalgia-card">
+        <h2>🐢 Logo</h2>
+        <p>I still remember controlling the little turtle with commands that made it draw shapes on the screen. It wasn't just code — it was art and logic.</p>
+        <pre><code>REPEAT 4 [FORWARD 100 RIGHT 90]</code></pre>
+    </div>
 
     <p style="margin-top: 40px; font-size: small;">Last updated: 14 July 2025</p>
-  </main>
+</main>
 
-  <div class="footer" style="text-align: center;">
-    <p>Made with ❤️ by Saeed Badreldin and the Helwan Linux Team.</p>
-  </div>
+<div class="footer" style="text-align: center;"><p>Made with ❤️ by Saeed Badreldin and the Helwan Linux Team.</p></div>
 
-  <script src="script.js"></script>
-  <!-- https://www.youtube.com/@sma-coding -->
-
-<div style="background-color: #0d1117; color: #c9d1d9; padding: 12px 20px; text-align: center; font-family: sans-serif; font-size: 16px;">
-  📺 Learn programming and advanced Linux scripting on 
-  <strong style="color: #58a6ff;">SMA Coding</strong> — the YouTube channel for coders, hackers, and open-source enthusiasts. 
-   <span style="white-space: nowrap;">
-    <a href="https://www.youtube.com/@sma-coding" target="_blank" style="margin-left: 10px; background: #238636; color: white; padding: 6px 12px; border-radius: 6px; text-decoration: none; font-weight: bold;">
-      Watch Now
-    </a>
-   </span>
-  </div>
+<div style="background-color: #0d1117; color: #c9d1d9; padding: 12px 20px; text-align: center; margin-top: 40px;">
+  📺 Learn programming on <strong style="color: #58a6ff;">SMA Coding</strong>
+  <a href="https://www.youtube.com/@sma-coding" target="_blank" style="margin-left: 10px; background: #238636; color: white; padding: 6px 12px; border-radius: 6px; text-decoration: none; font-weight: bold;">Watch Now</a>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
-
