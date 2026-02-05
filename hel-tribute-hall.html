@@ -12,6 +12,38 @@
     <link rel="icon" type="image/png" sizes="512x512" href="img/web-app-manifest-512x512.png">
     <link rel="manifest" href="img/site.webmanifest">
 
+    <style>
+        /* التنسيق المطلوب: الكروت بنفس لون الخلفية والنص أسود */
+        .tribute-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .tribute-card {
+            background: transparent; /* نفس لون خلفية الموقع */
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .tribute-card:hover {
+            transform: translateY(-5px);
+            border-color: #58a6ff;
+        }
+        /* جعل الكلام داخل الكروت أسود */
+        .tribute-card h3 {
+            margin-top: 0;
+            color: #000000; /* اسم الشخصية بالأسود */
+            font-weight: bold;
+        }
+        .tribute-card p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #000000; /* الوصف بالأسود */
+        }
+    </style>
 </head>
 <body>
 <div style="background-color: #0d1117; color: #c9d1d9; padding: 12px 20px; text-align: center; font-family: sans-serif; font-size: 16px;">
@@ -29,24 +61,25 @@
 </div>
 
 <nav style="text-align:center; margin:20px 0;">
-  <a href="index.html">Home</a> |
+  <a href="index.html">Home</a> |
     <a href="bsd.html">BSD</a> |
-  <a href="download.html">Download</a> |
-  <a href="philosophy.html">Philosophy</a> |
-  <a href="helwan-comparison.html">Helwan vs Others</a> |
-  <a href="documentation.html">Documentation</a> |
-  <a href="packages.html">Packages</a> |
-  <a href="news.html">News</a> |
-  <a href="assistant.html">Assistant</a> |
-  <a href="about.html">About</a> |
-  <a href="Contributing.html">Join Us</a> |
-  <a href="donate.html">Donate</a> |
-  <a href="contact.html">Contact</a> |
-  <a href="nostalgia.html">Nostalgia</a> |
-  <a href="hel-tribute-hall.html">Tribute Hall</a> |
-  <a href="credits.html">Credits</a> |
+  <a href="download.html">Download</a> |
+  <a href="philosophy.html">Philosophy</a> |
+  <a href="helwan-comparison.html">Helwan vs Others</a> |
+  <a href="documentation.html">Documentation</a> |
+  <a href="packages.html">Packages</a> |
+  <a href="news.html">News</a> |
+  <a href="assistant.html">Assistant</a> |
+  <a href="about.html">About</a> |
+  <a href="Contributing.html">Join Us</a> |
+  <a href="donate.html">Donate</a> |
+  <a href="contact.html">Contact</a> |
+  <a href="nostalgia.html">Nostalgia</a> |
+  <a href="hel-tribute-hall.html">Tribute Hall</a> |
+  <a href="credits.html">Credits</a> |
   <a href="archive.html">archive</a> |
 </nav>
+
 <div class="tribute-container">
     <h1 style="text-align:center;">🌟 Tribute Hall</h1>
     <p style="text-align:center;">Honoring legendary contributors to the world of open-source and programming excellence.</p>
@@ -129,7 +162,6 @@
             <h3>Aaron Swartz</h3>
             <p>A brilliant programmer, writer, and activist, dedicated to internet freedom and open access to information.</p>
         </div>
-
         <div class="tribute-card">
             <h3>Allan McRae</h3>
             <p>A long-standing and highly respected core developer for the Arch Linux distribution. His tireless work maintaining critical system packages and his role as a Trusted User have been instrumental in ensuring Arch's stability and reliability. His continuous contributions exemplify the true spirit of collaborative open-source development.</p>
@@ -150,9 +182,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
