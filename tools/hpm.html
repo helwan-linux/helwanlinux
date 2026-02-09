@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HPM - Helwan Package Manager</title>
+</head>
+<body>
+
+<h1>📦 Helwan Package Manager (HPM)</h1>
+<div class="section">
+<h2>Overview</h2>
+<p>HPM is a human-friendly package manager for Helwan Linux, built on top of <code>pacman</code> with natural-language command chaining. Each language supports its native "then" keyword for executing multiple commands in a row.</p>
+</div>
+
+<div class="section">
+<h2>Installation</h2>
+<p><b>On Helwan Linux:</b></p>
+<pre><code>sudo pacman -S hpm</code></pre>
+<p><b>On other Arch-based distributions:</b></p>
+<pre><code>yay -S hpm</code></pre>
+</div>
+
+<div class="section">
+<h2>🇪🇬 Arabic Commands</h2>
+<table border="1">
+<tr><th>Function</th><th>Command</th><th>Example</th></tr>
+<tr><td>Install Package</td><td>تثبيت</td><td>hpm تثبيت firefox</td></tr>
+<tr><td>Remove Package</td><td>إزالة</td><td>hpm إزالة vlc</td></tr>
+<tr><td>Upgrade System</td><td>ترقية</td><td>hpm ترقية</td></tr>
+<tr><td>Refresh Repos</td><td>تحديث</td><td>hpm تحديث</td></tr>
+<tr><td>Search Package</td><td>بحث</td><td>hpm بحث chrome</td></tr>
+<tr><td>Package Info</td><td>معلومات</td><td>hpm معلومات vlc</td></tr>
+<tr><td>List Installed</td><td>قائمة</td><td>hpm قائمة</td></tr>
+<tr><td>System Clean</td><td>تنظيف</td><td>hpm تنظيف</td></tr>
+<tr><td>Orphan Packages</td><td>يتيم</td><td>hpm يتيم</td></tr>
+<tr><td>AUR Repo</td><td>aur</td><td>hpm aur google-chrome</td></tr>
+<tr><td>System Doctor</td><td>فحص</td><td>hpm فحص</td></tr>
+<tr><td>Command History</td><td>سجل</td><td>hpm سجل</td></tr>
+<tr><td>Help</td><td>--مساعدة</td><td>hpm --مساعدة</td></tr>
+</table>
+<p><b>Examples:</b></p>
+<pre><code>Basic: hpm تثبيت vlc
+Chained: hpm تحديث ثم ترقية ثم تنظيف ثم فحص</code></pre>
+</div>
+
+<div class="section">
+<h2>🇺🇸 English Commands</h2>
+<table border="1">
+<tr><th>Function</th><th>Command</th><th>Shortcut</th><th>Example</th></tr>
+<tr><td>Install</td><td>install</td><td>i</td><td>hpm i firefox</td></tr>
+<tr><td>Remove</td><td>remove</td><td>r</td><td>hpm r vlc</td></tr>
+<tr><td>Upgrade</td><td>upgrade</td><td>u</td><td>hpm u</td></tr>
+<tr><td>Refresh</td><td>refresh</td><td>s</td><td>hpm s</td></tr>
+<tr><td>Search</td><td>search</td><td>q</td><td>hpm q chrome</td></tr>
+<tr><td>Info</td><td>info</td><td>I</td><td>hpm I vlc</td></tr>
+<tr><td>List Installed</td><td>list</td><td>l</td><td>hpm l</td></tr>
+<tr><td>Clean</td><td>clean</td><td>c</td><td>hpm c</td></tr>
+<tr><td>Orphans</td><td>orphans</td><td>o</td><td>hpm o</td></tr>
+<tr><td>AUR Support</td><td>aur</td><td>a</td><td>hpm a google-chrome</td></tr>
+<tr><td>Doctor</td><td>doctor</td><td>d</td><td>hpm d</td></tr>
+<tr><td>History</td><td>history</td><td>h</td><td>hpm h</td></tr>
+<tr><td>Help</td><td>--help</td><td>-</td><td>hpm --help</td></tr>
+</table>
+<p><b>Examples:</b></p>
+<pre><code>Basic: hpm i vlc
+Chained: hpm s then u then c then d</code></pre>
+</div>
+
+<div class="section">
+<h2>🇨🇳 Chinese Commands</h2>
+<table border="1">
+<tr><th>Function</th><th>Command</th><th>Example</th></tr>
+<tr><td>Install</td><td>安装</td><td>hpm 安装 firefox</td></tr>
+<tr><td>Remove</td><td>卸载</td><td>hpm 卸载 vlc</td></tr>
+<tr><td>Upgrade</td><td>升级</td><td>hpm 升级</td></tr>
+<tr><td>Refresh</td><td>刷新</td><td>hpm 刷新</td></tr>
+<tr><td>Search</td><td>搜索</td><td>hpm 搜索 chrome</td></tr>
+<tr><td>Info</td><td>信息</td><td>hpm 信息 vlc</td></tr>
+<tr><td>List</td><td>列表</td><td>hpm 列表</td></tr>
+<tr><td>Clean</td><td>清理</td><td>hpm 清理</td></tr>
+<tr><td>Orphans</td><td>孤儿</td><td>hpm 孤儿</td></tr>
+<tr><td>AUR Support</td><td>aur</td><td>hpm aur google-chrome</td></tr>
+<tr><td>Doctor</td><td>诊断</td><td>hpm 诊断</td></tr>
+<tr><td>History</td><td>历史</td><td>hpm 历史</td></tr>
+<tr><td>Help</td><td>--帮助</td><td>hpm --帮助</td></tr>
+</table>
+<p><b>Examples:</b></p>
+<pre><code>Basic: hpm 安装 vlc
+Chained: hpm 刷新 然后 升级 然后 清理</code></pre>
+</div>
+
+<div class="section">
+<h2>🇪🇸 Spanish Commands</h2>
+<table border="1">
+<tr><th>Function</th><th>Command</th><th>Example</th></tr>
+<tr><td>Install</td><td>instalar</td><td>hpm instalar firefox</td></tr>
+<tr><td>Remove</td><td>eliminar</td><td>hpm eliminar vlc</td></tr>
+<tr><td>Upgrade</td><td>actualizar</td><td>hpm actualizar</td></tr>
+<tr><td>Refresh</td><td>sincronizar</td><td>hpm sincronizar</td></tr>
+<tr><td>Search</td><td>buscar</td><td>hpm buscar chrome</td></tr>
+<tr><td>Info</td><td>informacion</td><td>hpm informacion vlc</td></tr>
+<tr><td>List</td><td>lista</td><td>hpm lista</td></tr>
+<tr><td>Clean</td><td>limpiar</td><td>hpm limpiar</td></tr>
+<tr><td>Orphans</td><td>huerfanos</td><td>hpm huerfanos</td></tr>
+<tr><td>AUR Support</td><td>aur</td><td>hpm aur google-chrome</td></tr>
+<tr><td>Doctor</td><td>diagnostico</td><td>hpm diagnostico</td></tr>
+<tr><td>History</td><td>historial</td><td>hpm historial</td></tr>
+<tr><td>Help</td><td>--ayuda</td><td>hpm --ayuda</td></tr>
+</table>
+<p><b>Examples:</b></p>
+<pre><code>Basic: hpm instalar vlc
+Chained: hpm sincronizar luego actualizar luego limpiar</code></pre>
+</div>
+
+<div class="section note">
+<p><b>Note:</b> HPM supports executing multiple commands in a single line using the <code>then</code> keyword (or its native equivalent in your language). For example: <code>hpm s then u then c then d</code>.</p>
+</div>
+
+<hr>
+<a href="../helwan-tools.html">Back</a>
+
+</body>
+</html>

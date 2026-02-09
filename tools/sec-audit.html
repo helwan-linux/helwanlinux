@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hel-sec-audit – User Guide</title>
+</head>
+<body>
+
+<h1>hel-sec-audit – User Guide</h1>
+
+<h2>Overview</h2>
+<p><strong>hel-sec-audit</strong> is a security auditing application for Helwan Linux. It scans your system for vulnerabilities and provides a detailed report of potential security issues.</p>
+
+<h2>Main Window</h2>
+<p>The main window is your starting point. It contains the application title, start button, menus, and theme options.</p>
+
+<ul>
+    <li><strong>Application Title:</strong> Displays <code>🔒 hel-sec-audit 🔍</code>.</li>
+    <li><strong>Start Scan Button:</strong> Launches the security scan. The scan runs in the background so the UI remains responsive.</li>
+    <li><strong>Menus:</strong>
+        <ul>
+            <li><strong>File → Exit:</strong> Closes the application.</li>
+            <li><strong>Settings → Application Settings:</strong> Opens the settings window to configure options.</li>
+            <li><strong>Help → About:</strong> Displays information about the program.</li>
+            <li><strong>Themes:</strong> Change the visual appearance:
+                <ul>
+                    <li><code>Dark Mode 🌙</code>: Dark background with light text.</li>
+                    <li><code>Pink Mode 🌸</code>: Soft pink UI for a fun look.</li>
+                    <li><code>Default Mode 🌤</code>: Standard blue gradient and buttons.</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<h2>Starting a Scan</h2>
+<ol>
+    <li>Click the <strong>Start Scan</strong> button.</li>
+    <li>The <strong>Scan Window</strong> opens and shows progress.</li>
+    <li>The scan runs using a background thread so the main window stays active.</li>
+    <li>Progress updates appear live in the Scan Window.</li>
+    <li>When the scan finishes, the <strong>Results Window</strong> opens with the findings.</li>
+</ol>
+
+<div class="note">
+<strong>Note:</strong> Do not close the application while a scan is running; this may interrupt the process.
+</div>
+
+<h2>Scan Window</h2>
+<p>This window shows the current scan progress:</p>
+<ul>
+    <li>Progress bar with percentage completed.</li>
+    <li>Current check being performed.</li>
+</ul>
+
+<h2>Results Window</h2>
+<p>After the scan, this window displays:</p>
+<ul>
+    <li>List of security issues found.</li>
+    <li>Severity of each issue.</li>
+    <li>Recommendations to fix or improve security.</li>
+</ul>
+
+<h2>Settings Window</h2>
+<p>The settings window allows you to configure application-specific options, such as:</p>
+<ul>
+    <li>Scan preferences (which checks to enable/disable).</li>
+    <li>Notification settings.</li>
+    <li>Theme preferences.</li>
+</ul>
+
+<h2>About Window</h2>
+<p>Provides information about <strong>hel-sec-audit</strong>, including:</p>
+<ul>
+    <li>Version number.</li>
+    <li>Developer information.</li>
+    <li>License and credits.</li>
+</ul>
+
+<h2>Themes</h2>
+<p>You can switch between three visual themes:</p>
+<ul>
+    <li><strong>Dark Mode 🌙:</strong> Dark gray background with light text.</li>
+    <li><strong>Pink Mode 🌸:</strong> Soft pink background with bright pink buttons.</li>
+    <li><strong>Default Mode 🌤:</strong> Gradient gray background with blue buttons.</li>
+</ul>
+
+<h2>Keyboard Shortcuts</h2>
+<ul>
+    <li><code>Ctrl+Q</code>: Exit application.</li>
+</ul>
+
+<div class="note">
+<strong>Tip:</strong> Use themes and settings to make the interface comfortable for long scans.
+</div>
+
+<h2>Troubleshooting</h2>
+<div class="warning">
+<strong>Warning:</strong> If the scan fails or shows errors, make sure you have the necessary permissions to run system checks.
+</div>
+
+<hr>
+<a href="../helwan-tools.html">Back</a>
+
+</body>
+</html>

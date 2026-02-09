@@ -1,0 +1,45 @@
+<h1 id="usb-writer">Helwan USB Writer</h1>
+<p>Helwan USB Writer allows you to safely write ISO files to USB drives and verify their integrity using SHA256 checksums. This guide explains how to use it easily.</p>
+
+<h2>1. Select ISO File</h2>
+<ol>
+    <li>Click <strong>Select ISO</strong> and browse to your ISO file.</li>
+    <li>The file name will appear under <strong>ISO File</strong>.</li>
+    <li>Click <strong>Calculate SHA256</strong> to compute the ISO checksum.</li>
+    <li>The SHA256 value will appear below. This is used for verification later.</li>
+</ol>
+
+<div class="tip">
+<strong>Tip:</strong> You must calculate the checksum before writing the ISO to USB.
+</div>
+
+<h2>2. Select USB Device</h2>
+<ol>
+    <li>Click <strong>Refresh Devices</strong> to detect connected USB drives.</li>
+    <li>Choose your target USB device from the dropdown list.</li>
+    <li><strong>Warning:</strong> All data on the selected USB will be erased!</li>
+</ol>
+
+<h2>3. Write ISO to USB</h2>
+<ol>
+    <li>Once ISO is selected and checksum is calculated, and USB is chosen, click <strong>Write ISO to USB</strong>.</li>
+    <li>You may be prompted to enter your password (required by pkexec for safe writing).</li>
+</ol>
+
+<h2>4. Verify USB Contents (Optional but Recommended)</h2>
+<ol>
+    <li>After writing completes, you will be asked if you want to verify the USB contents.</li>
+    <li>If the checksums match, the USB is verified and ready.</li>
+</ol>
+
+<h2>5. Safety & Best Practices</h2>
+<ul>
+    <li>Always backup important data before writing to a USB drive.</li>
+    <li>Do not remove the USB during writing or verification.</li>
+</ul>
+
+<hr>
+<a href="../helwan-tools.html">Back</a>
+
+</body>
+</html>

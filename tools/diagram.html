@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hel-diagram - User Guide</title>
+</head>
+<body>
+
+<h1 id="diagram">hel-diagram</h1>
+
+<h2>Overview</h2>
+<p><strong>hel-diagram</strong> is a visual tool for generating, viewing, and managing folder structures. You can build directory trees, export diagrams, and create projects from templates.</p>
+
+<h2>Main Window</h2>
+<p>The main window includes:</p>
+<ul>
+    <li><strong>Text Area:</strong> Shows the generated tree diagram or template content.</li>
+    <li><strong>Status Label:</strong> Displays the current folder, template, or export status.</li>
+    <li><strong>Filter Dropdown:</strong> Choose how to view the folder tree:
+        <ul>
+            <li><code>All</code>: Show both folders and files.</li>
+            <li><code>Folders Only</code>: Show only directories.</li>
+            <li><code>Files Only</code>: Show only files.</li>
+        </ul>
+    </li>
+</ul>
+
+<h2>File Menu</h2>
+<ul>
+    <li><strong>Open Folder:</strong> Select a folder to generate a live tree diagram.</li>
+    <li><strong>Open Diagram File:</strong> Load a previously saved diagram (.txt or .md).</li>
+    <li><strong>Save Diagram:</strong> Save the current diagram to a file.</li>
+    <li><strong>New Project from Template:</strong> Load a pre-defined folder structure template:
+        <ul>
+            <li>Python App</li>
+            <li>Web Project</li>
+            <li>Node.js Starter</li>
+        </ul>
+    </li>
+</ul>
+
+<h2>Build Menu</h2>
+<ul>
+    <li><strong>Build from Diagram:</strong> Create the actual folder/file structure on your disk from a diagram file.</li>
+</ul>
+
+<h2>Export Menu</h2>
+<ul>
+    <li><strong>Export as HTML:</strong> Export the tree diagram as an HTML file for sharing or documentation.</li>
+</ul>
+
+<h2>Help Menu</h2>
+<ul>
+    <li><strong>Help:</strong> Displays basic instructions for using the app.</li>
+    <li><strong>About:</strong> Shows the application version and credits.</li>
+</ul>
+
+<h2>Templates</h2>
+<p>Templates are pre-defined folder structures that you can load directly into the text area:</p>
+<ul>
+    <li><strong>Python App:</strong> Basic Python project structure with <code>main.py</code> and <code>requirements.txt</code>.</li>
+    <li><strong>Web Project:</strong> HTML, CSS, and JS folders ready to start a web app.</li>
+    <li><strong>Node.js Starter:</strong> Node project with <code>app.js</code>, <code>package.json</code>, and routes folder.</li>
+</ul>
+
+<h2>Live Folder Watching</h2>
+<p>If <strong>watchdog</strong> is installed, the app automatically refreshes the tree diagram when files/folders change in the selected directory.</p>
+<div class="note">
+    <strong>Tip:</strong> This feature keeps your diagram up-to-date in real time.
+</div>
+
+<h2>Saving and Exporting</h2>
+<ul>
+    <li>Use <strong>Save Diagram</strong> to save your current tree.</li>
+    <li>Use <strong>Export as HTML</strong> to create a shareable HTML version of your diagram.</li>
+</ul>
+
+<h2>Building Folder Structure</h2>
+<p>You can create actual folders and files on your disk by using <strong>Build → Build from Diagram</strong>. Choose a diagram file and select an output folder.</p>
+
+<h2>Filters</h2>
+<p>The filter dropdown allows you to control which items are visible in the tree:</p>
+<ul>
+    <li><strong>All:</strong> Shows everything.</li>
+    <li><strong>Folders Only:</strong> Hides files.</li>
+    <li><strong>Files Only:</strong> Hides folders.</li>
+</ul>
+
+<h2>Keyboard Shortcuts & Notes</h2>
+<ul>
+    <li>Standard shortcuts apply for file dialogs (Ctrl+O, Ctrl+S, etc.).</li>
+    <li>The tree updates automatically when you select a folder.</li>
+    <li>Empty diagrams cannot be saved or exported.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<div class="warning">
+    <strong>Warning:</strong> If the app cannot watch a folder, make sure the <code>watchdog</code> package is installed:
+    <code>pip install watchdog</code>
+</div>
+
+<hr>
+<a href="../helwan-tools.html">Back</a>
+
+</body>
+</html>

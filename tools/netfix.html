@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Helwan Linux NetFix GUI - User Guide</title>
+</head>
+<body>
+
+<h1>Helwan Linux NetFix GUI - User Guide</h1>
+
+<h2>Purpose</h2>
+<p>The Helwan NetFix GUI is a graphical tool for Arch-based systems designed to quickly perform maintenance and fixes. It helps users repair the package database, clear caches, fix corrupted packages, update the system, refresh mirrors, and run a full automatic fix.</p>
+
+<h2>Main Features</h2>
+<ul>
+    <li>Repair Database: Removes unused packages.</li>
+    <li>Clear Cache: Deletes old cached packages.</li>
+    <li>Fix Corrupted Packages: Resolves overwrite or conflict errors.</li>
+    <li>Update System: Synchronizes packages with the latest versions.</li>
+    <li>Refresh Mirrors: Updates package server mirrors for speed and reliability.</li>
+    <li>Full Auto Fix: Runs all maintenance tasks in order automatically.</li>
+    <li>Live Output: Displays command output in a scrollable text area.</li>
+    <li>Progress Bar: Shows ongoing processes visually.</li>
+</ul>
+
+<h2>How It Works</h2>
+<p>The application uses <code>PyQt5</code> for its graphical interface. Commands are executed using <code>pkexec</code> to request administrative privileges. The GUI updates in real-time with command output and progress.</p>
+
+<h3>Buttons & Commands</h3>
+<ul>
+    <li>Each button corresponds to a specific system maintenance task.</li>
+    <li>Clicking a button runs the associated command.</li>
+    <li>While a command is running, the interface is disabled to prevent interference.</li>
+    <li>“Full Auto Fix” runs all commands sequentially, stopping if an error occurs.</li>
+</ul>
+
+<h3>Output & Progress</h3>
+<ul>
+    <li>The text area shows live output from the commands.</li>
+    <li>Errors are clearly labeled with <code>ERROR:</code>.</li>
+    <li>The progress bar appears during command execution to indicate activity.</li>
+</ul>
+
+<h2>Running the Tool</h2>
+<ol>
+    <li>Open a terminal.</li>
+    <li>Navigate to the folder containing <code>hel_netfix_gui_qt.py</code>.</li>
+    <li>Run the tool with:</li>
+    <pre><code>python3 hel_netfix_gui_qt.py</code></pre>
+</ol>
+
+<div class="note">
+    <strong>Notes for Users:</strong>
+    <ul>
+        <li>Do not close the application while commands are running.</li>
+        <li>Ensure <code>pkexec</code> is installed for privilege escalation.</li>
+        <li>The tool is safe for Arch-based systems, but always keep backups of important data.</li>
+    </ul>
+</div>
+
+<hr>
+<a href="../helwan-tools.html">Back</a>
+
+</body>
+</html>

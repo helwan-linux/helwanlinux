@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Helwan Markdown Editor Documentation</title>
+</head>
+<body>
+
+<h1>Helwan Markdown Editor Documentation</h1>
+
+<h2>Overview</h2>
+<p>The <strong>Helwan Markdown Editor</strong> is a user-friendly Markdown editor built with PyQt5. 
+It allows you to write, preview, and export Markdown documents in real-time. The editor supports multiple languages, live preview, code highlighting, math formulas, tables, checklists, footnotes, and notes.</p>
+
+<h2>Features</h2>
+
+<h3>Tabs</h3>
+<ul>
+    <li>Supports multiple tabs.</li>
+    <li>Tabs show the file name. Unsaved changes are marked with <code>*</code>.</li>
+</ul>
+
+<h3>Editor & Preview</h3>
+<ul>
+    <li>Split view: <strong>Editor</strong> on the left, <strong>Preview</strong> on the right.</li>
+    <li>Live preview updates as you type.</li>
+    <li>Markdown features supported:
+        <ul>
+            <li>Headings (#, ##, ###)</li>
+            <li>Bold, Italic, Strikethrough</li>
+            <li>Ordered and Unordered lists</li>
+            <li>Task lists (checkboxes)</li>
+            <li>Links and Images</li>
+            <li>Inline code and Code blocks</li>
+            <li>Blockquotes</li>
+            <li>Horizontal lines</li>
+            <li>Tables</li>
+            <li>Notes (<code>&gt; [!NOTE] ...</code>)</li>
+            <li>Math formulas (<code>$$ ... $$</code>)</li>
+            <li>Footnotes</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Status Bar</h3>
+<ul>
+    <li>Displays <strong>word count</strong> and <strong>character count</strong> for the active tab.</li>
+</ul>
+
+<h3>Toolbar</h3>
+<ul>
+    <li>New, Open, Save, Save As</li>
+    <li>Undo / Redo</li>
+    <li>Formatting actions (headings, bold, italic, etc.)</li>
+    <li>Insert table, math formula, note</li>
+    <li>Find & Replace</li>
+    <li>Text case conversions</li>
+    <li>Export to HTML</li>
+    <li>Theme switcher (Light / Dark)</li>
+    <li>Language selector</li>
+</ul>
+
+<h3>Keyboard Shortcuts</h3>
+<table border="1">
+<tr><th>Action</th><th>Shortcut</th></tr>
+<tr><td>New File</td><td>Ctrl+N</td></tr>
+<tr><td>Open File</td><td>Ctrl+O</td></tr>
+<tr><td>Save File</td><td>Ctrl+S</td></tr>
+<tr><td>Save As</td><td>Ctrl+Shift+S</td></tr>
+<tr><td>Undo</td><td>Ctrl+Z</td></tr>
+<tr><td>Redo</td><td>Ctrl+Y</td></tr>
+<tr><td>Bold</td><td>Ctrl+B</td></tr>
+<tr><td>Italic</td><td>Ctrl+I</td></tr>
+<tr><td>Insert Link</td><td>Ctrl+L</td></tr>
+<tr><td>Insert Image</td><td>Ctrl+Shift+L</td></tr>
+<tr><td>Inline Code</td><td>Ctrl+`</td></tr>
+<tr><td>Code Block</td><td>Ctrl+Shift+`</td></tr>
+<tr><td>Insert Table</td><td>Ctrl+T</td></tr>
+<tr><td>Find/Replace</td><td>Ctrl+F</td></tr>
+</table>
+
+<h2>Language Support</h2>
+<p>The editor supports multiple languages:</p>
+<ul>
+    <li>English</li>
+    <li>العربية</li>
+    <li>中文</li>
+    <li>Español</li>
+</ul>
+
+<h2>Exporting HTML</h2>
+<ol>
+    <li>Click <strong>Export HTML</strong> in the toolbar.</li>
+    <li>Select file location and name.</li>
+    <li>The exported HTML preserves:
+        <ul>
+            <li>Syntax highlighting</li>
+            <li>Task lists</li>
+            <li>Tables</li>
+            <li>Notes</li>
+            <li>Math formulas</li>
+        </ul>
+    </li>
+</ol>
+
+<h2>Notes & Tips</h2>
+<div class="note">
+    Unsaved changes are marked with <code>*</code> in the tab title.<br>
+    Task list checkboxes in Markdown (<code>[ ]</code> and <code>[x]</code>) are automatically converted to ☐ and ✅ in the preview.<br>
+    Math formulas require <strong>MathJax</strong>, loaded automatically in the preview and HTML export.
+</div>
+
+<h2>Troubleshooting</h2>
+<ul>
+    <li><strong>No content to export</strong>: Make sure the editor contains Markdown text before exporting.</li>
+    <li><strong>Preview not updating</strong>: Check that the tab is active and contains text.</li>
+    <li><strong>Language not updating</strong>: Ensure the selected language is supported (en, ar, zh, es).</li>
+</ul>
+
+<h2>Quick Start</h2>
+<ol>
+    <li>Open the editor.</li>
+    <li>Start typing Markdown in the left pane.</li>
+    <li>Preview updates automatically on the right.</li>
+    <li>Use the toolbar or keyboard shortcuts to format text.</li>
+    <li>Save your work with <code>Ctrl+S</code>.</li>
+    <li>Export to HTML via the toolbar.</li>
+</ol>
+
+<hr>
+<a href="../helwan-tools.html">Back</a>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Helwan ISO Signer & USB Writer Guide</title>
+</head>
+<body>
+
+<h1>Helwan ISO Signer & Verifier</h1>
+<p>Helwan ISO Signer & Verifier is a simple tool to sign ISO files and verify their signatures. It is designed for users who want a safe and easy way to generate release files and ensure file integrity.</p>
+
+<h2>1. Sign ISO</h2>
+<ol>
+    <li><strong>Select the ISO File:</strong> Click <code>Browse ISO</code> and choose your ISO file.</li>
+    <li><strong>Select Output Directory:</strong> Choose where the signed files will be saved. Default is <code>release</code> folder.</li>
+    <li><strong>Choose Hash Algorithms:</strong> Pick one or more hashing algorithms. Recommended: <code>SHA256</code>.</li>
+    <li><strong>Start Signing:</strong> Click the <strong>Sign and Generate Release Files</strong> button.</li>
+    <li><strong>View Progress and Logs:</strong> The progress bar shows the overall process. Log messages will appear below.</li>
+    <li><strong>Final Output:</strong> After completion, the output path is displayed. Click <strong>Open Folder</strong> to view the signed files.</li>
+</ol>
+
+<div class="tip">
+<strong>Tip:</strong> At least one hash algorithm must be selected before signing.
+</div>
+
+<h2>2. Verify ISO Signature</h2>
+<ol>
+    <li><strong>Select ISO File:</strong> Click <code>Browse ISO</code> in the Verify tab.</li>
+    <li><strong>Select Signature File:</strong> Choose the corresponding <code>.sig</code> or <code>.asc</code> file.</li>
+    <li><strong>Start Verification:</strong> Click <strong>Start Verification</strong>.</li>
+    <li><strong>Check Results:</strong> Logs will show if verification passed or failed. A message box confirms the result.</li>
+</ol>
+
+<div class="note">
+<strong>Note:</strong> If verification fails, the ISO file may be corrupted or altered.
+</div>
+
+<h2>3. Hash Options Explained</h2>
+<ul>
+    <li><strong>SHA256:</strong> Recommended for general security.</li>
+    <li><strong>SHA512:</strong> Stronger but slower than SHA256.</li>
+    <li><strong>SHA3-512:</strong> Modern and secure alternative.</li>
+    <li><strong>BLAKE2b:</strong> Fast and secure hash.</li>
+    <li><strong>SHA1 / MD5:</strong> Legacy hashes, less secure, only for compatibility.</li>
+</ul>
+
+<h2>4. Tips & Best Practices</h2>
+<ul>
+    <li>Always save ISO files in a safe location before signing.</li>
+    <li>Use SHA256 or higher for production releases.</li>
+    <li>Check the output log to ensure all files were signed correctly.</li>
+    <li>Open the final output folder to confirm that signature files were created.</li>
+</ul>
+
+<hr style="border: 0; height: 2px; background: linear-gradient(to right, transparent, #777, transparent); margin: 50px 0;">
+
+<hr>
+<a href="../helwan-tools.html">Back</a>
+
+</body>
+</html>

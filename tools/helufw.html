@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HelUfw Firewall Manager - User Guide</title>
+</head>
+<body>
+
+<h1>HelUfw Firewall Manager</h1>
+<p>HelUfw is an easy-to-use graphical interface for managing your Linux firewall using UFW (Uncomplicated Firewall). You can view status, add/remove rules, reset settings, and control logging.</p>
+
+<h2>1. Status Tab</h2>
+<ol>
+    <li>The Status tab shows the current firewall status (Active/Inactive).</li>
+    <li>Click <strong>Refresh Status</strong> to update the status and rules.</li>
+    <li>Use <strong>Enable UFW</strong> to activate the firewall or <strong>Disable UFW</strong> to deactivate it.</li>
+    <li>The output area displays detailed UFW information and any command results.</li>
+</ol>
+<div class="tip">
+    <strong>Tip:</strong> After enabling or disabling UFW, always refresh the status to see the updated information.
+</div>
+
+<h2>2. Rules Tab</h2>
+<ol>
+    <li>Add new rules using the "Add New Rule" section:
+        <ul>
+            <li>Select action: <strong>Allow</strong> or <strong>Deny</strong>.</li>
+            <li>Specify port or port range (e.g., 22, 80, 1024:65535).</li>
+            <li>Choose protocol: TCP, UDP, or leave empty for any.</li>
+            <li>Select direction: <strong>in</strong> or <strong>out</strong>, or leave empty for any.</li>
+            <li>Add an optional comment for reference.</li>
+            <li>Click <strong>Add Rule</strong> to apply it.</li>
+        </ul>
+    </li>
+    <li>The "Existing Rules" section lists all current UFW rules.</li>
+    <li>Select a rule and click <strong>Delete Selected Rule</strong> to remove it.</li>
+    <li>Click <strong>Refresh Rules</strong> to update the list.</li>
+</ol>
+<div class="note">
+    <strong>Warning:</strong> Rules require administrative privileges. You may be prompted for your password.
+</div>
+
+<h2>3. Settings Tab</h2>
+<ol>
+    <li><strong>Reset UFW</strong>: Resets all firewall rules to default. Use with caution, as this cannot be undone.</li>
+    <li><strong>UFW Logging</strong>: Control the firewall logging level:
+        <ul>
+            <li>Enable Logging</li>
+            <li>Disable Logging</li>
+            <li>Low Logging Level</li>
+        </ul>
+    </li>
+</ol>
+<div class="tip">
+    <strong>Tip:</strong> Logging helps you monitor blocked or allowed connections for security auditing.
+</div>
+
+<h2>4. General Notes</h2>
+<ul>
+    <li>All actions that modify firewall rules require administrative privileges (you will be prompted for your password).</li>
+    <li>Always refresh the status or rules list after making changes to see accurate information.</li>
+    <li>Be careful when enabling, disabling, or resetting the firewall, as it can affect your system's network connections.</li>
+</ul>
+
+<h2>5. Troubleshooting</h2>
+<ul>
+    <li>If commands fail, ensure you enter the correct password and that <code>pkexec</code> is installed and configured.</li>
+    <li>If rules are not applied correctly, refresh the rules list to check for updates.</li>
+    <li>For unexpected errors, read the output area for detailed information.</li>
+</ul>
+
+<hr>
+<a href="../helwan-tools.html">Back</a>
+
+</body>
+</html>

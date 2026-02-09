@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Helwan Linux Welcome Tool</title>
+</head>
+<body>
+
+<h1>Helwan Linux Welcome Tool</h1>
+
+<p>
+The Helwan Linux Welcome Tool is a system management application designed
+to help users perform common administrative and maintenance tasks without
+needing advanced terminal knowledge.
+</p>
+
+<p>
+This tool focuses on simplicity, safety, and accessibility while still
+providing powerful system features.
+</p>
+
+<hr>
+
+<h2>What This Tool Is For</h2>
+<ul>
+    <li>Keeping the system up to date</li>
+    <li>Managing Linux kernels</li>
+    <li>Cleaning unused system data</li>
+    <li>Managing essential system services</li>
+    <li>Providing system information</li>
+    <li>Sending feedback to developers</li>
+</ul>
+
+<hr>
+
+<h2>Welcome Tab</h2>
+
+<p>
+The Welcome tab is the main control area of the application.
+Most users will use this tab frequently.
+</p>
+
+<h3>System Updates</h3>
+<ul>
+    <li>
+        <strong>Update System (Pacman)</strong><br>
+        Updates all official system packages using Pacman.
+        This is the recommended update method for all users.
+    </li>
+    <li>
+        <strong>Update System (Yay)</strong><br>
+        Updates system and AUR packages using Yay.
+        This option appears only if Yay is installed.
+    </li>
+</ul>
+
+<h3>Kernel Management</h3>
+<ul>
+    <li>
+        <strong>Install Linux Kernel</strong><br>
+        Installs or reinstalls the default Linux kernel.
+    </li>
+    <li>
+        <strong>Install Linux Zen Kernel</strong><br>
+        Installs the Linux Zen kernel, optimized for desktop
+        responsiveness and lower latency.
+    </li>
+</ul>
+
+<p>
+After installing a new kernel, the bootloader is updated automatically.
+A reboot is required to use the new kernel.
+</p>
+
+<h3>Application Theme</h3>
+<p>
+Allows changing the visual theme of the Welcome Tool.
+This affects only the application interface, not the system theme.
+</p>
+
+<h3>Application Language</h3>
+<p>
+Changes the language used inside the Welcome Tool.
+Some language changes may require restarting the application.
+</p>
+
+<h3>Startup Behavior</h3>
+<p>
+The “Show on startup” option controls whether the Welcome Tool
+opens automatically when you log in.
+</p>
+
+<h3>System Language</h3>
+<p>
+Allows changing the system-wide language using locale settings.
+A system reboot is required after applying changes.
+</p>
+
+<h3>System Information</h3>
+<p>
+Displays basic hardware and system information, including:
+</p>
+<ul>
+    <li>Available disk space</li>
+    <li>Processor model</li>
+    <li>Total installed memory (RAM)</li>
+</ul>
+
+<h3>System Utilities</h3>
+<ul>
+    <li>
+        <strong>System Information Details</strong><br>
+        Opens a terminal-based system information tool.
+    </li>
+    <li>
+        <strong>Performance Monitor</strong><br>
+        Opens a terminal tool to monitor CPU and memory usage.
+    </li>
+</ul>
+
+<hr>
+
+<h2>System Cleaner Tab</h2>
+
+<p>
+The System Cleaner tab is used to remove unnecessary files
+and free disk space safely.
+</p>
+
+<h3>Cleaning Options</h3>
+<ul>
+    <li>
+        <strong>Clean Pacman Cache (Full)</strong><br>
+        Removes all downloaded package files.
+        This action cannot be undone.
+    </li>
+    <li>
+        <strong>Remove Orphan Packages</strong><br>
+        Removes packages that are no longer required by any installed software.
+    </li>
+    <li>
+        <strong>Clean Old Packages</strong><br>
+        Removes old package versions while keeping recent ones.
+    </li>
+</ul>
+
+<p>
+All cleaning actions require administrator privileges.
+The user will be asked for confirmation before execution.
+</p>
+
+<hr>
+
+<h2>System Services Tab</h2>
+
+<p>
+The System Services tab provides quick access to essential system services
+and common maintenance actions.
+</p>
+
+<ul>
+    <li>Start important system services</li>
+    <li>Stop services safely</li>
+    <li>Restart services when needed</li>
+    <li>Apply quick fixes for known system issues</li>
+</ul>
+
+<p>
+This tab is designed to reduce the need for manual systemctl commands.
+</p>
+
+<hr>
+
+<h2>Feedback Tab</h2>
+
+<p>
+The Feedback tab allows users to communicate directly with
+the Helwan Linux development team.
+</p>
+
+<ul>
+    <li>Report bugs or errors</li>
+    <li>Suggest new features</li>
+    <li>Share general feedback about the system</li>
+</ul>
+
+<p>
+Feedback is stored temporarily during the session
+and sent when the user confirms submission.
+</p>
+
+<hr>
+
+<h2>Security and Permissions</h2>
+
+<p>
+Some actions performed by this tool require administrator (root) privileges.
+</p>
+
+<ul>
+    <li>The system will always ask for confirmation</li>
+    <li>No action is executed silently</li>
+    <li>No background changes are made without user approval</li>
+</ul>
+
+<hr>
+
+<h2>Important Notes</h2>
+
+<ul>
+    <li>Always read warnings before performing system actions</li>
+    <li>Kernel changes require a system reboot</li>
+    <li>Language changes may require restarting the application or the system</li>
+</ul>
+
+<p>
+This tool is designed to be safe for regular users
+while still providing powerful system management features.
+</p>
+
+<hr>
+<a href="../helwan-tools.html">Back</a>
+
+</body>
+</html>
