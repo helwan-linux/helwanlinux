@@ -2,147 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Momo - Helwan Linux Diagnostics Tool</title>
+    <title>Momo - Your System Doctor</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Momo - Helwan Linux Diagnostics Tool</h1>
-<p><strong>Version:</strong> Stable (TUI with Curses and Persistent Config)<br>
-<strong>Author:</strong> Saeed Badrelden</p>
 
-<div class="section">
-<h2>Overview</h2>
-<p>Momo is a Linux-based **diagnostics tool** designed to help users quickly check the health and performance of their system, including RAM, CPU, storage, and network. It provides a **text-based interactive menu (TUI)** for easy navigation and offers persistent configuration for stress test durations.</p>
+<h1>🔍 Momo: The Helwan System Doctor</h1>
 
-<p>The tool is designed for both **quick checks** and **deep diagnostics**, including:</p>
-<ul>
-    <li>RAM and CPU stress testing with configurable durations</li>
-    <li>Disk health and performance checks (including NVMe)</li>
-    <li>Network bandwidth and path quality testing</li>
-    <li>Automatic logging of all test outputs</li>
-</ul>
+<main>
+    <section>
+        <h2>What is Momo?</h2>
+        <p>Think of **Momo** as a digital doctor for your computer. Instead of typing complex commands to find out why your PC is slow or if your hardware is healthy, Momo gives you a simple menu to check everything in one place [cite: 2026-01-26].</p>
+    </section>
 
-<p class="note"><strong>Note:</strong> Some tests require root privileges (especially NVMe and disk tests). Running Momo with <code>sudo</code> is recommended for full functionality.</p>
-</div>
+    <section>
+        <h2>How to start?</h2>
+        <p>You don't need to look for files or folders. Just open your <strong>Terminal</strong> and type one simple word:</p>
+        <pre><code>momo</code></pre>
+        <p>That's it! The "Doctor" is now ready to assist you [cite: 2026-01-26, 2026-01-28].</p>
+    </section>
 
-<div class="section">
-<h2>System Requirements</h2>
-<ul>
-    <li>Linux operating system</li>
-    <li>Terminal with enough size (recommended ≥ 80x24)</li>
-    <li>Installed tools (some are optional):
+    <section>
+        <h2>What can Momo do for you?</h2>
         <ul>
-            <li><code>stress-ng</code> (RAM/CPU stress tests)</li>
-            <li><code>memtester</code> (RAM endurance tests)</li>
-            <li><code>sysbench</code> (RAM speed test)</li>
-            <li><code>smartctl</code> (SMART disk tests)</li>
-            <li><code>fio</code> (Disk IOPS test)</li>
-            <li><code>iperf3</code> (Network bandwidth)</li>
-            <li><code>mtr</code> (Network path quality)</li>
-            <li><code>nvme-cli</code> (NVMe diagnostics)</li>
+            <li><strong>Check Health:</strong> See if your hard drive or SSD is healthy or needs replacement [cite: 2026-01-26].</li>
+            <li><strong>Test Speed:</strong> Measure how fast your internet and memory (RAM) really are [cite: 2026-01-26].</li>
+            <li><strong>Stress Test:</strong> Make sure your computer won't crash when you do heavy work or gaming [cite: 2026-01-26].</li>
+            <li><strong>Temperature Monitor:</strong> Check if your device is getting too hot [cite: 2026-01-26].</li>
         </ul>
-    </li>
-</ul>
-</div>
+    </section>
 
-<div class="section">
-<h2>Launching Momo</h2>
-<p>Open a terminal and run:</p>
-<pre><code>python3 momo.py</code></pre>
-<p>Or, for full disk and NVMe functionality:</p>
-<pre><code>sudo python3 momo.py</code></pre>
-</div>
+    <section>
+        <h2>Easy Controls</h2>
+        <p>Momo is designed to be used with just your keyboard:</p>
+        <ul>
+            <li><strong>Arrow Keys (↑/↓):</strong> Move between different tests.</li>
+            <li><strong>Enter:</strong> Start the selected test.</li>
+            <li><strong>"A" Key:</strong> The "Auto-Check" mode—Momo will test everything for you automatically! [cite: 2026-01-26]</li>
+            <li><strong>"Q" Key:</strong> Safely close the doctor's office and go back to work.</li>
+        </ul>
+    </section>
 
-<div class="section">
-<h2>Interactive Menu</h2>
-<p>Once launched, Momo presents a scrollable menu where you can select tests using the arrow keys and <strong>Enter</strong>. Additional commands:</p>
-<ul>
-    <li><strong>A</strong> - Run all tests automatically</li>
-    <li><strong>Q</strong> - Quit Momo</li>
-    <li>During a test, <strong>Q/S</strong> - Stop the test early</li>
-    <li>Scroll within long test outputs using <strong>↑</strong> and <strong>↓</strong> keys</li>
-</ul>
-</div>
+    <div class="tip">
+        <strong>Pro Tip:</strong> If you want to check your disks (SSD/HDD), run the command as <code>sudo momo</code>. This gives the doctor "X-ray" vision to see deep into your hardware [cite: 2026-01-26].
+    </div>
 
-<div class="section">
-<h2>Available Tests</h2>
-<ul>
-    <li><strong>RAM Usage:</strong> Displays current memory usage.</li>
-    <li><strong>RAM Details:</strong> Shows detailed memory info from /proc/meminfo.</li>
-    <li><strong>RAM Stress Test (Short):</strong> Quick RAM stress using stress-ng.</li>
-    <li><strong>RAM Endurance Test (Long):</strong> Extended RAM stress test for endurance.</li>
-    <li><strong>Memtester 512M (x5):</strong> Runs memory tests 5 times.</li>
-    <li><strong>Memory Speed:</strong> Measures memory speed using sysbench.</li>
-    <li><strong>Swap Usage:</strong> Shows active swap partitions.</li>
-    <li><strong>CPU Info:</strong> Detailed CPU information.</li>
-    <li><strong>CPU Stress Test:</strong> Stress test for CPU using stress-ng.</li>
-    <li><strong>Smart Status:</strong> SMART health info for disks (requires smartctl).</li>
-    <li><strong>Disk IOPS (Fio Test):</strong> Measures random I/O performance using fio.</li>
-    <li><strong>Disk Usage:</strong> Shows filesystem usage (df -h).</li>
-    <li><strong>Sensors:</strong> Displays CPU and motherboard temperatures.</li>
-    <li><strong>Network Ping (Basic):</strong> Simple ping test to google.com.</li>
-    <li><strong>Network Bandwidth (iperf3):</strong> Measures download/upload bandwidth.</li>
-    <li><strong>Network Path Quality (mtr):</strong> Measures latency and packet loss along the network path.</li>
-    <li><strong>NVMe Smart Info:</strong> SMART info for NVMe drives (requires nvme-cli and sudo).</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Stress Test Configuration</h2>
-<p>You can configure the duration (in seconds) of stress tests through the menu option <strong>"Configure Stress Test Durations"</strong>. Changes are saved automatically in a persistent configuration file (~/.momo/config.json).</p>
-
-<p><strong>Default Durations:</strong></p>
-<ul>
-    <li>RAM Stress Test (Short): 30 seconds</li>
-    <li>RAM Endurance Test (Long): 3600 seconds (1 hour)</li>
-    <li>CPU Stress Test: 20 seconds</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Logs</h2>
-<p>All test outputs are automatically logged in:</p>
-<pre><code>~/.momo/logs</code></pre>
-<p>Logs include timestamp, test name, and full command output for later review.</p>
-</div>
-
-<div class="section">
-<h2>Tips for Users</h2>
-<ul>
-    <li>Run Momo in a standard terminal with enough size to avoid display issues.</li>
-    <li>Root privileges are recommended for Disk and NVMe tests.</li>
-    <li>Long stress tests may take a significant amount of time depending on duration settings.</li>
-    <li>Network tests require an active internet connection.</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Troubleshooting</h2>
-<ul>
-    <li><strong>Missing tool errors:</strong> Install the required tool using your package manager (e.g., pacman, apt, dnf).</li>
-    <li><strong>Curses display issues:</strong> Ensure your terminal is large enough; resizing may adjust scrollable menus automatically.</li>
-    <li><strong>Permission errors:</strong> Use sudo for tests that require access to hardware devices.</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Summary</h2>
-<p>Momo is a **user-friendly, terminal-based diagnostic tool** designed to give both quick insights and deep system tests for Helwan Linux (and compatible Linux distributions). It is ideal for power users and technicians who want:</p>
-<ul>
-    <li>Real-time monitoring</li>
-    <li>Stress and endurance testing</li>
-    <li>Automated logging and historical review</li>
-</ul>
-
-<p>With persistent configuration and scrolling UI, Momo ensures that both short and long-running tests are handled efficiently and safely.</p>
-</div>
+    <section>
+        <h2>Peace of Mind</h2>
+        <p>Everything Momo finds is saved in a report file in your home folder (<code>~/.momo/logs</code>). If you ever need help from the Helwan community, you can just send them these logs [cite: 2026-01-26].</p>
+    </section>
+</main>
 
 <footer>
-<p style="text-align:center; font-size:0.9em; color:#777;">&copy; Saeed Badrelden - Helwan Linux Diagnostics Tool</p>
+    <p>&copy; 2026 Helwan Linux - Built for everyone [cite: 2026-02-05].</p>
 </footer>
 
 <hr>
-<a href="../helwan-tools.html">Back</a>
+<a href="../helwan-tools.html">Back to Tools List</a>
 
 </body>
 </html>
