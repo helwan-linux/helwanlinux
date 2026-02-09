@@ -2,65 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Helwan Linux NetFix GUI - User Guide</title>
+    <title>NetFix Repair - User Guide</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Helwan Linux NetFix GUI - User Guide</h1>
+<h1>🛠️ NetFix: Your One-Click System Repair Tool</h1>
 
-<h2>Purpose</h2>
-<p>The Helwan NetFix GUI is a graphical tool for Arch-based systems designed to quickly perform maintenance and fixes. It helps users repair the package database, clear caches, fix corrupted packages, update the system, refresh mirrors, and run a full automatic fix.</p>
+<div class="section">
+    <h2>What is NetFix?</h2>
+    <p>NetFix is a graphical "First Aid" kit for your Helwan Linux system. It is designed to fix common system issues like broken updates, slow download mirrors, or package database errors without needing to know complex terminal commands.</p>
+</div>
 
-<h2>Main Features</h2>
-<ul>
-    <li>Repair Database: Removes unused packages.</li>
-    <li>Clear Cache: Deletes old cached packages.</li>
-    <li>Fix Corrupted Packages: Resolves overwrite or conflict errors.</li>
-    <li>Update System: Synchronizes packages with the latest versions.</li>
-    <li>Refresh Mirrors: Updates package server mirrors for speed and reliability.</li>
-    <li>Full Auto Fix: Runs all maintenance tasks in order automatically.</li>
-    <li>Live Output: Displays command output in a scrollable text area.</li>
-    <li>Progress Bar: Shows ongoing processes visually.</li>
-</ul>
-
-<h2>How It Works</h2>
-<p>The application uses <code>PyQt5</code> for its graphical interface. Commands are executed using <code>pkexec</code> to request administrative privileges. The GUI updates in real-time with command output and progress.</p>
-
-<h3>Buttons & Commands</h3>
-<ul>
-    <li>Each button corresponds to a specific system maintenance task.</li>
-    <li>Clicking a button runs the associated command.</li>
-    <li>While a command is running, the interface is disabled to prevent interference.</li>
-    <li>“Full Auto Fix” runs all commands sequentially, stopping if an error occurs.</li>
-</ul>
-
-<h3>Output & Progress</h3>
-<ul>
-    <li>The text area shows live output from the commands.</li>
-    <li>Errors are clearly labeled with <code>ERROR:</code>.</li>
-    <li>The progress bar appears during command execution to indicate activity.</li>
-</ul>
-
-<h2>Running the Tool</h2>
-<ol>
-    <li>Open a terminal.</li>
-    <li>Navigate to the folder containing <code>hel_netfix_gui_qt.py</code>.</li>
-    <li>Run the tool with:</li>
-    <pre><code>python3 hel_netfix_gui_qt.py</code></pre>
-</ol>
-
-<div class="note">
-    <strong>Notes for Users:</strong>
+<div class="section">
+    <h2>Main Features</h2>
     <ul>
-        <li>Do not close the application while commands are running.</li>
-        <li>Ensure <code>pkexec</code> is installed for privilege escalation.</li>
-        <li>The tool is safe for Arch-based systems, but always keep backups of important data.</li>
+        <li><strong>Repair Database:</strong> Cleans up and fixes your app list database.</li>
+        <li><strong>Clear Cache:</strong> Frees up space by removing old downloaded files.</li>
+        <li><strong>Fix Corrupted Packages:</strong> Automatically repairs apps that didn't install correctly.</li>
+        <li><strong>Update System:</strong> Ensures your entire system is running the latest versions.</li>
+        <li><strong>Refresh Mirrors:</strong> Finds the fastest servers for faster downloads.</li>
+        <li><strong>Full Auto Fix:</strong> The "Magic Button" that runs all repairs in order automatically.</li>
     </ul>
 </div>
 
+<div class="section">
+    <h2>How to Use NetFix</h2>
+    <p>Using NetFix is as simple as clicking a button:</p>
+    <ol>
+        <li>Start the tool by typing <code>netfix</code> in your terminal or selecting it from the menu.</li>
+        <li>When the window appears, click the button for the task you need.</li>
+        <li>A window will pop up asking for your password (this is safe; it needs permission to fix system files).</li>
+        <li>Watch the <strong>Live Output</strong> area to see exactly what the tool is doing.</li>
+        <li>Wait for the <strong>Progress Bar</strong> to finish before closing the app.</li>
+    </ol>
+</div>
+
+<div class="section">
+    <h2>Quick Tips</h2>
+    <ul>
+        <li><strong>Don't Interrupt:</strong> Avoid closing the window while a repair is in progress to prevent errors.</li>
+        <li><strong>One at a Time:</strong> The interface will temporarily lock while a task is running to keep your system safe.</li>
+        <li><strong>Error Reading:</strong> If a task fails, errors will be clearly marked in red (ERROR:) in the text area.</li>
+    </ul>
+</div>
+
+<div class="section note">
+    <strong>User Safety:</strong> NetFix is built for Arch-based systems and is safe to use. However, as with any system repair, it's always good practice to keep backups of your important files.
+</div>
+
 <hr>
-<a href="../helwan-tools.html">Back</a>
+<p style="text-align:center;">&copy; 2026 Helwan Linux - System Maintenance Made Simple</p>
+
+<hr>
+<a href="../helwan-tools.html">Back to Tools List</a>
 
 </body>
 </html>
