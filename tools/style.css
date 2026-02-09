@@ -1,0 +1,68 @@
+/* Helwan Linux Tools - Global Style */
+:root {
+    --bg-color: #2c3e50;    /* رمادي بحري غامق */
+    --text-color: #ecf0f1;  /* أبيض مائل للرمادي */
+    --accent-color: #3498db; /* أزرق هادئ */
+    --note-bg: #34495e;     /* رمادي فاتح للملاحظات */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    color: var(--accent-color);
+    border-bottom: 1px solid #455a64;
+    padding-bottom: 10px;
+}
+
+ul, ol {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px 40px;
+    border-radius: 8px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+code, pre {
+    background-color: #1c2833;
+    color: #e67e22;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: block;
+    overflow-x: auto;
+}
+
+.note, .tip, .warning {
+    background-color: var(--note-bg);
+    border-left: 5px solid var(--accent-color);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.warning { border-left-color: #e74c3c; }
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #455a64;
+    margin: 40px 0;
+}
