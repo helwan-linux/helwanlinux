@@ -1,0 +1,2050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tools - Helwan Linux</title>
+
+  <!-- Plausible Analytics -->
+  <script defer data-domain="helwan-linux.github.io"
+          src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"></script>
+  <script>
+    window.plausible = window.plausible || function () {
+      (window.plausible.q = window.plausible.q || []).push(arguments)
+    }
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon Standard -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    
+    <!-- Apple Devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    
+    <!-- Android / PWA -->
+    <link rel="icon" type="image/png" sizes="192x192" href="img/web-app-manifest-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/web-app-manifest-512x512.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="img/site.webmanifest">
+  
+</head>
+<body>
+<!-- https://www.youtube.com/@HelwanO.S -->
+
+<div style="background-color: #0d1117; color: #c9d1d9; padding: 12px 20px; text-align: center; font-family: sans-serif; font-size: 16px;">
+  📡 This is the <strong style="color: #58a6ff;">official YouTube channel</strong> of Helwan Linux — get the latest updates, system demos, and exclusive features.
+  <span style="white-space: nowrap; margin-left: 10px;">
+    <a href="https://www.youtube.com/@HelwanO.S" target="_blank" style="display: inline-flex; align-items: center; background: #ff0000; color: white; padding: 6px 12px; border-radius: 6px; text-decoration: none; font-weight: bold;">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube" style="width: 20px; height: 20px; margin-right: 8px;">
+      Visit Channel
+    </a>
+  </span>
+</div>
+
+  <!-- Logo -->
+  <div style="text-align:center; margin-top: 20px;">
+    <img src="img/logo.png" alt="Helwan Linux Logo" width="150" />
+  </div>
+
+<!-- Navigation -->
+<nav style="text-align:center; margin:20px 0;">
+  <a href="index.html">Home</a> |
+	<a href="bsd.html">BSD</a> |
+  <a href="download.html">Download</a> |
+  <a href="philosophy.html">Philosophy</a> |
+  <a href="helwan-comparison.html">Helwan vs Others</a> |
+  <a href="documentation.html">Documentation</a> |
+  <a href="packages.html">Packages</a> |
+  <a href="news.html">News</a> |
+  <a href="assistant.html">Assistant</a> |
+  <a href="about.html">About</a> |
+  <a href="Contributing.html">Join Us</a> |
+  <a href="donate.html">Donate</a> |
+  <a href="contact.html">Contact</a> |
+  <a href="nostalgia.html">Nostalgia</a> |
+  <a href="hel-tribute-hall.html">Tribute Hall</a> |
+  <a href="credits.html">Credits</a> |
+  <a href="archive.html">archive</a> |
+</nav>
+<hr style="border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); margin: 60px 0;">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helwan Linux Tools Documentation</title>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: auto; padding: 20px; }
+        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 50px; }
+        pre { background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; }
+        code { font-family: monospace; color: #c7254e; background: #f9f2f4; padding: 2px 4px; border-radius: 4px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background: #f8f8f8; }
+        .section { margin-bottom: 30px; }
+        .tip { background: #e7f3fe; border-left: 5px solid #2196F3; padding: 10px; margin: 15px 0; }
+        .note { background: #fff3cd; border-left: 5px solid #ffecb5; padding: 10px; margin: 15px 0; }
+    </style>
+</head>
+<body>
+
+<div class="index-container" style="background: #fdfdfd; padding: 25px; border: 1px solid #ddd; border-radius: 10px; margin: 20px auto; max-width: 800px; font-family: sans-serif;">
+    <h2 style="color: #333; border-bottom: 2px solid #777; padding-bottom: 10px;">🛠️ Helwan Linux Tools Index</h2>
+    <ul style="line-height: 1.8; list-style: none; padding-left: 0;">
+        <li><a href="#hpm" style="text-decoration: none; color: #007bff; font-weight: bold;">📦 Helwan Package Manager (HPM)</a></li>
+        <li><a href="#welcome-tool" style="text-decoration: none; color: #007bff; font-weight: bold;">👋 Helwan Welcome Tool</a></li>
+        <li><a href="#momo" style="text-decoration: none; color: #007bff; font-weight: bold;">🔍 Momo - Diagnostics Tool</a></li>
+        <li><a href="#hel-sync" style="text-decoration: none; color: #007bff; font-weight: bold;">📲 Hel-Sync Pro 2026</a></li>
+        <li><a href="#system-manager" style="text-decoration: none; color: #007bff; font-weight: bold;">📊 Helwan System Manager</a></li>
+        <li><a href="#helfetch" style="text-decoration: none; color: #007bff; font-weight: bold;">🖥️ Helfetch - System Info</a></li>
+        <li><a href="#markdown-editor" style="text-decoration: none; color: #007bff; font-weight: bold;">📝 Helwan Markdown Editor</a></li>
+        <li><a href="#iso-signer" style="text-decoration: none; color: #007bff; font-weight: bold;">🔑 Helwan ISO Signer & Verifier</a></li>
+        <li><a href="#usb-writer" style="text-decoration: none; color: #007bff; font-weight: bold;">💾 Helwan USB Writer</a></li>
+        <li><a href="#helufw" style="text-decoration: none; color: #007bff; font-weight: bold;">🛡️ HelUfw Firewall Manager</a></li>
+        <li><a href="#text-editor" style="text-decoration: none; color: #007bff; font-weight: bold;">✍️ Helwan Text Editor</a></li>
+        <li><a href="#sec" style="text-decoration: none; color: #007bff; font-weight: bold;">🛡️ Helwan Security Audit</a></li>
+        <li><a href="#diagram" style="text-decoration: none; color: #007bff; font-weight: bold;">📊 Helwan Diagram Tool</a></li>
+        <li><a href="#netfix" style="text-decoration: none; color: #007bff; font-weight: bold;">🌐 Helwan Netfix</a></li>
+        <li><a href="#gait" style="text-decoration: none; color: #007bff; font-weight: bold;">🤖 Helwan AI Gate</a></li>
+        <li><a href="#store" style="text-decoration: none; color: #007bff; font-weight: bold;">🛒 Helwan Store</a></li>
+        <li><a href="#blocks" style="text-decoration: none; color: #007bff; font-weight: bold;">🧱 Helwan Blocks</a></li>
+    </ul>
+</div>
+<hr style="border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); margin: 60px 0;">
+
+<h1 id="hpm">📦 Helwan Package Manager (HPM)</h1>
+<div class="section">
+<h2>Overview</h2>
+<p>HPM is a human-friendly package manager for Helwan Linux, built on top of <code>pacman</code> with natural-language command chaining. Each language supports its native "then" keyword for executing multiple commands in a row.</p>
+</div>
+
+<div class="section">
+<h2>Installation</h2>
+<p><b>On Helwan Linux:</b></p>
+<pre><code>sudo pacman -S hpm</code></pre>
+<p><b>On other Arch-based distributions:</b></p>
+<pre><code>yay -S hpm</code></pre>
+</div>
+
+<div class="section">
+<h2>🇪🇬 Arabic Commands</h2>
+<table>
+<tr><th>Function</th><th>Command</th><th>Example</th></tr>
+<tr><td>Install Package</td><td>تثبيت</td><td>hpm تثبيت firefox</td></tr>
+<tr><td>Remove Package</td><td>إزالة</td><td>hpm إزالة vlc</td></tr>
+<tr><td>Upgrade System</td><td>ترقية</td><td>hpm ترقية</td></tr>
+<tr><td>Refresh Repos</td><td>تحديث</td><td>hpm تحديث</td></tr>
+<tr><td>Search Package</td><td>بحث</td><td>hpm بحث chrome</td></tr>
+<tr><td>Package Info</td><td>معلومات</td><td>hpm معلومات vlc</td></tr>
+<tr><td>List Installed</td><td>قائمة</td><td>hpm قائمة</td></tr>
+<tr><td>System Clean</td><td>تنظيف</td><td>hpm تنظيف</td></tr>
+<tr><td>Orphan Packages</td><td>يتيم</td><td>hpm يتيم</td></tr>
+<tr><td>AUR Repo</td><td>aur</td><td>hpm aur google-chrome</td></tr>
+<tr><td>System Doctor</td><td>فحص</td><td>hpm فحص</td></tr>
+<tr><td>Command History</td><td>سجل</td><td>hpm سجل</td></tr>
+<tr><td>Help</td><td>--مساعدة</td><td>hpm --مساعدة</td></tr>
+</table>
+<p><b>Examples:</b></p>
+<pre><code>Basic: hpm تثبيت vlc
+Chained: hpm تحديث ثم ترقية ثم تنظيف ثم فحص</code></pre>
+</div>
+
+<div class="section">
+<h2>🇺🇸 English Commands</h2>
+<table>
+<tr><th>Function</th><th>Command</th><th>Shortcut</th><th>Example</th></tr>
+<tr><td>Install</td><td>install</td><td>i</td><td>hpm i firefox</td></tr>
+<tr><td>Remove</td><td>remove</td><td>r</td><td>hpm r vlc</td></tr>
+<tr><td>Upgrade</td><td>upgrade</td><td>u</td><td>hpm u</td></tr>
+<tr><td>Refresh</td><td>refresh</td><td>s</td><td>hpm s</td></tr>
+<tr><td>Search</td><td>search</td><td>q</td><td>hpm q chrome</td></tr>
+<tr><td>Info</td><td>info</td><td>I</td><td>hpm I vlc</td></tr>
+<tr><td>List Installed</td><td>list</td><td>l</td><td>hpm l</td></tr>
+<tr><td>Clean</td><td>clean</td><td>c</td><td>hpm c</td></tr>
+<tr><td>Orphans</td><td>orphans</td><td>o</td><td>hpm o</td></tr>
+<tr><td>AUR Support</td><td>aur</td><td>a</td><td>hpm a google-chrome</td></tr>
+<tr><td>Doctor</td><td>doctor</td><td>d</td><td>hpm d</td></tr>
+<tr><td>History</td><td>history</td><td>h</td><td>hpm h</td></tr>
+<tr><td>Help</td><td>--help</td><td>-</td><td>hpm --help</td></tr>
+</table>
+<p><b>Examples:</b></p>
+<pre><code>Basic: hpm i vlc
+Chained: hpm s then u then c then d</code></pre>
+</div>
+
+<div class="section">
+<h2>🇨🇳 Chinese Commands</h2>
+<table>
+<tr><th>Function</th><th>Command</th><th>Example</th></tr>
+<tr><td>Install</td><td>安装</td><td>hpm 安装 firefox</td></tr>
+<tr><td>Remove</td><td>卸载</td><td>hpm 卸载 vlc</td></tr>
+<tr><td>Upgrade</td><td>升级</td><td>hpm 升级</td></tr>
+<tr><td>Refresh</td><td>刷新</td><td>hpm 刷新</td></tr>
+<tr><td>Search</td><td>搜索</td><td>hpm 搜索 chrome</td></tr>
+<tr><td>Info</td><td>信息</td><td>hpm 信息 vlc</td></tr>
+<tr><td>List</td><td>列表</td><td>hpm 列表</td></tr>
+<tr><td>Clean</td><td>清理</td><td>hpm 清理</td></tr>
+<tr><td>Orphans</td><td>孤儿</td><td>hpm 孤儿</td></tr>
+<tr><td>AUR Support</td><td>aur</td><td>hpm aur google-chrome</td></tr>
+<tr><td>Doctor</td><td>诊断</td><td>hpm 诊断</td></tr>
+<tr><td>History</td><td>历史</td><td>hpm 历史</td></tr>
+<tr><td>Help</td><td>--帮助</td><td>hpm --帮助</td></tr>
+</table>
+<p><b>Examples:</b></p>
+<pre><code>Basic: hpm 安装 vlc
+Chained: hpm 刷新 然后 升级 然后 清理</code></pre>
+</div>
+
+<div class="section">
+<h2>🇪🇸 Spanish Commands</h2>
+<table>
+<tr><th>Function</th><th>Command</th><th>Example</th></tr>
+<tr><td>Install</td><td>instalar</td><td>hpm instalar firefox</td></tr>
+<tr><td>Remove</td><td>eliminar</td><td>hpm eliminar vlc</td></tr>
+<tr><td>Upgrade</td><td>actualizar</td><td>hpm actualizar</td></tr>
+<tr><td>Refresh</td><td>sincronizar</td><td>hpm sincronizar</td></tr>
+<tr><td>Search</td><td>buscar</td><td>hpm buscar chrome</td></tr>
+<tr><td>Info</td><td>informacion</td><td>hpm informacion vlc</td></tr>
+<tr><td>List</td><td>lista</td><td>hpm lista</td></tr>
+<tr><td>Clean</td><td>limpiar</td><td>hpm limpiar</td></tr>
+<tr><td>Orphans</td><td>huerfanos</td><td>hpm huerfanos</td></tr>
+<tr><td>AUR Support</td><td>aur</td><td>hpm aur google-chrome</td></tr>
+<tr><td>Doctor</td><td>diagnostico</td><td>hpm diagnostico</td></tr>
+<tr><td>History</td><td>historial</td><td>hpm historial</td></tr>
+<tr><td>Help</td><td>--ayuda</td><td>hpm --ayuda</td></tr>
+</table>
+<p><b>Examples:</b></p>
+<pre><code>Basic: hpm instalar vlc
+Chained: hpm sincronizar luego actualizar luego limpiar</code></pre>
+</div>
+
+<div class="section note">
+<p><b>Note:</b> HPM supports executing multiple commands in a single line using the <code>then</code> keyword (or its native equivalent in your language). For example: <code>hpm s then u then c then d</code>.</p>
+</div>
+
+
+<hr style="border: 0; height: 2px; background: linear-gradient(to right, transparent, #777, transparent); margin: 50px 0;">
+<h1 id="welcome-tool">Helwan Linux Welcome Tool</h1>
+
+<p>
+The Helwan Linux Welcome Tool is a system management application designed
+to help users perform common administrative and maintenance tasks without
+needing advanced terminal knowledge.
+</p>
+
+<p>
+This tool focuses on simplicity, safety, and accessibility while still
+providing powerful system features.
+</p>
+
+<hr>
+
+<h2>What This Tool Is For</h2>
+<ul>
+    <li>Keeping the system up to date</li>
+    <li>Managing Linux kernels</li>
+    <li>Cleaning unused system data</li>
+    <li>Managing essential system services</li>
+    <li>Providing system information</li>
+    <li>Sending feedback to developers</li>
+</ul>
+
+<hr>
+
+<h2>Welcome Tab</h2>
+
+<p>
+The Welcome tab is the main control area of the application.
+Most users will use this tab frequently.
+</p>
+
+<h3>System Updates</h3>
+<ul>
+    <li>
+        <strong>Update System (Pacman)</strong><br>
+        Updates all official system packages using Pacman.
+        This is the recommended update method for all users.
+    </li>
+    <li>
+        <strong>Update System (Yay)</strong><br>
+        Updates system and AUR packages using Yay.
+        This option appears only if Yay is installed.
+    </li>
+</ul>
+
+<h3>Kernel Management</h3>
+<ul>
+    <li>
+        <strong>Install Linux Kernel</strong><br>
+        Installs or reinstalls the default Linux kernel.
+    </li>
+    <li>
+        <strong>Install Linux Zen Kernel</strong><br>
+        Installs the Linux Zen kernel, optimized for desktop
+        responsiveness and lower latency.
+    </li>
+</ul>
+
+<p>
+After installing a new kernel, the bootloader is updated automatically.
+A reboot is required to use the new kernel.
+</p>
+
+<h3>Application Theme</h3>
+<p>
+Allows changing the visual theme of the Welcome Tool.
+This affects only the application interface, not the system theme.
+</p>
+
+<h3>Application Language</h3>
+<p>
+Changes the language used inside the Welcome Tool.
+Some language changes may require restarting the application.
+</p>
+
+<h3>Startup Behavior</h3>
+<p>
+The “Show on startup” option controls whether the Welcome Tool
+opens automatically when you log in.
+</p>
+
+<h3>System Language</h3>
+<p>
+Allows changing the system-wide language using locale settings.
+A system reboot is required after applying changes.
+</p>
+
+<h3>System Information</h3>
+<p>
+Displays basic hardware and system information, including:
+</p>
+<ul>
+    <li>Available disk space</li>
+    <li>Processor model</li>
+    <li>Total installed memory (RAM)</li>
+</ul>
+
+<h3>System Utilities</h3>
+<ul>
+    <li>
+        <strong>System Information Details</strong><br>
+        Opens a terminal-based system information tool.
+    </li>
+    <li>
+        <strong>Performance Monitor</strong><br>
+        Opens a terminal tool to monitor CPU and memory usage.
+    </li>
+</ul>
+
+<hr>
+
+<h2>System Cleaner Tab</h2>
+
+<p>
+The System Cleaner tab is used to remove unnecessary files
+and free disk space safely.
+</p>
+
+<h3>Cleaning Options</h3>
+<ul>
+    <li>
+        <strong>Clean Pacman Cache (Full)</strong><br>
+        Removes all downloaded package files.
+        This action cannot be undone.
+    </li>
+    <li>
+        <strong>Remove Orphan Packages</strong><br>
+        Removes packages that are no longer required by any installed software.
+    </li>
+    <li>
+        <strong>Clean Old Packages</strong><br>
+        Removes old package versions while keeping recent ones.
+    </li>
+</ul>
+
+<p>
+All cleaning actions require administrator privileges.
+The user will be asked for confirmation before execution.
+</p>
+
+<hr>
+
+<h2>System Services Tab</h2>
+
+<p>
+The System Services tab provides quick access to essential system services
+and common maintenance actions.
+</p>
+
+<ul>
+    <li>Start important system services</li>
+    <li>Stop services safely</li>
+    <li>Restart services when needed</li>
+    <li>Apply quick fixes for known system issues</li>
+</ul>
+
+<p>
+This tab is designed to reduce the need for manual systemctl commands.
+</p>
+
+<hr>
+
+<h2>Feedback Tab</h2>
+
+<p>
+The Feedback tab allows users to communicate directly with
+the Helwan Linux development team.
+</p>
+
+<ul>
+    <li>Report bugs or errors</li>
+    <li>Suggest new features</li>
+    <li>Share general feedback about the system</li>
+</ul>
+
+<p>
+Feedback is stored temporarily during the session
+and sent when the user confirms submission.
+</p>
+
+<hr>
+
+<h2>Security and Permissions</h2>
+
+<p>
+Some actions performed by this tool require administrator (root) privileges.
+</p>
+
+<ul>
+    <li>The system will always ask for confirmation</li>
+    <li>No action is executed silently</li>
+    <li>No background changes are made without user approval</li>
+</ul>
+
+<hr>
+
+<h2>Important Notes</h2>
+
+<ul>
+    <li>Always read warnings before performing system actions</li>
+    <li>Kernel changes require a system reboot</li>
+    <li>Language changes may require restarting the application or the system</li>
+</ul>
+
+<p>
+This tool is designed to be safe for regular users
+while still providing powerful system management features.
+</p>
+
+<p>
+Thank you for using Helwan Linux.
+</p>
+<hr style="border: 0; height: 2px; background: linear-gradient(to right, transparent, #777, transparent); margin: 50px 0;">
+
+<h1 id="Momo" - Helwan Linux Diagnostics Tool</h1>
+
+<p><strong>Version:</strong> Stable (TUI with Curses and Persistent Config)<br>
+<strong>Author:</strong> Saeed Badrelden</p>
+
+<div class="section">
+<h2>Overview</h2>
+<p>Momo is a Linux-based **diagnostics tool** designed to help users quickly check the health and performance of their system, including RAM, CPU, storage, and network. It provides a **text-based interactive menu (TUI)** for easy navigation and offers persistent configuration for stress test durations.</p>
+
+<p>The tool is designed for both **quick checks** and **deep diagnostics**, including:</p>
+<ul>
+    <li>RAM and CPU stress testing with configurable durations</li>
+    <li>Disk health and performance checks (including NVMe)</li>
+    <li>Network bandwidth and path quality testing</li>
+    <li>Automatic logging of all test outputs</li>
+</ul>
+
+<p class="note"><strong>Note:</strong> Some tests require root privileges (especially NVMe and disk tests). Running Momo with <code>sudo</code> is recommended for full functionality.</p>
+</div>
+
+<div class="section">
+<h2>System Requirements</h2>
+<ul>
+    <li>Linux operating system</li>
+    <li>Terminal with enough size (recommended ≥ 80x24)</li>
+    <li>Installed tools (some are optional):
+        <ul>
+            <li><code>stress-ng</code> (RAM/CPU stress tests)</li>
+            <li><code>memtester</code> (RAM endurance tests)</li>
+            <li><code>sysbench</code> (RAM speed test)</li>
+            <li><code>smartctl</code> (SMART disk tests)</li>
+            <li><code>fio</code> (Disk IOPS test)</li>
+            <li><code>iperf3</code> (Network bandwidth)</li>
+            <li><code>mtr</code> (Network path quality)</li>
+            <li><code>nvme-cli</code> (NVMe diagnostics)</li>
+        </ul>
+    </li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Launching Momo</h2>
+<p>Open a terminal and run:</p>
+<pre><code>python3 momo.py</code></pre>
+<p>Or, for full disk and NVMe functionality:</p>
+<pre><code>sudo python3 momo.py</code></pre>
+</div>
+
+<div class="section">
+<h2>Interactive Menu</h2>
+<p>Once launched, Momo presents a scrollable menu where you can select tests using the arrow keys and <strong>Enter</strong>. Additional commands:</p>
+<ul>
+    <li><strong>A</strong> - Run all tests automatically</li>
+    <li><strong>Q</strong> - Quit Momo</li>
+    <li>During a test, <strong>Q/S</strong> - Stop the test early</li>
+    <li>Scroll within long test outputs using <strong>↑</strong> and <strong>↓</strong> keys</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Available Tests</h2>
+<ul>
+    <li><strong>RAM Usage:</strong> Displays current memory usage.</li>
+    <li><strong>RAM Details:</strong> Shows detailed memory info from /proc/meminfo.</li>
+    <li><strong>RAM Stress Test (Short):</strong> Quick RAM stress using stress-ng.</li>
+    <li><strong>RAM Endurance Test (Long):</strong> Extended RAM stress test for endurance.</li>
+    <li><strong>Memtester 512M (x5):</strong> Runs memory tests 5 times.</li>
+    <li><strong>Memory Speed:</strong> Measures memory speed using sysbench.</li>
+    <li><strong>Swap Usage:</strong> Shows active swap partitions.</li>
+    <li><strong>CPU Info:</strong> Detailed CPU information.</li>
+    <li><strong>CPU Stress Test:</strong> Stress test for CPU using stress-ng.</li>
+    <li><strong>Smart Status:</strong> SMART health info for disks (requires smartctl).</li>
+    <li><strong>Disk IOPS (Fio Test):</strong> Measures random I/O performance using fio.</li>
+    <li><strong>Disk Usage:</strong> Shows filesystem usage (df -h).</li>
+    <li><strong>Sensors:</strong> Displays CPU and motherboard temperatures.</li>
+    <li><strong>Network Ping (Basic):</strong> Simple ping test to google.com.</li>
+    <li><strong>Network Bandwidth (iperf3):</strong> Measures download/upload bandwidth.</li>
+    <li><strong>Network Path Quality (mtr):</strong> Measures latency and packet loss along the network path.</li>
+    <li><strong>NVMe Smart Info:</strong> SMART info for NVMe drives (requires nvme-cli and sudo).</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Stress Test Configuration</h2>
+<p>You can configure the duration (in seconds) of stress tests through the menu option <strong>"Configure Stress Test Durations"</strong>. Changes are saved automatically in a persistent configuration file (~/.momo/config.json).</p>
+
+<p><strong>Default Durations:</strong></p>
+<ul>
+    <li>RAM Stress Test (Short): 30 seconds</li>
+    <li>RAM Endurance Test (Long): 3600 seconds (1 hour)</li>
+    <li>CPU Stress Test: 20 seconds</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Logs</h2>
+<p>All test outputs are automatically logged in:</p>
+<pre><code>~/.momo/logs</code></pre>
+<p>Logs include timestamp, test name, and full command output for later review.</p>
+</div>
+
+<div class="section">
+<h2>Tips for Users</h2>
+<ul>
+    <li>Run Momo in a standard terminal with enough size to avoid display issues.</li>
+    <li>Root privileges are recommended for Disk and NVMe tests.</li>
+    <li>Long stress tests may take a significant amount of time depending on duration settings.</li>
+    <li>Network tests require an active internet connection.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Troubleshooting</h2>
+<ul>
+    <li><strong>Missing tool errors:</strong> Install the required tool using your package manager (e.g., pacman, apt, dnf).</li>
+    <li><strong>Curses display issues:</strong> Ensure your terminal is large enough; resizing may adjust scrollable menus automatically.</li>
+    <li><strong>Permission errors:</strong> Use sudo for tests that require access to hardware devices.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Summary</h2>
+<p>Momo is a **user-friendly, terminal-based diagnostic tool** designed to give both quick insights and deep system tests for Helwan Linux (and compatible Linux distributions). It is ideal for power users and technicians who want:</p>
+<ul>
+    <li>Real-time monitoring</li>
+    <li>Stress and endurance testing</li>
+    <li>Automated logging and historical review</li>
+</ul>
+
+<p>With persistent configuration and scrolling UI, Momo ensures that both short and long-running tests are handled efficiently and safely.</p>
+</div>
+
+<footer>
+<p style="text-align:center; font-size:0.9em; color:#777;">&copy; Saeed Badrelden - Helwan Linux Diagnostics Tool</p>
+</footer>
+
+<hr style="border: 0; height: 2px; background: linear-gradient(to right, transparent, #777, transparent); margin: 50px 0;">
+
+
+<h1 id="hel-sync>Hel-Sync- User Guide</h1>
+
+<div class="section">
+<h2>1. Preparation & Connection</h2>
+<ol>
+    <li>Ensure your PC and mobile device are on the same Wi-Fi network.</li>
+    <li>Launch Hel-Sync Pro on your PC. The Dashboard window will open.</li>
+    <li>Click the <b>🔗 GENERATE ACCESS QR</b> button.</li>
+    <li>Scan the QR code with your mobile camera or QR reader to open the mobile control page.</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>2. Sending Files from PC to Mobile</h2>
+<ol>
+    <li>Click <b>1. ADD FILES</b> and select files to send.</li>
+    <li>The selected files appear in the <b>READY TO SEND</b> list.</li>
+    <li>Click <b>2. START SENDING</b> to begin sharing files.</li>
+    <li>Monitor the transfer progress in the <b>System Status</b> section and progress bar.</li>
+    <li>Once completed, the status will show <b>Files Shared Successfully!</b></li>
+    <li>Files can now be downloaded on your mobile device instantly.</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>3. Receiving Files from Mobile</h2>
+<ol>
+    <li>Select files to upload on the mobile page and press <b>Upload</b>.</li>
+    <li>Files will appear in the <b>RECEIVED</b> list on the PC Dashboard.</li>
+    <li>You will get a notification for each received file.</li>
+    <li>Open the downloads folder using <b>OPEN DOWNLOADS</b> button to access the files.</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>4. Clipboard Text Synchronization</h2>
+<h3>Send Text from PC to Mobile:</h3>
+<ol>
+    <li>Enter your text in the <b>OUTGOING TEXT</b> box.</li>
+    <li>Click <b>SEND TEXT NOW</b> to push text to mobile.</li>
+</ol>
+
+<h3>Receive Text from Mobile to PC:</h3>
+<ol>
+    <li>Incoming text appears in the <b>INCOMING TEXT</b> box.</li>
+    <li>Click <b>COPY TO CLIPBOARD</b> to copy it.</li>
+    <li>Click <b>PASTE FROM PC</b> to paste clipboard text into the outgoing box.</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>5. Remote PC Control via Mobile</h2>
+<ul>
+    <li><b>Touchpad:</b> Move the mouse cursor by touching and dragging.</li>
+    <li><b>Left Click / Right Click:</b> Perform mouse clicks.</li>
+    <li><b>Volume & Media Controls:</b>
+        <ul>
+            <li>🔊 Vol Up / 🔉 Vol Down – adjust volume.</li>
+            <li>🔇 Mute – mute/unmute sound.</li>
+            <li>⏯️ Play / Pause – media control.</li>
+            <li>🔒 Lock PC – lock your computer instantly.</li>
+            <li>🔔 Buzz PC – play an alert sound on PC.</li>
+        </ul>
+    </li>
+</ul>
+</div>
+
+<div class="section">
+<h2>6. Find My Mobile</h2>
+<ol>
+    <li>Click <b>🔔 FIND MY MOBILE</b> in the PC Dashboard.</li>
+    <li>The mobile device will vibrate, play sound, and flash its screen.</li>
+    <li>The alert automatically stops after 8 seconds.</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>7. Stop Sharing</h2>
+<ol>
+    <li>Click <b>🛑 STOP SHARING</b> to terminate file sharing.</li>
+    <li>The <b>READY TO SEND</b> list will clear, and no new files will be sent.</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>8. Notes & Tips</h2>
+<ul>
+    <li>Always grant permission when a mobile upload request appears.</li>
+    <li>Use a new QR code for each session for security.</li>
+    <li>All received files are saved in: <code>~/Downloads/HelSync</code></li>
+    <li>Use the <b>OPEN DOWNLOADS</b> button to open the folder quickly.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>9. Help & About</h2>
+<ul>
+    <li>Click <b>Help</b> in the PC Dashboard to view this guide inside the app.</li>
+    <li>Click <b>About</b> to check the version and key features of Hel-Sync.</li>
+</ul>
+</div>
+<hr style="border: 0; height: 2px; background: linear-gradient(to right, transparent, #777, transparent); margin: 50px 0;">
+
+<h1 id="system-manager>Helwan System Manager - User Guide</h1>
+
+<div class="section">
+<h2>1. Interface Overview</h2>
+<p>The Helwan System Manager dashboard allows you to monitor and manage your system in real-time. Key components include:</p>
+<ul>
+    <li><b>Language Selector:</b> Choose your preferred language for the interface.</li>
+    <li><b>Search Bar:</b> Quickly filter and find processes by name or PID.</li>
+    <li><b>Tab Navigation:</b> Access different sections like Performance, Processes, System Info, Network, Startup Programs, and About.</li>
+    <li><b>Status Bar:</b> Displays real-time notifications and system status messages.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>2. Performance Tab</h2>
+<p>This tab displays real-time graphs of system performance metrics:</p>
+<ul>
+    <li><b>CPU Usage:</b> Current CPU usage percentage.</li>
+    <li><b>RAM Usage:</b> Current memory usage percentage.</li>
+    <li><b>Disk Read:</b> Disk read speed in KB/s.</li>
+    <li><b>Disk Write:</b> Disk write speed in KB/s.</li>
+</ul>
+<p>Graphs update continuously to give you live system feedback.</p>
+</div>
+
+<div class="section">
+<h2>3. Processes Tab</h2>
+<p>Manage active processes on your system:</p>
+<ul>
+    <li><b>Table:</b> Lists all running processes with details like PID, CPU, RAM usage, etc.</li>
+    <li><b>Refresh:</b> Update the process list.</li>
+    <li><b>Kill:</b> Terminate a selected process.</li>
+    <li><b>Renice:</b> Adjust the process priority.</li>
+    <li><b>Inspect:</b> View detailed information about a process.</li>
+    <li><b>Suspend / Resume:</b> Pause or continue a process.</li>
+    <li><b>Set CPU Affinity:</b> Assign which CPU cores the process can use.</li>
+    <li><b>Set I/O Priority:</b> Adjust input/output scheduling priority.</li>
+    <li><b>Open File Location:</b> Open the folder where the process's executable is located.</li>
+</ul>
+<p><b>Tip:</b> Click column headers to sort the processes by CPU, memory, or name.</p>
+</div>
+
+<div class="section">
+<h2>4. System Info Tab</h2>
+<p>View detailed system and disk information:</p>
+<ul>
+    <li><b>System Info:</b> Displays OS, kernel version, CPU, RAM, and other system details.</li>
+    <li><b>Disk Info:</b> Shows mounted disks, partitions, and free/used space.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>5. Network & Sensors Tab</h2>
+<p>Monitor system network connections and sensors:</p>
+<ul>
+    <li><b>Network Connections:</b> Lists active network connections and ports.</li>
+    <li><b>Hardware Sensors:</b> Displays CPU temperature, fan speeds, and voltages.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>6. Network Monitor Tab</h2>
+<p>Live graphing of network activity:</p>
+<ul>
+    <li><b>Upload:</b> Shows outgoing traffic in KB/s.</li>
+    <li><b>Download:</b> Shows incoming traffic in KB/s.</li>
+    <li><b>Interface Info:</b> Details of your network interfaces (IP, speed, status).</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>7. Startup Programs Tab</h2>
+<p>Manage programs that start with your system:</p>
+<ul>
+    <li><b>Refresh Startup Programs:</b> Update the list of programs that launch at startup.</li>
+    <li><b>Disable Selected:</b> Prevent a selected program from starting automatically.</li>
+    <li><b>Enable Selected:</b> Re-enable a disabled startup program.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>8. About Tab</h2>
+<p>Displays application information, version, and developer credits.</p>
+</div>
+
+<div class="section">
+<h2>9. Additional Notes</h2>
+<ul>
+    <li>All actions are performed safely with system permissions in mind.</li>
+    <li>Sorting and filtering make it easy to locate processes quickly.</li>
+    <li>Graphs provide a visual representation of performance trends.</li>
+</ul>
+</div>
+
+<div class="section note">
+<h3>Security Tip</h3>
+<p>Be cautious when killing or suspending processes. Terminating critical system processes can destabilize your system.</p>
+</div>
+<hr style="border: 0; height: 2px; background: linear-gradient(to right, transparent, #777, transparent); margin: 50px 0;">
+
+
+<h1 id="helfetch>Helfetch - Helwan Linux System Information Tool</h1>
+
+<div class="section">
+<h2>Overview</h2>
+<p>Helfetch is a custom system information fetcher for Helwan Linux. It collects and displays comprehensive information about your system, hardware, desktop environment, and network. The tool can also show an inspirational quote and the Helwan Linux ASCII art logo.</p>
+</div>
+
+<div class="section">
+<h2>Usage</h2>
+<p>Run Helfetch from the terminal:</p>
+<pre><code>python3 helfetch.py [options]</code></pre>
+<p>Available options:</p>
+<ul>
+    <li><code>--no-logo</code>: Do not display the Helwan Linux ASCII art logo at the top.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Data Collected</h2>
+<p>Helfetch gathers data from multiple sources and modules:</p>
+<ul>
+    <li><b>System Info:</b> OS version, kernel, security status, system integrity.</li>
+    <li><b>Hardware Info:</b> RAM size and state, disk usage and performance.</li>
+    <li><b>Desktop Info:</b> Desktop environment, window manager, screen resolution.</li>
+    <li><b>Network Info:</b> Active connections, IP addresses, network interfaces.</li>
+</ul>
+<p>All collected data is merged into a single structured output.</p>
+</div>
+
+<div class="section">
+<h2>Output</h2>
+<p>The output is formatted in a human-readable style with optional colors for clarity:</p>
+<ul>
+    <li><b>ASCII Logo:</b> Displays the Helwan Linux logo (optional).</li>
+    <li><b>Information Keys:</b> Colored according to <code>info_key_color</code> setting.</li>
+    <li><b>Information Values:</b> Colored according to <code>info_value_color</code> setting.</li>
+    <li><b>RAM State:</b> Displayed with a colored bar indicating usage level.</li>
+    <li><b>Inspirational Quote:</b> A motivational message included at the bottom.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Modules Overview</h2>
+<ul>
+    <li><b>core.system_info:</b> Retrieves OS details, security, and integrity status.</li>
+    <li><b>core.hardware_info:</b> Retrieves RAM, disk, and general hardware stats.</li>
+    <li><b>core.desktop_info:</b> Retrieves desktop environment and display info.</li>
+    <li><b>core.network_info:</b> Retrieves network connection and interface info.</li>
+    <li><b>display.ascii_art:</b> Provides Helwan Linux ASCII logo and color codes.</li>
+    <li><b>display.formatter:</b> Formats and colors the output for terminal display.</li>
+    <li><b>config.default_config:</b> Contains default color settings for keys and values.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Error Handling</h2>
+<ul>
+    <li>If an error occurs during execution, it will be displayed in red with a descriptive message.</li>
+    <li>Pressing <code>Ctrl + C</code> safely exits the program without crashing.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Example Output</h2>
+<pre><code>
+
+
+OS: Helwan Linux 2026
+Kernel: 6.18.7-zen
+CPU: Intel i7-12700K
+RAM: 32 GB (75% used)
+Disk: 1 TB (60% free)
+Desktop: KDE Plasma 6.6
+Network: Connected via Wi-Fi (192.168.1.10)
+Quote: "Keep pushing forward, success is near."
+</code></pre>
+</div>
+
+<div class="section note">
+<h3>Note</h3>
+<p>Helfetch is designed to work on Helwan Linux but may display partial information on other Linux distributions. Use <code>--no-logo</code> if you want a cleaner terminal output without ASCII art.</p>
+</div>
+<hr style="border: 0; height: 2px; background: linear-gradient(to right, transparent, #777, transparent); margin: 50px 0;">
+
+<h1 id="markdown-editor>Helwan Markdown Editor Documentation</h1>
+
+<h2>Overview</h2>
+<p>The <strong>Helwan Markdown Editor</strong> is a user-friendly Markdown editor built with PyQt5. 
+It allows you to write, preview, and export Markdown documents in real-time. The editor supports multiple languages, live preview, code highlighting, math formulas, tables, checklists, footnotes, and notes.</p>
+
+<h2>Features</h2>
+
+<h3>Tabs</h3>
+<ul>
+    <li>Supports multiple tabs.</li>
+    <li>Tabs show the file name. Unsaved changes are marked with <code>*</code>.</li>
+</ul>
+
+<h3>Editor & Preview</h3>
+<ul>
+    <li>Split view: <strong>Editor</strong> on the left, <strong>Preview</strong> on the right.</li>
+    <li>Live preview updates as you type.</li>
+    <li>Markdown features supported:
+        <ul>
+            <li>Headings (#, ##, ###)</li>
+            <li>Bold, Italic, Strikethrough</li>
+            <li>Ordered and Unordered lists</li>
+            <li>Task lists (checkboxes)</li>
+            <li>Links and Images</li>
+            <li>Inline code and Code blocks</li>
+            <li>Blockquotes</li>
+            <li>Horizontal lines</li>
+            <li>Tables</li>
+            <li>Notes (<code>&gt; [!NOTE] ...</code>)</li>
+            <li>Math formulas (<code>$$ ... $$</code>)</li>
+            <li>Footnotes</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Status Bar</h3>
+<ul>
+    <li>Displays <strong>word count</strong> and <strong>character count</strong> for the active tab.</li>
+</ul>
+
+<h3>Toolbar</h3>
+<ul>
+    <li>New, Open, Save, Save As</li>
+    <li>Undo / Redo</li>
+    <li>Formatting actions (headings, bold, italic, etc.)</li>
+    <li>Insert table, math formula, note</li>
+    <li>Find & Replace</li>
+    <li>Text case conversions</li>
+    <li>Export to HTML</li>
+    <li>Theme switcher (Light / Dark)</li>
+    <li>Language selector</li>
+</ul>
+
+<h3>Keyboard Shortcuts</h3>
+<table>
+<tr><th>Action</th><th>Shortcut</th></tr>
+<tr><td>New File</td><td>Ctrl+N</td></tr>
+<tr><td>Open File</td><td>Ctrl+O</td></tr>
+<tr><td>Save File</td><td>Ctrl+S</td></tr>
+<tr><td>Save As</td><td>Ctrl+Shift+S</td></tr>
+<tr><td>Undo</td><td>Ctrl+Z</td></tr>
+<tr><td>Redo</td><td>Ctrl+Y</td></tr>
+<tr><td>Bold</td><td>Ctrl+B</td></tr>
+<tr><td>Italic</td><td>Ctrl+I</td></tr>
+<tr><td>Insert Link</td><td>Ctrl+L</td></tr>
+<tr><td>Insert Image</td><td>Ctrl+Shift+L</td></tr>
+<tr><td>Inline Code</td><td>Ctrl+`</td></tr>
+<tr><td>Code Block</td><td>Ctrl+Shift+`</td></tr>
+<tr><td>Insert Table</td><td>Ctrl+T</td></tr>
+<tr><td>Find/Replace</td><td>Ctrl+F</td></tr>
+</table>
+
+<h2>Language Support</h2>
+<p>The editor supports multiple languages:</p>
+<ul>
+    <li>English</li>
+    <li>العربية</li>
+    <li>中文</li>
+    <li>Español</li>
+</ul>
+
+<h2>Exporting HTML</h2>
+<ol>
+    <li>Click <strong>Export HTML</strong> in the toolbar.</li>
+    <li>Select file location and name.</li>
+    <li>The exported HTML preserves:
+        <ul>
+            <li>Syntax highlighting</li>
+            <li>Task lists</li>
+            <li>Tables</li>
+            <li>Notes</li>
+            <li>Math formulas</li>
+        </ul>
+    </li>
+</ol>
+
+<h2>Notes & Tips</h2>
+<div class="note">
+    Unsaved changes are marked with <code>*</code> in the tab title.<br>
+    Task list checkboxes in Markdown (<code>[ ]</code> and <code>[x]</code>) are automatically converted to ☐ and ✅ in the preview.<br>
+    Math formulas require <strong>MathJax</strong>, loaded automatically in the preview and HTML export.
+</div>
+
+<h2>Troubleshooting</h2>
+<ul>
+    <li><strong>No content to export</strong>: Make sure the editor contains Markdown text before exporting.</li>
+    <li><strong>Preview not updating</strong>: Check that the tab is active and contains text.</li>
+    <li><strong>Language not updating</strong>: Ensure the selected language is supported (en, ar, zh, es).</li>
+</ul>
+
+<h2>Quick Start</h2>
+<ol>
+    <li>Open the editor.</li>
+    <li>Start typing Markdown in the left pane.</li>
+    <li>Preview updates automatically on the right.</li>
+    <li>Use the toolbar or keyboard shortcuts to format text.</li>
+    <li>Save your work with <code>Ctrl+S</code>.</li>
+    <li>Export to HTML via the toolbar.</li>
+</ol>
+
+
+<hr style="border: 0; height: 2px; background: linear-gradient(to right, transparent, #777, transparent); margin: 50px 0;">
+
+
+
+<h1 id="iso-signer">Helwan ISO Signer & Verifier</h1>
+<p>Helwan ISO Signer & Verifier is a simple tool to sign ISO files and verify their signatures. It is designed for users who want a safe and easy way to generate release files and ensure file integrity.</p>
+
+<h2>1. Sign ISO</h2>
+<p>Follow these steps to sign an ISO file:</p>
+<ol>
+    <li><strong>Select the ISO File:</strong> Click <code>Browse ISO</code> and choose your ISO file.</li>
+    <li><strong>Select Output Directory:</strong> Choose where the signed files will be saved. Default is <code>release</code> folder.</li>
+    <li><strong>Choose Hash Algorithms:</strong> Pick one or more hashing algorithms. Recommended: <code>SHA256</code>.</li>
+    <li><strong>Start Signing:</strong> Click the <strong>Sign and Generate Release Files</strong> button.</li>
+    <li><strong>View Progress and Logs:</strong> The progress bar shows the overall process. Log messages will appear below.</li>
+    <li><strong>Final Output:</strong> After completion, the output path is displayed. Click <strong>Open Folder</strong> to view the signed files.</li>
+</ol>
+
+<div class="tip">
+<strong>Tip:</strong> At least one hash algorithm must be selected before signing.
+</div>
+
+<h2>2. Verify ISO Signature</h2>
+<p>To verify a signed ISO file:</p>
+<ol>
+    <li><strong>Select ISO File:</strong> Click <code>Browse ISO</code> in the Verify tab.</li>
+    <li><strong>Select Signature File:</strong> Choose the corresponding <code>.sig</code> or <code>.asc</code> file.</li>
+    <li><strong>Start Verification:</strong> Click <strong>Start Verification</strong>.</li>
+    <li><strong>Check Results:</strong> Logs will show if verification passed or failed. A message box confirms the result.</li>
+</ol>
+
+<div class="note">
+<strong>Note:</strong> If verification fails, the ISO file may be corrupted or altered.
+</div>
+
+<h2>3. Hash Options Explained</h2>
+<ul>
+    <li><strong>SHA256:</strong> Recommended for general security.</li>
+    <li><strong>SHA512:</strong> Stronger but slower than SHA256.</li>
+    <li><strong>SHA3-512:</strong> Modern and secure alternative.</li>
+    <li><strong>BLAKE2b:</strong> Fast and secure hash.</li>
+    <li><strong>SHA1 / MD5:</strong> Legacy hashes, less secure, only for compatibility.</li>
+</ul>
+
+<h2>4. Tips & Best Practices</h2>
+<ul>
+    <li>Always save ISO files in a safe location before signing.</li>
+    <li>Use SHA256 or higher for production releases.</li>
+    <li>Check the output log to ensure all files were signed correctly.</li>
+    <li>Open the final output folder to confirm that signature files were created.</li>
+</ul>
+
+<h2>5. Troubleshooting</h2>
+<ul>
+    <li>If the Sign button does not respond, make sure the ISO file exists and at least one hash algorithm is selected.</li>
+    <li>If verification fails unexpectedly, ensure you are using the correct signature file for the ISO.</li>
+    <li>Use the log output area to check for any errors during signing or verification.</li>
+</ul>
+
+<h2>6. Keyboard Shortcuts</h2>
+<ul>
+    <li>Browse ISO: Click the button in each tab.</li>
+    <li>Start Signing: Click <strong>Sign and Generate Release Files</strong>.</li>
+    <li>Start Verification: Click <strong>Start Verification</strong>.</li>
+</ul>
+
+<h2>7. Support</h2>
+<p>For issues or feedback, contact Helwan Linux community or visit the official documentation website.</p>
+<hr style="border: 0; height: 2px; background: linear-gradient(to right, transparent, #777, transparent); margin: 50px 0;">
+
+
+<h1 id="usb-writer">Helwan USB Writer</h1>
+<p>Helwan USB Writer allows you to safely write ISO files to USB drives and verify their integrity using SHA256 checksums. This guide explains how to use it easily.</p>
+
+<h2>1. Select ISO File</h2>
+<ol>
+    <li>Click <strong>Select ISO</strong> and browse to your ISO file.</li>
+    <li>The file name will appear under <strong>ISO File</strong>.</li>
+    <li>Click <strong>Calculate SHA256</strong> to compute the ISO checksum.</li>
+    <li>The SHA256 value will appear below. This is used for verification later.</li>
+</ol>
+
+<div class="tip">
+<strong>Tip:</strong> You must calculate the checksum before writing the ISO to USB.
+</div>
+
+<h2>2. Select USB Device</h2>
+<ol>
+    <li>Click <strong>Refresh Devices</strong> to detect connected USB drives.</li>
+    <li>Choose your target USB device from the dropdown list.</li>
+    <li><strong>Warning:</strong> All data on the selected USB will be erased!</li>
+</ol>
+
+<div class="note">
+Make sure you select the correct USB device to avoid losing important data.
+</div>
+
+<h2>3. Write ISO to USB</h2>
+<ol>
+    <li>Once ISO is selected and checksum is calculated, and USB is chosen, click <strong>Write ISO to USB</strong>.</li>
+    <li>You may be prompted to enter your password (required by pkexec for safe writing).</li>
+    <li>Progress and logs will appear in the log section.</li>
+</ol>
+
+<h2>4. Verify USB Contents (Optional but Recommended)</h2>
+<ol>
+    <li>After writing completes, you will be asked if you want to verify the USB contents.</li>
+    <li>If you choose yes, the program will compute the SHA256 checksum of the USB content (up to ISO file size) and compare it to the original ISO.</li>
+    <li>If the checksums match, the USB is verified and ready.</li>
+</ol>
+
+<div class="tip">
+This step ensures your USB drive is bootable and the ISO was written correctly.
+</div>
+
+<h2>5. Log / Progress</h2>
+<p>The log area shows:</p>
+<ul>
+    <li>Information messages like scanning devices and starting operations.</li>
+    <li>Progress updates for writing and verification.</li>
+    <li>Errors or warnings if something goes wrong.</li>
+</ul>
+
+<h2>6. Safety & Best Practices</h2>
+<ul>
+    <li>Always backup important data before writing to a USB drive.</li>
+    <li>Verify the checksum of ISO files before writing.</li>
+    <li>Do not remove the USB during writing or verification.</li>
+    <li>Use the <strong>Refresh Devices</strong> button if your USB does not appear.</li>
+</ul>
+
+<h2>7. Troubleshooting</h2>
+<ul>
+    <li>If writing fails, check your password and permissions.</li>
+    <li>If USB verification fails, try reformatting the USB or using another device.</li>
+    <li>Check logs for detailed error messages.</li>
+</ul>
+
+<h2>8. Notes</h2>
+<ul>
+    <li>pkexec is required on Linux to safely write ISO files to USB.</li>
+    <li>This tool only supports SHA256 verification for ISO and USB.</li>
+</ul>
+<hr style="border: 0; height: 2px; background: linear-gradient(to right, transparent, #777, transparent); margin: 50px 0;">
+
+
+<h1 id="helufw">HelUfw Firewall Manager</h1>
+<p>HelUfw is an easy-to-use graphical interface for managing your Linux firewall using UFW (Uncomplicated Firewall). You can view status, add/remove rules, reset settings, and control logging.</p>
+
+<h2>1. Status Tab</h2>
+<ol>
+    <li>The Status tab shows the current firewall status (Active/Inactive).</li>
+    <li>Click <strong>Refresh Status</strong> to update the status and rules.</li>
+    <li>Use <strong>Enable UFW</strong> to activate the firewall or <strong>Disable UFW</strong> to deactivate it.</li>
+    <li>The output area displays detailed UFW information and any command results.</li>
+</ol>
+<div class="tip">
+Tip: After enabling or disabling UFW, always refresh the status to see the updated information.
+</div>
+
+<h2>2. Rules Tab</h2>
+<ol>
+    <li>Add new rules using the "Add New Rule" section:
+        <ul>
+            <li>Select action: <strong>Allow</strong> or <strong>Deny</strong>.</li>
+            <li>Specify port or port range (e.g., 22, 80, 1024:65535).</li>
+            <li>Choose protocol: TCP, UDP, or leave empty for any.</li>
+            <li>Select direction: <strong>in</strong> or <strong>out</strong>, or leave empty for any.</li>
+            <li>Add an optional comment for reference.</li>
+            <li>Click <strong>Add Rule</strong> to apply it.</li>
+        </ul>
+    </li>
+    <li>The "Existing Rules" section lists all current UFW rules.</li>
+    <li>Select a rule and click <strong>Delete Selected Rule</strong> to remove it.</li>
+    <li>Click <strong>Refresh Rules</strong> to update the list.</li>
+</ol>
+<div class="note">
+Warning: Rules require administrative privileges. You may be prompted for your password.
+</div>
+
+<h2>3. Settings Tab</h2>
+<ol>
+    <li><strong>Reset UFW</strong>: Resets all firewall rules to default. Use with caution, as this cannot be undone.</li>
+    <li><strong>UFW Logging</strong>: Control the firewall logging level:
+        <ul>
+            <li>Enable Logging</li>
+            <li>Disable Logging</li>
+            <li>Low Logging Level</li>
+        </ul>
+    </li>
+</ol>
+<div class="tip">
+Tip: Logging helps you monitor blocked or allowed connections for security auditing.
+</div>
+
+<h2>4. General Notes</h2>
+<ul>
+    <li>All actions that modify firewall rules require administrative privileges (you will be prompted for your password).</li>
+    <li>Always refresh the status or rules list after making changes to see accurate information.</li>
+    <li>Be careful when enabling, disabling, or resetting the firewall, as it can affect your system's network connections.</li>
+</ul>
+
+<h2>5. Troubleshooting</h2>
+<ul>
+    <li>If commands fail, ensure you enter the correct password and that <code>pkexec</code> is installed and configured.</li>
+    <li>If rules are not applied correctly, refresh the rules list to check for updates.</li>
+    <li>For unexpected errors, read the output area for detailed information.</li>
+</ul>
+<hr style="border: 0; height: 2px; background: linear-gradient(to right, transparent, #777, transparent); margin: 50px 0;">
+
+
+<h1 id="text-editor">Helwan Text Editor – User Guide</h1>
+
+<h2>1. Overview</h2>
+<p>Helwan Text Editor is a simple and powerful text editor. You can type, edit, and format text easily.</p>
+<ul>
+    <li>Standard text editing (cut, copy, paste, undo, redo)</li>
+    <li>Find and replace text</li>
+    <li>Text formatting (bold, italic, underline, font size, font family, colors)</li>
+    <li>Text alignment and direction (Left-to-Right or Right-to-Left)</li>
+    <li>Word and character count</li>
+</ul>
+
+<h2>2. Main Window Layout</h2>
+
+<h3>Text Area</h3>
+<ul>
+    <li>Type your text here.</li>
+    <li>Words wrap automatically to the window width.</li>
+    <li>Placeholder text: <code>Start typing here...</code></li>
+</ul>
+
+<h3>Menu Bar</h3>
+
+<h4>File Menu</h4>
+<ul>
+    <li><code>New</code> (Ctrl+N): Start a new document</li>
+    <li><code>Open</code> (Ctrl+O): Open an existing file</li>
+    <li><code>Save</code> (Ctrl+S): Save the current file</li>
+    <li><code>Save As</code> (Ctrl+Shift+S): Save with a new name</li>
+    <li><code>Cut / Copy / Paste</code>: Standard editing actions</li>
+    <li><code>Select All</code> (Ctrl+A): Select all text</li>
+    <li><code>Exit</code> (Ctrl+Q): Close the editor</li>
+</ul>
+
+<h4>Edit Menu</h4>
+<ul>
+    <li><code>Undo / Redo</code> (Ctrl+Z / Ctrl+Y)</li>
+    <li><code>Find</code> (Ctrl+F): Search for text</li>
+    <li><code>Replace</code> (Ctrl+H): Find and replace text</li>
+</ul>
+
+<h4>Format Menu</h4>
+<ul>
+    <li><code>Bold / Italic / Underline</code> (Ctrl+B / Ctrl+I / Ctrl+U)</li>
+    <li><code>Font Color / Highlight Color</code>: Change text or background color</li>
+    <li>Text Alignment: Left, Center, Right</li>
+    <li>Text Direction: Left-to-Right or Right-to-Left</li>
+</ul>
+
+<h4>Help Menu</h4>
+<ul>
+    <li><code>About</code>: View application information</li>
+</ul>
+
+<h3>Toolbar</h3>
+<ul>
+    <li>Quick access buttons: New, Open, Save, Undo, Redo</li>
+    <li>Font Family: Choose a font from the list</li>
+    <li>Font Size: Choose text size</li>
+    <li>Find / Replace buttons</li>
+</ul>
+
+<h3>Status Bar</h3>
+<ul>
+    <li>Shows <code>Ready</code> or other messages</li>
+    <li>Displays word count and character count</li>
+</ul>
+
+<h2>3. Quick Tips</h2>
+<ul>
+    <li>To format text, select it first, then choose Bold, Italic, or Underline.</li>
+    <li>Use Find/Replace to quickly search or replace text in your document.</li>
+    <li>Check word/character count in the bottom bar.</li>
+    <li>Toolbar combos allow instant font and size changes.</li>
+</ul>
+
+<div class="note">
+    <strong>Note:</strong> Keyboard shortcuts make editing faster. Try using Ctrl+S to save frequently!
+</div>
+
+<hr style="border: 0; height: 2px; background: linear-gradient(to right, transparent, #777, transparent); margin: 50px 0;">
+
+
+<h1 id="tour">Helwan Tutor – User Guide</h1>
+
+<h2>Overview</h2>
+<p>Helwan Tutor is an interactive tutorial application designed to teach users about Helwan Linux and its tools in multiple languages.</p>
+<ul>
+    <li>Supports multiple languages: English, Arabic, Spanish, Chinese.</li>
+    <li>Displays lessons in Markdown format.</li>
+    <li>Allows adjusting font size for readability.</li>
+    <li>Copy lesson text to clipboard for offline use.</li>
+    <li>Click on links to open in your web browser.</li>
+</ul>
+
+<h2>Main Window Layout</h2>
+
+<h3>Language Selection</h3>
+<ul>
+    <li>Select your preferred language from the dropdown menu.</li>
+    <li>The lessons list will update automatically according to the selected language.</li>
+</ul>
+
+<h3>Lessons List</h3>
+<ul>
+    <li>Displays all available lessons for the selected language.</li>
+    <li>Click on a lesson to view its content.</li>
+</ul>
+
+<h3>Lesson Viewer</h3>
+<ul>
+    <li>The right panel displays the lesson content in formatted text (Markdown).</li>
+    <li>Clickable links open in the default web browser.</li>
+</ul>
+
+<h3>Font Controls</h3>
+<ul>
+    <li><code>Increase Font</code>: Makes lesson text larger.</li>
+    <li><code>Decrease Font</code>: Makes lesson text smaller.</li>
+</ul>
+
+<h3>Copy Lesson Text</h3>
+<ul>
+    <li>Copies all visible lesson text to your system clipboard.</li>
+    <li>You can paste it into another document or application.</li>
+</ul>
+
+<h2>Quick Tips</h2>
+<ul>
+    <li>Use the language dropdown to switch quickly between languages.</li>
+    <li>Font size can be increased for easier reading, especially on small screens.</li>
+    <li>If a lesson file is missing, it will be created automatically (empty).</li>
+</ul>
+
+<div class="note">
+<strong>Note:</strong> Make sure your lesson files are in <code>/usr/share/hel-tutorial/lessons/[language_code]/</code> with <code>.md</code> extension.
+</div>
+
+<div class="warning">
+<strong>Warning:</strong> Copying large lessons may overwrite your clipboard content. Use responsibly.
+</div>
+<hr style="border: 0; height: 2px; background: linear-gradient(to right, transparent, #777, transparent); margin: 50px 0;">
+
+<h1 id = "sec">hel-sec-audit – User Guide</h1>
+
+<h2>Overview</h2>
+<p><strong>hel-sec-audit</strong> is a security auditing application for Helwan Linux. It scans your system for vulnerabilities and provides a detailed report of potential security issues.</p>
+
+<h2>Main Window</h2>
+<p>The main window is your starting point. It contains the application title, start button, menus, and theme options.</p>
+
+<ul>
+    <li><strong>Application Title:</strong> Displays <code>🔒 hel-sec-audit 🔍</code>.</li>
+    <li><strong>Start Scan Button:</strong> Launches the security scan. The scan runs in the background so the UI remains responsive.</li>
+    <li><strong>Menus:</strong>
+        <ul>
+            <li><strong>File → Exit:</strong> Closes the application.</li>
+            <li><strong>Settings → Application Settings:</strong> Opens the settings window to configure options.</li>
+            <li><strong>Help → About:</strong> Displays information about the program.</li>
+            <li><strong>Themes:</strong> Change the visual appearance:
+                <ul>
+                    <li><code>Dark Mode 🌙</code>: Dark background with light text.</li>
+                    <li><code>Pink Mode 🌸</code>: Soft pink UI for a fun look.</li>
+                    <li><code>Default Mode 🌤</code>: Standard blue gradient and buttons.</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<h2>Starting a Scan</h2>
+<ol>
+    <li>Click the <strong>Start Scan</strong> button.</li>
+    <li>The <strong>Scan Window</strong> opens and shows progress.</li>
+    <li>The scan runs using a background thread so the main window stays active.</li>
+    <li>Progress updates appear live in the Scan Window.</li>
+    <li>When the scan finishes, the <strong>Results Window</strong> opens with the findings.</li>
+</ol>
+
+<div class="note">
+<strong>Note:</strong> Do not close the application while a scan is running; this may interrupt the process.
+</div>
+
+<h2>Scan Window</h2>
+<p>This window shows the current scan progress:</p>
+<ul>
+    <li>Progress bar with percentage completed.</li>
+    <li>Current check being performed.</li>
+</ul>
+
+<h2>Results Window</h2>
+<p>After the scan, this window displays:</p>
+<ul>
+    <li>List of security issues found.</li>
+    <li>Severity of each issue.</li>
+    <li>Recommendations to fix or improve security.</li>
+</ul>
+
+<h2>Settings Window</h2>
+<p>The settings window allows you to configure application-specific options, such as:</p>
+<ul>
+    <li>Scan preferences (which checks to enable/disable).</li>
+    <li>Notification settings.</li>
+    <li>Theme preferences.</li>
+</ul>
+
+<h2>About Window</h2>
+<p>Provides information about <strong>hel-sec-audit</strong>, including:</p>
+<ul>
+    <li>Version number.</li>
+    <li>Developer information.</li>
+    <li>License and credits.</li>
+</ul>
+
+<h2>Themes</h2>
+<p>You can switch between three visual themes:</p>
+<ul>
+    <li><strong>Dark Mode 🌙:</strong> Dark gray background with light text.</li>
+    <li><strong>Pink Mode 🌸:</strong> Soft pink background with bright pink buttons.</li>
+    <li><strong>Default Mode 🌤:</strong> Gradient gray background with blue buttons.</li>
+</ul>
+
+<h2>Keyboard Shortcuts</h2>
+<ul>
+    <li><code>Ctrl+Q</code>: Exit application.</li>
+    <li>All buttons and menus can also be clicked with the mouse.</li>
+</ul>
+
+<div class="note">
+<strong>Tip:</strong> Use themes and settings to make the interface comfortable for long scans.
+</div>
+
+<h2>Troubleshooting</h2>
+<div class="warning">
+<strong>Warning:</strong> If the scan fails or shows errors, make sure you have the necessary permissions to run system checks.
+</div>
+
+<hr style="border: 0; height: 2px; background: linear-gradient(to right, transparent, #777, transparent); margin: 50px 0;">
+
+
+<h1 id="diagram">hel-diagram </h1>
+
+<h2>Overview</h2>
+<p><strong>hel-diagram</strong> is a visual tool for generating, viewing, and managing folder structures. You can build directory trees, export diagrams, and create projects from templates.</p>
+
+<h2>Main Window</h2>
+<p>The main window includes:</p>
+<ul>
+    <li><strong>Text Area:</strong> Shows the generated tree diagram or template content.</li>
+    <li><strong>Status Label:</strong> Displays the current folder, template, or export status.</li>
+    <li><strong>Filter Dropdown:</strong> Choose how to view the folder tree:
+        <ul>
+            <li><code>All</code>: Show both folders and files.</li>
+            <li><code>Folders Only</code>: Show only directories.</li>
+            <li><code>Files Only</code>: Show only files.</li>
+        </ul>
+    </li>
+</ul>
+
+<h2>File Menu</h2>
+<ul>
+    <li><strong>Open Folder:</strong> Select a folder to generate a live tree diagram.</li>
+    <li><strong>Open Diagram File:</strong> Load a previously saved diagram (.txt or .md).</li>
+    <li><strong>Save Diagram:</strong> Save the current diagram to a file.</li>
+    <li><strong>New Project from Template:</strong> Load a pre-defined folder structure template:
+        <ul>
+            <li>Python App</li>
+            <li>Web Project</li>
+            <li>Node.js Starter</li>
+        </ul>
+    </li>
+</ul>
+
+<h2>Build Menu</h2>
+<ul>
+    <li><strong>Build from Diagram:</strong> Create the actual folder/file structure on your disk from a diagram file.</li>
+</ul>
+
+<h2>Export Menu</h2>
+<ul>
+    <li><strong>Export as HTML:</strong> Export the tree diagram as an HTML file for sharing or documentation.</li>
+</ul>
+
+<h2>Help Menu</h2>
+<ul>
+    <li><strong>Help:</strong> Displays basic instructions for using the app.</li>
+    <li><strong>About:</strong> Shows the application version and credits.</li>
+</ul>
+
+<h2>Templates</h2>
+<p>Templates are pre-defined folder structures that you can load directly into the text area:</p>
+<ul>
+    <li><strong>Python App:</strong> Basic Python project structure with <code>main.py</code> and <code>requirements.txt</code>.</li>
+    <li><strong>Web Project:</strong> HTML, CSS, and JS folders ready to start a web app.</li>
+    <li><strong>Node.js Starter:</strong> Node project with <code>app.js</code>, <code>package.json</code>, and routes folder.</li>
+</ul>
+
+<h2>Live Folder Watching</h2>
+<p>If <strong>watchdog</strong> is installed, the app automatically refreshes the tree diagram when files/folders change in the selected directory.</p>
+<div class="note">
+Tip: This feature keeps your diagram up-to-date in real time.
+</div>
+
+<h2>Saving and Exporting</h2>
+<ul>
+    <li>Use <strong>Save Diagram</strong> to save your current tree.</li>
+    <li>Use <strong>Export as HTML</strong> to create a shareable HTML version of your diagram.</li>
+</ul>
+
+<h2>Building Folder Structure</h2>
+<p>You can create actual folders and files on your disk by using <strong>Build → Build from Diagram</strong>. Choose a diagram file and select an output folder.</p>
+
+<h2>Filters</h2>
+<p>The filter dropdown allows you to control which items are visible in the tree:</p>
+<ul>
+    <li><strong>All:</strong> Shows everything.</li>
+    <li><strong>Folders Only:</strong> Hides files.</li>
+    <li><strong>Files Only:</strong> Hides folders.</li>
+</ul>
+
+<h2>Keyboard Shortcuts & Notes</h2>
+<ul>
+    <li>Standard shortcuts apply for file dialogs (Ctrl+O, Ctrl+S, etc.).</li>
+    <li>The tree updates automatically when you select a folder.</li>
+    <li>Empty diagrams cannot be saved or exported.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<div class="warning">
+If the app cannot watch a folder, make sure the <code>watchdog</code> package is installed:
+<code>pip install watchdog</code>
+</div>
+<div class="note">
+Tip: For large folders, live preview may slow down. You can manually refresh the view using the filter dropdown.
+</div>
+<hr style="border: 0; height: 2px; background: linear-gradient(to right, transparent, #777, transparent); margin: 50px 0;">
+
+
+<h1 id="lunch">Helwan App Launcher</h1>
+
+<h2>Purpose</h2>
+<p>This Python script is the main entry point for the Helwan application. Its job is to:</p>
+<ul>
+    <li>Start the PyQt5 application.</li>
+    <li>Load the application's main window.</li>
+    <li>Apply the Helwan custom styling (QSS) for a consistent look.</li>
+</ul>
+
+<h2>How It Works</h2>
+<ol>
+    <li>The script imports necessary modules: <code>sys</code>, <code>os</code>, and PyQt5's <code>QApplication</code>.</li>
+    <li>It imports the main window class from <code>gui.main_window</code> which contains all UI logic.</li>
+    <li>It creates a <code>QApplication</code> object, which is required for any PyQt5 GUI application.</li>
+    <li>It checks if the custom QSS style file <code>helwan_style.qss</code> exists, and applies it to the application if available.</li>
+    <li>It creates an instance of <code>MainWindow</code> and shows it on the screen.</li>
+    <li>Finally, it starts the application's event loop using <code>app.exec_()</code>.</li>
+</ol>
+
+<h2>Files Involved</h2>
+<ul>
+    <li><code>helwan_style.qss</code>: Custom stylesheet for Helwan UI.</li>
+    <li><code>gui/main_window.py</code>: Contains the main window, menu bar, toolbar, and all UI components.</li>
+    <li><code>main.py</code> (this script): Launches the application.</li>
+</ul>
+
+<h2>Running the Application</h2>
+<p>To run the Helwan App:</p>
+<ol>
+    <li>Open a terminal.</li>
+    <li>Navigate to the project folder.</li>
+    <li>Run the command:</li>
+    <pre><code>python3 main.py</code></pre>
+    <li>The main window should appear with all menus, toolbar, and functionality ready to use.</li>
+</ol>
+
+<h2>Notes for Users</h2>
+<div class="note">
+- The QSS style file <code>helwan_style.qss</code> is optional. If missing, the app will still run with default PyQt5 styles.<br>
+- Closing the window will exit the application.<br>
+- This script should not be modified unless you want to change startup behavior or load a different style file.
+</div>
+
+<h2>Summary</h2>
+<p>This launcher is a simple, safe script that boots your Helwan application and ensures the UI is styled correctly. You don’t need to interact with it directly besides running it.</p>
+
+<hr style="border: 0; height: 2px; background: linear-gradient(to right, transparent, #777, transparent); margin: 50px 0;">
+
+
+<h1 id="netfix">Helwan Linux NetFix GUI - User Guide</h1>
+
+<h2>Purpose</h2>
+<p>The Helwan NetFix GUI is a graphical tool for Arch-based systems designed to quickly perform maintenance and fixes. It helps users repair the package database, clear caches, fix corrupted packages, update the system, refresh mirrors, and run a full automatic fix.</p>
+
+<h2>Main Features</h2>
+<ul>
+<li>Repair Database: Removes unused packages.</li>
+<li>Clear Cache: Deletes old cached packages.</li>
+<li>Fix Corrupted Packages: Resolves overwrite or conflict errors.</li>
+<li>Update System: Synchronizes packages with the latest versions.</li>
+<li>Refresh Mirrors: Updates package server mirrors for speed and reliability.</li>
+<li>Full Auto Fix: Runs all maintenance tasks in order automatically.</li>
+<li>Live Output: Displays command output in a scrollable text area.</li>
+<li>Progress Bar: Shows ongoing processes visually.</li>
+<li>Help & About dialogs for guidance.</li>
+</ul>
+
+<h2>How It Works</h2>
+<p>The application uses <code>PyQt5</code> for its graphical interface. Commands are executed using <code>pkexec</code> to request administrative privileges. The GUI updates in real-time with command output and progress.</p>
+
+<h3>Buttons & Commands</h3>
+<ul>
+<li>Each button corresponds to a specific system maintenance task.</li>
+<li>Clicking a button runs the associated command.</li>
+<li>While a command is running, the interface is disabled to prevent interference.</li>
+<li>The text area displays all outputs, including errors.</li>
+<li>“Full Auto Fix” runs all commands sequentially, stopping if an error occurs.</li>
+</ul>
+
+<h3>Output & Progress</h3>
+<ul>
+<li>The text area shows live output from the commands.</li>
+<li>Errors are clearly labeled with <code>ERROR:</code>.</li>
+<li>The progress bar appears during command execution to indicate activity.</li>
+</ul>
+
+<h2>Installation Requirements</h2>
+<ul>
+<li>Python 3.x</li>
+<li>PyQt5 module (<code>pip install PyQt5</code>)</li>
+<li>pkexec (for graphical privilege escalation)</li>
+<li>Optional: Ensure your Polkit policies allow pkexec usage in GUI applications.</li>
+</ul>
+
+<h2>Running the Tool</h2>
+<ol>
+<li>Open a terminal.</li>
+<li>Navigate to the folder containing <code>hel_netfix_gui_qt.py</code>.</li>
+<li>Run the tool with:</li>
+<pre><code>python3 hel_netfix_gui_qt.py</code></pre>
+<li>The GUI window will open with all buttons, progress bar, and output area.</li>
+</ol>
+
+<h2>Help & About</h2>
+<ul>
+<li><strong>Help:</strong> Explains what each button does.</li>
+<li><strong>About:</strong> Shows the version, author, and contact information.</li>
+</ul>
+
+<h2>Notes for Users</h2>
+<div class="note">
+<ul>
+<li>Do not close the terminal while commands are running if you launched from a terminal.</li>
+<li>Ensure pkexec and other necessary tools are installed and in your PATH.</li>
+<li>The "Full Auto Fix" may stop if a command fails, showing the error in the output area.</li>
+<li>The tool is safe for Arch-based systems but always back up important data.</li>
+</ul>
+</div>
+
+<h2>Summary</h2>
+<p>Helwan NetFix GUI provides a safe, easy, and visual way to maintain and fix your Arch-based system without typing complex terminal commands. All operations are logged live for transparency and troubleshooting.</p>
+<hr style="border: 0; height: 2px; background: linear-gradient(to right, transparent, #777, transparent); margin: 50px 0;">
+<h1 id="gait">Helwan AI Gate</h1>
+  <main>
+    <section>
+      <h2>Overview</h2>
+      <p>Helwan AI Gate is a multi-tab web browsing tool designed for Helwan Linux. It allows you to quickly access your favorite websites, use smart commands, and manage tabs efficiently.</p>
+    </section>
+
+    <section>
+      <h2>Interface</h2>
+      <ul>
+        <li><strong>Navigation Buttons:</strong> Use the back, forward, and reload buttons to control the active tab.</li>
+        <li><strong>URL Bar:</strong> Enter a website URL, search term, or smart command.</li>
+        <li><strong>Sidebar:</strong> Quickly access saved sites or add new ones.</li>
+        <li><strong>Tabs:</strong> Each website opens in its own tab. Switch or close tabs easily.</li>
+        <li><strong>Notepad:</strong> A small built-in notepad to save notes locally.</li>
+        <li><strong>Clock:</strong> Displays the current system time.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Using Smart Commands</h2>
+      <p>Helwan AI Gate automatically recognizes certain keywords or commands:</p>
+      <ul>
+        <li>Direct URLs: Enter <code>https://example.com</code> to open the website.</li>
+        <li>Domain names: Enter <code>example.com</code> and it will auto-prefix <code>https://</code>.</li>
+        <li>Quick keywords:
+          <ul>
+            <li><code>youtube</code> or <code>yt</code> → Opens YouTube</li>
+            <li><code>gmail</code> → Opens Gmail</li>
+            <li><code>maps</code> → Opens Google Maps</li>
+            <li><code>github</code> → Opens GitHub</li>
+          </ul>
+        </li>
+        <li>Play command: <code>play song name</code> → Searches YouTube for the song.</li>
+        <li>Tab commands:
+          <ul>
+            <li><code>open new tab</code> → Opens a blank new tab</li>
+            <li><code>close tab</code> → Closes the active tab</li>
+            <li><code>clear tabs</code> → Closes all tabs</li>
+          </ul>
+        </li>
+        <li>Any other input → Google search automatically.</li>
+      </ul>
+      <div class="tip">Tip: You can mix Arabic and English commands, e.g., "شغل song name" works too.</div>
+    </section>
+
+    <section>
+      <h2>Managing Sites</h2>
+      <ul>
+        <li>Click <strong>+ Add New Site</strong> in the sidebar to save a website for quick access.</li>
+        <li>Click the 🗑 icon next to a saved site to delete it.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Notepad</h2>
+      <ul>
+        <li>Click 📝 Notepad to open it.</li>
+        <li>Write notes freely. They are saved automatically in your system.</li>
+        <li>Use the Clear button to delete all notes.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Tips & Troubleshooting</h2>
+      <ul>
+        <li>If a website fails to load, try reloading the tab using the reload button.</li>
+        <li>Helwan AI Gate fixes layout issues for certain Google AI sites automatically.</li>
+        <li>Tabs can be switched by clicking their label in the tabs bar.</li>
+        <li>Ensure Electron API preload is available for full functionality (notifications, saved sites).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Support & Contact</h2>
+      <p>For questions or feedback, contact the Helwan Linux Team:</p>
+      <ul>
+        <li>Email: <code>helwanlinux@gmail.com</code></li>
+        <li>Website: <a href="https://helwanlinux.org" target="_blank">helwanlinux.org</a></li>
+      </ul>
+    </section>
+  </main>
+<hr style="border: 0; height: 2px; background: linear-gradient(to right, transparent, #777, transparent); margin: 50px 0;">
+
+
+  <h1>
+    <h1 id="store">Helwan Store - User Guide</h1>
+  </h1>
+
+  <main>
+
+    <section>
+      <h2>Overview</h2>
+      <p>Helwan Store is a package management interface for Helwan Linux that allows users to browse, search, and install packages from multiple repositories, including Arch, Helwan, and AUR. It provides filtering, pagination, and update management features for a smooth user experience.</p>
+    </section>
+
+    <section>
+      <h2>Main Interface</h2>
+      <ul>
+        <li><strong>Header:</strong> Displays the application name.</li>
+        <li><strong>Search Box:</strong> Enter the name of a package to search for it.</li>
+        <li><strong>Category Filter:</strong> Select a category such as Multimedia, Games, Development, etc.</li>
+        <li><strong>Repository Filter:</strong> Filter packages by repository: Arch, Helwan, or AUR.</li>
+        <li><strong>Check for System Updates:</strong> Click the button to see if any system updates are available.</li>
+        <li><strong>Packages List:</strong> Shows all packages according to your search and filters. Each row typically has:</li>
+          <ul>
+            <li>Package name</li>
+            <li>Status (installed/not installed)</li>
+            <li>Action buttons: Install / Remove</li>
+          </ul>
+        <li><strong>Pagination Controls:</strong> Navigate through multiple pages of packages.</li>
+        <li><strong>Status Message:</strong> Displays notifications like "Installation completed" or errors.</li>
+        <li><strong>Progress Bar:</strong> Shows the progress of installation or updates.</li>
+        <li><strong>Update Section:</strong> If system updates are available, it displays a message and an "Apply Updates" button.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Using the Search and Filters</h2>
+      <ul>
+        <li>Type a package name in the search box and press Enter to search.</li>
+        <li>Select a category to narrow down packages.</li>
+        <li>Use the repository filter to show packages only from a specific source.</li>
+        <li>Filters and search can be combined to quickly find the package you want.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Managing Packages</h2>
+      <ul>
+        <li>To install a package, click the <strong>Install</strong> button next to it.</li>
+        <li>To remove an installed package, click the <strong>Remove</strong> button.</li>
+        <li>Installed packages are highlighted in green (<span style="color:#28a745;">Installed</span>).</li>
+        <li>During installation or removal, the progress bar shows the operation's progress.</li>
+      </ul>
+      <div class="tip">Tip: You can see detailed status messages at the bottom-right corner of the screen.</div>
+    </section>
+
+    <section>
+      <h2>System Updates</h2>
+      <ul>
+        <li>Click "Check for System Updates" to see if your system has available updates.</li>
+        <li>If updates are available, the <strong>Update Section</strong> will appear with a summary and "Apply Updates" button.</li>
+        <li>Click "Apply Updates" to start updating your system.</li>
+        <li>The progress bar will indicate update progress.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Pagination</h2>
+      <ul>
+        <li>Use the "Previous Page" and "Next Page" buttons to navigate through packages.</li>
+        <li>The current page number is displayed between the buttons.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Tips & Best Practices</h2>
+      <ul>
+        <li>Always check for system updates before installing new packages.</li>
+        <li>Combine search and filters to quickly locate specific packages.</li>
+        <li>Installed packages cannot be installed again; the Install button will be disabled.</li>
+        <li>Use the status messages to monitor progress and troubleshoot errors.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Support</h2>
+      <p>If you encounter any issues, you can contact the Helwan Linux team via:</p>
+      
+    </section>
+
+  </main>
+<hr style="border: 0; height: 2px; background: linear-gradient(to right, transparent, #777, transparent); margin: 50px 0;">
+
+
+<h1 id="blocks">
+  <h1>Helwan Blocks - Ultimate User Guide</h1>
+</h1>
+
+<main>
+
+  <section>
+    <h2>Welcome!</h2>
+    <p>Helwan Blocks is a modern block-stacking puzzle game (like Tetris) for Helwan Linux. Your goal is to place falling blocks to complete horizontal lines and score points. Clear more lines at once to earn bigger bonuses!</p>
+    <div class="tip">Tip: Focus on planning ahead and keeping your stack flat for maximum score!</div>
+  </section>
+
+  <section>
+    <h2>Main Menu</h2>
+    <ul>
+      <li><strong>START GAME:</strong> Begin a new game immediately.</li>
+      <li><strong>INSTRUCTIONS:</strong> Learn how to play Helwan Blocks and what each key does.</li>
+      <li><strong>HIGH SCORES:</strong> View the top scores you or others have achieved.</li>
+      <li><strong>EXIT:</strong> Close the game safely.</li>
+      <li>The Helwan Logo and title are just for visual fun and do not affect gameplay.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How to Play</h2>
+    <p>Use the keyboard to control the falling blocks:</p>
+    <ul>
+      <li><strong>Left Arrow:</strong> Move the block left</li>
+      <li><strong>Right Arrow:</strong> Move the block right</li>
+      <li><strong>Down Arrow:</strong> Move the block down faster (soft drop)</li>
+      <li><strong>Up Arrow:</strong> Rotate the block</li>
+      <li><strong>Spacebar:</strong> Instantly drop the block to the bottom (hard drop)</li>
+      <li><strong>C Key:</strong> Hold or swap the current block with a stored block</li>
+      <li>Clear full rows to score points. Clearing multiple rows gives extra points!</li>
+      <li>Press <strong>M</strong> anytime to return to the main menu.</li>
+    </ul>
+    <div class="tip">Tip: Using the hold function strategically can help you set up combos!</div>
+  </section>
+
+  <section>
+    <h2>Game Screen Overview</h2>
+    <ul>
+      <li><strong>Score Panel:</strong> Shows your current score.</li>
+      <li><strong>Next Block:</strong> Displays the upcoming block so you can plan ahead.</li>
+      <li><strong>Held Block:</strong> Displays the block you have on hold.</li>
+      <li><strong>Playing Field:</strong> The area where blocks fall and are stacked.</li>
+      <li><strong>Game Over Screen:</strong> Appears when blocks reach the top. You can restart by pressing <strong>R</strong> or return to menu with <strong>M</strong>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Scoring Tips</h2>
+    <ul>
+      <li>Clear 1 line: small points</li>
+      <li>Clear 2 lines: more points</li>
+      <li>Clear 3 lines: bigger bonus</li>
+      <li>Clear 4 lines at once (a Tetris!): maximum points</li>
+      <li>Combo bonus: clearing lines consecutively gives extra points.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>High Scores</h2>
+    <ul>
+      <li>Access the high scores from the main menu.</li>
+      <li>The top score is highlighted in green.</li>
+      <li>If no scores exist yet, play and your score will appear here!</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Game Tips & Tricks</h2>
+    <ul>
+      <li>Keep the stack as flat as possible to avoid "game over" quickly.</li>
+      <li>Use the hold feature wisely to save crucial blocks for later.</li>
+      <li>Plan ahead using the next block preview.</li>
+      <li>Hard drops are fast and score extra points.</li>
+      <li>Don't panic! Stay calm and keep clearing lines.</li>
+    </ul>
+    <div class="tip">Tip: Focus on combos and multiple line clears to achieve high scores!</div>
+  </section>
+
+  <section>
+    <h2>Exiting the Game</h2>
+    <ul>
+      <li>From the main menu, click <strong>EXIT</strong> or press the window close button.</li>
+      <li>Game automatically saves your high scores locally.</li>
+    </ul>
+  </section>
+
+</main>
+<hr style="border: 0; height: 2px; background: linear-gradient(to right, transparent, #777, transparent); margin: 50px 0;">
+
+
+<h1>
+  <h1 id="fight">space fight</h1>
+</h1>
+
+<main>
+
+  <section>
+    <h2>Welcome!</h2>
+    <p>Welcome to the Helwan Linux Game! This game runs entirely in Pygame and is designed for fun, challenge, and learning. Your progress, scores, and settings are saved automatically.</p>
+    <div class="tip">Tip: The game remembers your high scores and audio settings for next time!</div>
+  </section>
+
+  <section>
+    <h2>Main Menu</h2>
+    <ul>
+      <li><strong>Start Game:</strong> Begin a new game session.</li>
+      <li><strong>Settings:</strong> Adjust game options like music and sound effects volume.</li>
+      <li><strong>Exit:</strong> Close the game safely.</li>
+    </ul>
+    <div class="tip">Tip: Use your mouse or keyboard shortcuts (if available) to navigate menus quickly.</div>
+  </section>
+
+  <section>
+    <h2>Game Controls</h2>
+    <p>The game screen responds to these keys:</p>
+    <ul>
+      <li><strong>Arrow Keys:</strong> Move objects or player characters depending on game mode.</li>
+      <li><strong>Spacebar:</strong> Perform main actions like jumping or placing items.</li>
+      <li><strong>C Key:</strong> Use special abilities or hold objects (if implemented).</li>
+      <li><strong>M Key:</strong> Return to Main Menu from in-game screens.</li>
+    </ul>
+    <div class="tip">Tip: Controls may vary slightly depending on the screen you are in.</div>
+  </section>
+
+  <section>
+    <h2>Game Screens</h2>
+    <ul>
+      <li><strong>Main Game Screen:</strong> Where gameplay happens.</li>
+      <li><strong>Settings Screen:</strong> Adjust music and sound volumes.</li>
+      <li><strong>Pause Screen:</strong> Pause the game and access quick options.</li>
+      <li><strong>High Score / Data Storage:</strong> Your progress is saved in <code>game_data.json</code> automatically.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Saving and Loading</h2>
+    <p>The game automatically handles:</p>
+    <ul>
+      <li>High Scores</li>
+      <li>Music and Sound Effect volumes</li>
+      <li>Other basic settings</li>
+    </ul>
+    <div class="tip">Tip: You do not need to manually save. Data is updated when you exit the game.</div>
+  </section>
+
+  <section>
+    <h2>Audio Settings</h2>
+    <ul>
+      <li>Music Volume: Adjust how loud the background music is.</li>
+      <li>SFX Volume: Adjust how loud sound effects are.</li>
+      <li>Settings are remembered between sessions automatically.</li>
+    </ul>
+    <div class="tip">Tip: Turn down music if you want to focus on gameplay sounds!</div>
+  </section>
+
+  <section>
+    <h2>Exiting the Game</h2>
+    <ul>
+      <li>Click the window close button or choose "Exit" from the main menu.</li>
+      <li>Your game data (scores, volumes) is saved automatically.</li>
+      <li>After quitting, you can restart the game and resume with your previous high scores.</li>
+    </ul>
+    <div class="tip">Tip: Always exit the game properly to ensure your progress is saved.</div>
+  </section>
+
+  <section>
+    <h2>Troubleshooting</h2>
+    <ul>
+      <li>If the game fails to load, ensure Python and Pygame are installed correctly.</li>
+      <li>If sounds don’t play, check your system audio and mixer settings.</li>
+      <li>If data is corrupted, deleting <code>game_data.json</code> will reset settings to default.</li>
+    </ul>
+  </section>
+
+</main>
+
+
+
+    <p style="text-align:center; font-size: small; color: gray;">
+      More versions coming soon. Stay tuned!
+    </p>
+  </main>
+
+  <script src="script.js"></script>
+  <!-- https://www.youtube.com/@sma-coding -->
+
+<div style="background-color: #0d1117; color: #c9d1d9; padding: 12px 20px; text-align: center; font-family: sans-serif; font-size: 16px;">
+  📺 Learn programming and advanced Linux scripting on 
+  <strong style="color: #58a6ff;">SMA Coding</strong> — the YouTube channel for coders, hackers, and open-source enthusiasts. 
+   <span style="white-space: nowrap;">
+    <a href="https://www.youtube.com/@sma-coding" target="_blank" style="margin-left: 10px; background: #238636; color: white; padding: 6px 12px; border-radius: 6px; text-decoration: none; font-weight: bold;">
+      Watch Now
+    </a>
+   </span>
+  </div>
+</body>
+</html>
+
+
+
