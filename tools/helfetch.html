@@ -2,96 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Helfetch - Helwan Linux System Information Tool</title>
+    <title>Helfetch Documentation</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Helfetch - Helwan Linux System Information Tool</h1>
+    <h1>Helfetch: System Information Fetcher</h1>
 
-<div class="section">
-<h2>Overview</h2>
-<p>Helfetch is a custom system information fetcher for Helwan Linux. It collects and displays comprehensive information about your system, hardware, desktop environment, and network. The tool can also show an inspirational quote and the Helwan Linux ASCII art logo.</p>
-</div>
+    <p>
+        <strong>Helfetch</strong> is the enhanced, next-generation system information tool for <b>Helwan Linux</b>. 
+        It provides a beautiful, high-speed overview of your system's health, hardware, and environment directly in your terminal.
+    </p>
 
-<div class="section">
-<h2>Usage</h2>
-<p>Run Helfetch from the terminal:</p>
-<pre><code>python3 helfetch.py [options]</code></pre>
-<p>Available options:</p>
-<ul>
-    <li><code>--no-logo</code>: Do not display the Helwan Linux ASCII art logo at the top.</li>
-</ul>
-</div>
+    <hr>
 
-<div class="section">
-<h2>Data Collected</h2>
-<p>Helfetch gathers data from multiple sources and modules:</p>
-<ul>
-    <li><b>System Info:</b> OS version, kernel, security status, system integrity.</li>
-    <li><b>Hardware Info:</b> RAM size and state, disk usage and performance.</li>
-    <li><b>Desktop Info:</b> Desktop environment, window manager, screen resolution.</li>
-    <li><b>Network Info:</b> Active connections, IP addresses, network interfaces.</li>
-</ul>
-<p>All collected data is merged into a single structured output.</p>
-</div>
+    <h2>Why Use Helfetch?</h2>
+    <ul>
+        <li><b>Comprehensive Data:</b> View everything from RAM state to network status in one go.</li>
+        <li><b>Visual Health Checks:</b> It doesn't just show numbers; it analyzes your RAM state and colors the output accordingly.</li>
+        <li><b>Security Awareness:</b> Includes system integrity and security status checks.</li>
+        <li><b>Inspirational:</b> Features daily quotes to keep you motivated while you work.</li>
+    </ul>
 
-<div class="section">
-<h2>Output</h2>
-<p>The output is formatted in a human-readable style with optional colors for clarity:</p>
-<ul>
-    <li><b>ASCII Logo:</b> Displays the Helwan Linux logo (optional).</li>
-    <li><b>Information Keys:</b> Colored according to <code>info_key_color</code> setting.</li>
-    <li><b>Information Values:</b> Colored according to <code>info_value_color</code> setting.</li>
-    <li><b>RAM State:</b> Displayed with a colored bar indicating usage level.</li>
-    <li><b>Inspirational Quote:</b> A motivational message included at the bottom.</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Modules Overview</h2>
-<ul>
-    <li><b>core.system_info:</b> Retrieves OS details, security, and integrity status.</li>
-    <li><b>core.hardware_info:</b> Retrieves RAM, disk, and general hardware stats.</li>
-    <li><b>core.desktop_info:</b> Retrieves desktop environment and display info.</li>
-    <li><b>core.network_info:</b> Retrieves network connection and interface info.</li>
-    <li><b>display.ascii_art:</b> Provides Helwan Linux ASCII logo and color codes.</li>
-    <li><b>display.formatter:</b> Formats and colors the output for terminal display.</li>
-    <li><b>config.default_config:</b> Contains default color settings for keys and values.</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Error Handling</h2>
-<ul>
-    <li>If an error occurs during execution, it will be displayed in red with a descriptive message.</li>
-    <li>Pressing <code>Ctrl + C</code> safely exits the program without crashing.</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Example Output</h2>
-<pre><code>
+    <hr>
+<iframe
+  src="view.html"
+  style="width:100%; border:none; height:600px;"
+  loading="lazy">
+</iframe>
 
 
-OS: Helwan Linux 2026
-Kernel: 6.18.7-zen
-CPU: Intel i7-12700K
-RAM: 32 GB (75% used)
-Disk: 1 TB (60% free)
-Desktop: KDE Plasma 6.6
-Network: Connected via Wi-Fi (192.168.1.10)
-Quote: "Keep pushing forward, success is near."
-</code></pre>
-</div>
+    <h2>How to Use</h2>
+    
+    <h3>Basic Command</h3>
+    <p>Open your terminal and type:</p>
+    <pre>helfetch</pre>
 
-<div class="section note">
-<h3>Note</h3>
-<p>Helfetch is designed to work on Helwan Linux but may display partial information on other Linux distributions. Use <code>--no-logo</code> if you want a cleaner terminal output without ASCII art.</p>
-</div>
+    <h3>Options</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Command</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>--no-logo</code></td>
+                <td>Display system info without the Helwan Linux ASCII logo.</td>
+            </tr>
+            <tr>
+                <td><code>--help</code></td>
+                <td>Show the help message and exit.</td>
+            </tr>
+        </tbody>
+    </table>
 
-<hr>
-<a href="../helwan-tools.html">Back</a>
+    <hr>
+
+    <h2>Information Captured</h2>
+    <p>The tool collects data from four core modules:</p>
+    <ol>
+        <li><strong>System:</strong> OS version, security status, and system integrity.</li>
+        <li><strong>Hardware:</strong> CPU, RAM usage, and Disk health.</li>
+        <li><strong>Desktop:</strong> Desktop Environment (DE), Window Manager (WM), and themes.</li>
+        <li><strong>Network:</strong> Current connection status and IP info.</li>
+    </ol>
+
+    <hr>
+
+    <h2>Troubleshooting</h2>
+    <p>
+        If the tool encounters an error, it will display a red error message. Common issues are usually related to missing permissions or corrupted configuration files. 
+        In case of a crash, you can safely exit using <code>Ctrl+C</code>.
+    </p>
+
+    <hr>
+
+    <p><i>Part of the Helwanian Identity Project.</i></p>
+    <a href="../helwan-tools.html">Back</a>
 
 </body>
 </html>
