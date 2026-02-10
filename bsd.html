@@ -123,25 +123,104 @@ animateBits();
 
 <!-- Navigation -->
 <nav style="text-align:center; margin:20px 0;">
-  <a href="index.html">Home</a> |
-  <a href="bsd.html">BSD</a> |
-  <a href="download.html">Download</a> |
-  <a href="philosophy.html">Philosophy</a> |
-  <a href="helwan-comparison.html">Helwan vs Others</a> |
-  <a href="documentation.html">Documentation</a> |
-  <a href="packages.html">Packages</a> |
-  <a href="news.html">News</a> |
-  <a href="assistant.html">Assistant</a> |
-  <a href="about.html">About</a> |
-  <a href="Contributing.html">Join Us</a> |
-  <a href="donate.html">Donate</a> |
-  <a href="contact.html">Contact</a> |
-  <a href="nostalgia.html">Nostalgia</a> |
-  <a href="hel-tribute-hall.html">Tribute Hall</a> |
-  <a href="credits.html">Credits</a> |
-  <a href="archive.html">archive</a> |
-  <a href="helwan-tools.html">helwan-tools</a> |
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="bsd.html">BSD</a></li>
+    <li><a href="download.html">Download</a></li>
+
+    <li class="dropdown">
+      <a href="#">Documentation ▼</a>
+      <ul class="submenu">
+        <li><a href="philosophy.html">Philosophy</a></li>
+        <li><a href="helwan-comparison.html">Helwan vs Others</a></li>
+        <li><a href="documentation.html">Documentation</a></li>
+        <li><a href="packages.html">Packages</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">Community ▼</a>
+      <ul class="submenu">
+        <li><a href="news.html">News</a></li>
+        <li><a href="assistant.html">Assistant</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Contributing.html">Join Us</a></li>
+      </ul>
+    </li>
+
+    <li><a href="donate.html">Donate</a></li>
+
+    <li class="dropdown">
+      <a href="#">Extras ▼</a>
+      <ul class="submenu">
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="nostalgia.html">Nostalgia</a></li>
+        <li><a href="hel-tribute-hall.html">Tribute Hall</a></li>
+        <li><a href="credits.html">Credits</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="helwan-tools.html">Helwan Tools</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
+
+<style>
+  nav ul.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  nav ul.menu li {
+    position: relative;
+  }
+
+  nav ul.menu li a {
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+    color: #000;
+    font-weight: bold;
+  }
+
+  nav ul.menu li:hover > a {
+    background-color: #eee;
+    border-radius: 4px;
+  }
+
+  /* Submenu */
+  ul.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    min-width: 180px;
+    z-index: 100;
+  }
+
+  ul.submenu li a {
+    padding: 8px 12px;
+    color: #000;
+  }
+
+  ul.submenu li a:hover {
+    background-color: #eee;
+  }
+
+  /* Show submenu on hover */
+  li.dropdown:hover > ul.submenu {
+    display: block;
+  }
+</style>
+
 
 <!-- helwanBSD Announcement Section (replacing Contact Section) -->
 <section style="margin-top:30px; text-align:left;">
