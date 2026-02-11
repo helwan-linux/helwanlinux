@@ -152,22 +152,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </div>
 <main>
-  <h1 style="text-align:center;">Welcome to Helwan Linux</h1>
+<h1 style="text-align:center;">Welcome to Helwan Linux</h1>
 
-	<div class="feature-card">
-	   <i class="icon-kernel"></i>
-	   <h4>Tech Radio</h4>
-	   <p>The first distro turning community reviews into accessible radio content..</p>
-   </div>
+<div class="feature-card">
+    <i class="icon-kernel"></i>
+    <h4>Tech Radio</h4>
+    <p>The first distro turning community reviews into accessible radio content..</p>
+</div>
 
-
-<div class="article-audio" style="margin: 20px 0; padding: 15px; border: 1px solid 	#250517; border-radius: 24px; background:#657383; color: #150517;">
-  <h3 style="margin-top: 0; color: #ffffff;"><strong>🎙️ Helwan Global Radio</strong></h3>
+<div class="article-audio" style="margin: 20px 0; padding: 20px; border: 1px solid #250517; border-radius: 24px; background:#657383; color: #150517; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+  <h3 style="margin-top: 0; color: #ffffff; text-align: center;"><strong>🎙️ Helwan Global Radio</strong></h3>
   
   <label for="audio-selector" style="display: block; margin-bottom: 10px;"><strong>Select Article Language:</strong></label>
-  <select id="audio-selector" style="width: 100%; padding: 8px; border-radius: 30px; background: #1e293b; color: white; border: 1px solid #58a6ff; margin-bottom: 15px;">
+  <select id="audio-selector" style="width: 100%; padding: 10px; border-radius: 30px; background: #1e293b; color: white; border: 1px solid #58a6ff; margin-bottom: 20px; cursor: pointer;">
     <option value="snd/article_audio.mp3" data-link="https://thedistrowriteproject.blogspot.com/2026/02/Helwan-Linux-3.0-Dev-Edition-Arch-Based-Powerhouse-for-Developers.html">🇬🇧 English - Helwan 3.0 Dev Overview</option>
-	<option value="snd/linuxadictos.mp3" data-link="https://en.linuxadictos.com/Helwan-Linux--the-Arch-distro-designed-for-developers-and-creators.html">🇬🇧 English - linuxadictos</option>  
+    <option value="snd/linuxadictos.mp3" data-link="https://en.linuxadictos.com/Helwan-Linux--the-Arch-distro-designed-for-developers-and-creators.html">🇬🇧 English - linuxadictos</option>  
     <option value="snd/pt1.mp3" data-link="https://thedistrowriteproject.blogspot.com/2026/02/Helwan-Linux-3.0-Dev-Mergulho-na-Distro.html">🇵🇹 Português - Um mergulho na distro Arch</option>
     <option value="snd/pentru dezvoltatori și creatori.mp3" data-link="https://penguinreviewslinux.blogspot.com/2026/02/helwan-linux-distributia-arch-conceputa.html">RO română - pentru dezvoltatori și creatori</option>
     <option value="snd/ar1.mp3" data-link="https://helwanlinux.createaforum.com/general-discussion/15811604160815751606-16041610160616031587-3-0-16071604-160815801583-157516041605/">AR هل وجد المطورون أخيراً التوازن </option>
@@ -178,25 +177,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     Your browser does not support the audio element.
   </audio>
   
-  <p><small style="color: #ffffff;">Source: <a id="source-link" href="https://thedistrowriteproject.blogspot.com/2026/02/Helwan-Linux-3.0-Dev-Edition-Arch-Based-Powerhouse-for-Developers.html" target="_blank" style="color: 	#250517; text-decoration: underline;"><strong>[GB] The DistroWrite Project</strong></a></small></p>
-  <p><small style="color: #ffffff;">Source: <a id="source-link" href="https://en.linuxadictos.com/Helwan-Linux--the-Arch-distro-designed-for-developers-and-creators.html" target="_blank" style="color:#250517; text-decoration: underline;"><strong>[GB] designed for developers</strong></a></small></p>
-  <p><small style="color: #ffffff;">Source: <a id="source-link" href="https://www.edivaldobrito.com.br/helwan-linux-3-0-arch-para-desenvolvedor/" target="_blank" style="color:#250517; text-decoration: underline;"><strong>[PT] edivaldobrito</strong></a></small></p>
-  <p><small style="color: #ffffff;">Source: <a id="source-link" href="https://penguinreviewslinux.blogspot.com/2026/02/helwan-linux-distributia-arch-conceputa.html" target="_blank" style="color:#250517; text-decoration: underline;"><strong>[RO] pentru dezvoltatori și creatori</strong></a></small></p>
-  <p><small style="color: #ffffff;">Source: <a id="source-link" href="https://helwanlinux.createaforum.com/general-discussion/15811604160815751606-16041610160616031587-3-0-16071604-160815801583-157516041605/" target="_blank" style="color:#250517; text-decoration: underline;"><strong>[AR] هل وجد المطورون أخيراً التوازن المفقود</strong></a></small></p>
+  <p style="margin-top: 15px; text-align: center;">
+    <small style="color: #ffffff;">Source: 
+      <a id="dynamic-source-link" href="https://thedistrowriteproject.blogspot.com/2026/02/Helwan-Linux-3.0-Dev-Edition-Arch-Based-Powerhouse-for-Developers.html" target="_blank" style="color: #250517; text-decoration: underline;">
+        <strong>[GB] The DistroWrite Project</strong>
+      </a>
+    </small>
+  </p>
 </div>
 
 <script>
-  // كود بسيط لتغيير الصوت والرابط عند اختيار لغة مختلفة
   const selector = document.getElementById('audio-selector');
   const player = document.getElementById('main-audio-player');
   const source = document.getElementById('audio-source');
-  const sourceLink = document.getElementById('source-link');
+  const dynamicLink = document.getElementById('dynamic-source-link');
 
   selector.addEventListener('change', function() {
     const selectedOption = this.options[this.selectedIndex];
+    
+    // تحديث ملف الصوت
     source.src = this.value;
-    sourceLink.href = selectedOption.getAttribute('data-link');
-    player.load(); // إعادة تحميل المشغل بالملف الجديد
+    
+    // تحديث الرابط والنص أسفل المشغل
+    dynamicLink.href = selectedOption.getAttribute('data-link');
+    dynamicLink.innerHTML = `<strong>${selectedOption.text}</strong>`;
+    
+    // إعادة تحميل المشغل
+    player.load();
   });
 </script>
 
