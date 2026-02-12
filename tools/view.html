@@ -1,100 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="ltr">
 <head>
-<meta charset="UTF-8">
-<title>Helfetch</title>
+    <meta charset="UTF-8">
+    <title>Helwan Linux - System Status</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #2f4f4f;       /* رمادي بحري */
+            --terminal: #0f172a;  /* خلفية اللوحة */
+            --key: #ffff00;      /* أصفر للمفاتيح - كما في كودك */
+            --value: #e2e8f0;    /* أبيض مائل للرمادي للقيم */
+            --accent: #38bdf8;   /* لون الحواجز */
+            --good: #22c55e;     /* أخضر للحالة الجيدة */
+            --ram: #3b82f6;      /* أزرق للرام */
+            --disk: #f59e0b;     /* برتقالي/أصفر للقرص */
+            --quote: #90ee90;    /* أخضر فاتح للمقولة */
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;800&display=swap" rel="stylesheet">
+        body {
+            background-color: var(--bg);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'JetBrains Mono', monospace;
+        }
 
-<style>
-:root{
-  --bg:#0b0f14;
-  --panel:#0f172a;
-  --logo:#4cc2ff;
-  --key:#94a3b8;
-  --value:#e2e8f0;
-  --good:#22c55e;
-  --shield:#38bdf8;
-  --ram:#34d399;
-  --disk:#fbbf24;
-  --quote:#a78bfa;
-}
+        .dashboard {
+            background-color: var(--terminal);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.1);
+            max-width: 700px;
+            width: 90%;
+        }
 
-*{
-  box-sizing:border-box;
-  font-family:"JetBrains Mono", monospace;
-}
+        .header {
+            border-bottom: 2px solid var(--accent);
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            color: var(--accent);
+            font-size: 1.5em;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }
 
-body{
-  margin:0;
-  background:radial-gradient(1200px 600px at 20% -10%, #0e1a2b, transparent),
-             radial-gradient(800px 400px at 90% 10%, #0a2230, transparent),
-             var(--bg);
-  display:grid;
-  place-items:center;
-  min-height:100vh;
-}
+        pre {
+            margin: 0;
+            white-space: pre;
+            line-height: 1.6;
+            font-size: 16px;
+        }
 
-.wrapper{
-  background:var(--panel);
-  padding:40px;
-  border-radius:18px;
-  box-shadow:0 30px 80px rgba(0,0,0,.6);
-  display:grid;
-  grid-template-columns:auto 1fr;
-  gap:60px;
-}
+        .section-title {
+            color: #94a3b8;
+            font-size: 0.9em;
+            margin-top: 20px;
+            margin-bottom: 5px;
+            display: block;
+            text-decoration: underline;
+        }
 
-pre{
-  margin:0;
-  white-space:pre;
-  font-size:14px;
-  line-height:1.1;
-}
+        .key { color: var(--key); font-weight: bold; }
+        .value { color: var(--value); }
+        .status-ok { color: var(--good); }
+        .ram-fill { color: var(--ram); }
+        .disk-fill { color: var(--disk); }
 
-.logo{
-  color:var(--logo);
-  font-weight:800;
-  text-shadow:0 0 18px rgba(76,194,255,.35);
-}
+        .quote-box {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px dashed rgba(255,255,255,0.2);
+            color: var(--quote);
+            font-style: italic;
+            text-align: center;
+            font-size: 0.95em;
+        }
 
-.key{ color:var(--key); }
-.value{ color:var(--value); }
-.good{ color:var(--good); }
-.shield{ color:var(--shield); }
-.ram{ color:var(--ram); }
-.disk{ color:var(--disk); }
-.quote{ color:var(--quote); }
-
-</style>
+        /* تأثير نبضي بسيط للحالة */
+        .pulse {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--good);
+            border-radius: 50%;
+            margin-right: 10px;
+            box-shadow: 0 0 10px var(--good);
+        }
+    </style>
 </head>
 <body>
 
-<pre class="logo" style="font-size:12px; line-height:1.05;">
-██╗  ██╗███████╗██╗     ██╗    ██╗ █████╗ ███╗   ██╗
-██║  ██║██╔════╝██║     ██║    ██║██╔══██╗████╗  ██║
-███████║█████╗  ██║     ██║ █╗ ██║███████║██╔██╗ ██║
-██╔══██║██╔══╝  ██║     ██║███╗██║██╔══██║██║╚██╗██║
-██║  ██║███████╗███████╗╚███╔███╔╝██║  ██║██║ ╚████║
-╚═╝  ╚═╝╚══════╝╚══════╝ ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝  ╚═══╝
-</pre>
+<div class="dashboard">
+    <div class="header">
+        <span>SYSTEM REPORT</span>
+        <span style="font-size: 0.6em; opacity: 0.7;">HELWAN LINUX OS</span>
+    </div>
 
+    <pre>
+<span class="key">User:</span>       <span class="value">helwan_user</span>
+<span class="key">Host:</span>       <span class="value">helwan-desktop</span>
+<span class="key">Kernel:</span>     <span class="value">6.1.0-helwan</span>
+<span class="key">OS:</span>         <span class="value">Helwan Linux (Arch Based)</span>
+<span class="key">Packages:</span>   <span class="value">1248 (Pacman)</span>
+<span class="key">Integrity:</span>  <span class="status-ok">Optimized ⚡</span>
+<span class="key">Security:</span>   <span class="status-ok">Active 🛡️</span>
 
-<pre>
-<span class="key">OS:</span>         <span class="value">Helwan Linux</span>
-<span class="key">Integrity:</span>  <span class="good">Healthy ✅</span>
-<span class="key">Security:</span>   <span class="shield">Active 🛡️</span>
-<span class="key">RAM:</span>        <span class="ram">2.1Gi/8.0Gi [█████----------]</span>
-<span class="key">Disk:</span>       <span class="disk">45% [█████████-----------]</span>
-<span class="key">DE:</span>         <span class="value">GNOME</span>
-<span class="key">WM:</span>         <span class="value">Mutter</span>
-<span class="key">Theme:</span>      <span class="value">Helwan-Dark</span>
-<span class="key">Status:</span>     <span class="value">Connected</span>
-<span class="key">IP:</span>         <span class="value">192.168.1.15</span>
+<span class="section-title">[Hardware Analysis]</span>
+<span class="key">RAM:</span>        <span class="value">2048MB / 8192MB (25.0%)</span>
+<span class="key">RAM State:</span>  <span class="ram-fill">[█████---------------]</span> <span class="status-ok">(Stable)</span>
+<span class="key">Disk:</span>       <span class="value">45%</span> <span class="disk-fill">[█████████-----------]</span>
+<span class="key">CPU:</span>        <span class="value">Intel(R) Core(TM) i7-10700K @ 3.80GHz</span>
+<span class="key">GPU:</span>        <span class="value">NVIDIA GeForce RTX 3070</span>
 
-<span class="quote">"Logic will get you from A to B. Imagination will take you everywhere."</span>
-</pre>
+<span class="section-title">[Network Connectivity]</span>
+<span class="key">Local IP:</span>   <span class="value">192.168.1.15</span>
+<span class="key">Public IP:</span>  <span class="value">156.210.XX.XX (Cairo, Egypt)</span></pre>
 
+    <div class="quote-box">
+        "My kernel is custom, my heart is Helwan Linux."
+    </div>
 </div>
 
 </body>
