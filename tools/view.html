@@ -1,150 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>helftech — Helwan Linux</title>
-  <style>
-    :root {
-      --bg: #0b0f14;
-      --panel: #0f1623;
-      --text: #e6edf3;
-      --muted: #9aa4b2;
-      --accent: #4cc2ff;
-      --accent2: #7cffc2;
-      --border: #1e293b;
-    }
+<meta charset="UTF-8">
+<title>Helfetch — Helwan Linux</title>
 
-    * {
-      box-sizing: border-box;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-    }
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-    body {
-      margin: 0;
-      background: radial-gradient(1200px 600px at 20% -10%, #0e1a2b, transparent),
-                  radial-gradient(800px 400px at 90% 10%, #0a2230, transparent),
-                  var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-    }
+<style>
+:root{
+  --bg:#0b0f14;
+  --panel:#0f1623;
+  --accent:#4cc2ff;
+  --key:#9aa4b2;
+  --value:#e6edf3;
+  --ram:#7cffc2;
+  --quote:#b48cff;
+  --border:#1e293b;
+}
 
-    .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), transparent),
-                  var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 22px 26px;
-      width: 820px;
-      max-width: 92vw;
-      box-shadow: 0 20px 60px rgba(0,0,0,.45);
-    }
+*{
+  box-sizing:border-box;
+  font-family:"JetBrains Mono", monospace;
+}
 
-    .header {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 20px;
-      align-items: center;
-      margin-bottom: 18px;
-    }
+body{
+  margin:0;
+  background:radial-gradient(1200px 600px at 20% -10%, #0e1a2b, transparent),
+             radial-gradient(800px 400px at 90% 10%, #0a2230, transparent),
+             var(--bg);
+  display:grid;
+  place-items:center;
+  min-height:100vh;
+  color:var(--value);
+}
 
-    .logo {
-      color: var(--accent);
-      line-height: 1.05;
-      white-space: pre;
-      font-weight: 700;
-    }
+.card{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:30px;
+  width:950px;
+  max-width:95vw;
+  box-shadow:0 20px 60px rgba(0,0,0,.45);
+}
 
-    .user {
-      font-size: 18px;
-      color: var(--accent2);
-    }
+.terminal{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:30px;
+}
 
-    .divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--border), transparent);
-      margin: 14px 0 18px;
-    }
+.logo{
+  color:var(--accent);
+  white-space:pre;
+  line-height:1.05;
+  font-weight:700;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px 28px;
-    }
+.info{
+  white-space:pre;
+  font-size:15px;
+  line-height:1.6;
+}
 
-    .row {
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: 10px;
-    }
+.key{ color:var(--key); }
+.value{ color:var(--value); }
+.ram{ color:var(--ram); }
+.quote{
+  margin-top:18px;
+  color:var(--quote);
+}
 
-    .key {
-      color: var(--muted);
-    }
-
-    .colors {
-      margin-top: 18px;
-      display: flex;
-      gap: 6px;
-    }
-
-    .dot {
-      width: 18px;
-      height: 10px;
-      border-radius: 3px;
-    }
-  </style>
+</style>
 </head>
 <body>
-  <div class="card">
-    <div class="header">
-      <div class="logo">
+
+<div class="card">
+  <div class="terminal">
+    <div class="logo">
 ██╗  ██╗███████╗██╗     ██╗    ██╗ █████╗ ███╗   ██╗
 ██║  ██║██╔════╝██║     ██║    ██║██╔══██╗████╗  ██║
 ███████║█████╗  ██║     ██║ █╗ ██║███████║██╔██╗ ██║
 ██╔══██║██╔══╝  ██║     ██║███╗██║██╔══██║██║╚██╗██║
 ██║  ██║███████╗███████╗╚███╔███╔╝██║  ██║██║ ╚████║
 ╚═╝  ╚═╝╚══════╝╚══════╝ ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝  ╚═══╝
-      </div>
-      <div class="user">Saeed@helwan</div>
     </div>
 
-    <div class="divider"></div>
+    <div class="info">
+<span class="key">OS:</span>        <span class="value">Helwan Linux 3.0 Dev</span>
+<span class="key">Kernel:</span>    <span class="value">6.8.2-arch1-1</span>
+<span class="key">Uptime:</span>    <span class="value">3h 41m</span>
+<span class="key">Shell:</span>     <span class="value">bash 5.2</span>
+<span class="key">CPU:</span>       <span class="value">AMD Ryzen 5 5600G</span>
+<span class="key">GPU:</span>       <span class="value">AMD Radeon Graphics</span>
+<span class="key">RAM:</span>       <span class="value">3.4 GiB / 16 GiB</span>
+<span class="key">RAM Usage:</span> <span class="ram">███████░░░░░ 21%</span>
+<span class="key">Disk:</span>      <span class="value">118G / 512G</span>
+<span class="key">Security:</span>  <span class="value">Secure</span>
+<span class="key">Integrity:</span> <span class="value">Verified</span>
+<span class="key">DE:</span>        <span class="value">KDE Plasma 6</span>
+<span class="key">WM:</span>        <span class="value">KWin</span>
+<span class="key">Network:</span>   <span class="value">Connected (192.168.1.12)</span>
 
-    <div class="grid">
-      <div class="row"><div class="key">OS</div><div>Helwan Linux x86_64</div></div>
-      <div class="row"><div class="key">Kernel</div><div>Linux 6.7.4-helwan</div></div>
-
-      <div class="row"><div class="key">Uptime</div><div>2 hours, 13 mins</div></div>
-      <div class="row"><div class="key">Packages</div><div>1247 (pacman)</div></div>
-
-      <div class="row"><div class="key">Shell</div><div>bash 5.2.21</div></div>
-      <div class="row"><div class="key">Terminal</div><div>konsole</div></div>
-
-      <div class="row"><div class="key">DE</div><div>Plasma 6.0</div></div>
-      <div class="row"><div class="key">WM</div><div>KWin</div></div>
-
-      <div class="row"><div class="key">Theme</div><div>Helwan-Dark</div></div>
-      <div class="row"><div class="key">Icons</div><div>Helwan-Icons</div></div>
-
-      <div class="row"><div class="key">CPU</div><div>Intel Core i7-8700</div></div>
-      <div class="row"><div class="key">GPU</div><div>NVIDIA GTX 1660 SUPER</div></div>
-
-      <div class="row"><div class="key">Memory</div><div>3.2 GiB / 15.6 GiB</div></div>
-      <div class="row"><div class="key">Resolution</div><div>1920x1080</div></div>
-    </div>
-
-    <div class="colors">
-      <div class="dot" style="background:#ff6b6b"></div>
-      <div class="dot" style="background:#feca57"></div>
-      <div class="dot" style="background:#1dd1a1"></div>
-      <div class="dot" style="background:#54a0ff"></div>
-      <div class="dot" style="background:#5f27cd"></div>
-      <div class="dot" style="background:#c8d6e5"></div>
-      <div class="dot" style="background:#576574"></div>
-      <div class="dot" style="background:#222f3e"></div>
+<div class="quote">"Build. Break. Learn. Repeat."</div>
     </div>
   </div>
+</div>
+
 </body>
 </html>
