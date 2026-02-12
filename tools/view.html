@@ -2,20 +2,22 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Helfetch — Helwan Linux</title>
+<title>Helfetch</title>
 
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
   --bg:#0b0f14;
-  --panel:#0f1623;
-  --accent:#4cc2ff;
-  --key:#9aa4b2;
-  --value:#e6edf3;
-  --ram:#7cffc2;
-  --quote:#b48cff;
-  --border:#1e293b;
+  --panel:#0f172a;
+  --logo:#4cc2ff;
+  --key:#94a3b8;
+  --value:#e2e8f0;
+  --good:#22c55e;
+  --shield:#38bdf8;
+  --ram:#34d399;
+  --disk:#fbbf24;
+  --quote:#a78bfa;
 }
 
 *{
@@ -31,80 +33,68 @@ body{
   display:grid;
   place-items:center;
   min-height:100vh;
-  color:var(--value);
 }
 
-.card{
+.wrapper{
   background:var(--panel);
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:30px;
-  width:950px;
-  max-width:95vw;
-  box-shadow:0 20px 60px rgba(0,0,0,.45);
-}
-
-.terminal{
+  padding:40px;
+  border-radius:18px;
+  box-shadow:0 30px 80px rgba(0,0,0,.6);
   display:grid;
   grid-template-columns:auto 1fr;
-  gap:30px;
+  gap:60px;
+}
+
+pre{
+  margin:0;
+  white-space:pre;
+  font-size:14px;
+  line-height:1.1;
 }
 
 .logo{
-  color:var(--accent);
-  white-space:pre;
-  line-height:1.05;
-  font-weight:700;
-}
-
-.info{
-  white-space:pre;
-  font-size:15px;
-  line-height:1.6;
+  color:var(--logo);
+  font-weight:800;
+  text-shadow:0 0 18px rgba(76,194,255,.35);
 }
 
 .key{ color:var(--key); }
 .value{ color:var(--value); }
+.good{ color:var(--good); }
+.shield{ color:var(--shield); }
 .ram{ color:var(--ram); }
-.quote{
-  margin-top:18px;
-  color:var(--quote);
-}
+.disk{ color:var(--disk); }
+.quote{ color:var(--quote); }
 
 </style>
 </head>
 <body>
 
-<div class="card">
-  <div class="terminal">
-    <div class="logo">
+<pre class="logo" style="font-size:12px; line-height:1.05;">
 ██╗  ██╗███████╗██╗     ██╗    ██╗ █████╗ ███╗   ██╗
 ██║  ██║██╔════╝██║     ██║    ██║██╔══██╗████╗  ██║
 ███████║█████╗  ██║     ██║ █╗ ██║███████║██╔██╗ ██║
 ██╔══██║██╔══╝  ██║     ██║███╗██║██╔══██║██║╚██╗██║
 ██║  ██║███████╗███████╗╚███╔███╔╝██║  ██║██║ ╚████║
 ╚═╝  ╚═╝╚══════╝╚══════╝ ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝  ╚═══╝
-    </div>
+</pre>
 
-    <div class="info">
-<span class="key">OS:</span>        <span class="value">Helwan Linux 3.0 Dev</span>
-<span class="key">Kernel:</span>    <span class="value">6.8.2-arch1-1</span>
-<span class="key">Uptime:</span>    <span class="value">3h 41m</span>
-<span class="key">Shell:</span>     <span class="value">bash 5.2</span>
-<span class="key">CPU:</span>       <span class="value">AMD Ryzen 5 5600G</span>
-<span class="key">GPU:</span>       <span class="value">AMD Radeon Graphics</span>
-<span class="key">RAM:</span>       <span class="value">3.4 GiB / 16 GiB</span>
-<span class="key">RAM Usage:</span> <span class="ram">███████░░░░░ 21%</span>
-<span class="key">Disk:</span>      <span class="value">118G / 512G</span>
-<span class="key">Security:</span>  <span class="value">Secure</span>
-<span class="key">Integrity:</span> <span class="value">Verified</span>
-<span class="key">DE:</span>        <span class="value">KDE Plasma 6</span>
-<span class="key">WM:</span>        <span class="value">KWin</span>
-<span class="key">Network:</span>   <span class="value">Connected (192.168.1.12)</span>
 
-<div class="quote">"Build. Break. Learn. Repeat."</div>
-    </div>
-  </div>
+<pre>
+<span class="key">OS:</span>         <span class="value">Helwan Linux</span>
+<span class="key">Integrity:</span>  <span class="good">Healthy ✅</span>
+<span class="key">Security:</span>   <span class="shield">Active 🛡️</span>
+<span class="key">RAM:</span>        <span class="ram">2.1Gi/8.0Gi [█████----------]</span>
+<span class="key">Disk:</span>       <span class="disk">45% [█████████-----------]</span>
+<span class="key">DE:</span>         <span class="value">GNOME</span>
+<span class="key">WM:</span>         <span class="value">Mutter</span>
+<span class="key">Theme:</span>      <span class="value">Helwan-Dark</span>
+<span class="key">Status:</span>     <span class="value">Connected</span>
+<span class="key">IP:</span>         <span class="value">192.168.1.15</span>
+
+<span class="quote">"Logic will get you from A to B. Imagination will take you everywhere."</span>
+</pre>
+
 </div>
 
 </body>
