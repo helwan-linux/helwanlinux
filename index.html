@@ -294,6 +294,61 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 
 
+<section style="margin: 40px auto; max-width: 1000px; padding: 25px; background: #fdfdfd; border-radius: 12px; border: 1px solid #ddd; font-family: sans-serif;">
+  <h2 style="text-align:center; color: #1a1a1a; margin-bottom: 10px;">⌨️ Built-in Terminal Shortcuts (Aliases)</h2>
+  <p style="text-align: center; color: #555; margin-bottom: 30px;">Helwan Linux provides these native shortcuts to make your terminal experience faster and more intuitive.</p>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+    
+    <div style="background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid #333;">
+      <h4 style="margin-top:0; color: #333;">🔄 Updates & Sync</h4>
+      <code style="display:block; background:#1a1a1a; color:#fff; padding:8px; border-radius:4px; margin-bottom:5px;">update</code>
+      <small>Full system upgrade (Syu)</small>
+      <code style="display:block; background:#1a1a1a; color:#fff; padding:8px; border-radius:4px; margin: 10px 0 5px 0;">sync</code>
+      <small>Force database refresh (Syyy)</small>
+      <code style="display:block; background:#1a1a1a; color:#fff; padding:8px; border-radius:4px; margin: 10px 0 5px 0;">unlock</code>
+      <small>Remove pacman lock file</small>
+    </div>
+
+    <div style="background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid #333;">
+      <h4 style="margin-top:0; color: #333;">📦 Package Control</h4>
+      <code style="display:block; background:#1a1a1a; color:#fff; padding:8px; border-radius:4px; margin-bottom:5px;">install [pkg]</code>
+      <small>Standard install command</small>
+      <code style="display:block; background:#1a1a1a; color:#fff; padding:8px; border-radius:4px; margin: 10px 0 5px 0;">remove [pkg]</code>
+      <small>Standard remove command</small>
+      <code style="display:block; background:#1a1a1a; color:#fff; padding:8px; border-radius:4px; margin: 10px 0 5px 0;">local-install</code>
+      <small>Install from local file (-U)</small>
+    </div>
+
+    <div style="background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid #333;">
+      <h4 style="margin-top:0; color: #333;">🔍 Search & Info</h4>
+      <code style="display:block; background:#1a1a1a; color:#fff; padding:8px; border-radius:4px; margin-bottom:5px;">search [query]</code>
+      <small>Search online repositories</small>
+      <code style="display:block; background:#1a1a1a; color:#fff; padding:8px; border-radius:4px; margin: 10px 0 5px 0;">search-local</code>
+      <small>Search installed packages</small>
+      <code style="display:block; background:#1a1a1a; color:#fff; padding:8px; border-radius:4px; margin: 10px 0 5px 0;">pkg-info [pkg]</code>
+      <small>View detailed info (-Qi)</small>
+    </div>
+
+    <div style="background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid #333;">
+      <h4 style="margin-top:0; color: #333;">🛠️ Maintenance & Info</h4>
+      <code style="display:block; background:#1a1a1a; color:#fff; padding:8px; border-radius:4px; margin-bottom:5px;">autoremove</code>
+      <small>Clean unused dependencies (Rns)</small>
+      <code style="display:block; background:#1a1a1a; color:#fff; padding:8px; border-radius:4px; margin: 10px 0 5px 0;">clr-cache</code>
+      <small>Clean pacman cache (Scc)</small>
+      <code style="display:block; background:#1a1a1a; color:#fff; padding:8px; border-radius:4px; margin: 10px 0 5px 0;">helwan</code>
+      <small>Display kernel info (uname -a)</small>
+    </div>
+
+  </div>
+  
+  <p style="text-align: center; margin-top: 30px; font-style: italic; font-size: 0.95rem; color: #777;">
+    💡 Tip: These aliases are pre-loaded in your <code>.bashrc</code> for immediate use.
+  </p>
+</section>
+
+
+
 
 <footer style="text-align:center; font-size: small; margin-top: 40px;">
   Made with ❤️ by the Helwan
