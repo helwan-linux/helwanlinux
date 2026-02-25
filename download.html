@@ -169,21 +169,21 @@
 
 <!-- the book -->
     
-<div style="background: #161b22; color: #e6edf3; padding: 20px; border-radius: 8px; border: 1px solid #30363d;">
-    <h2 style="text-align: center; border-bottom: 1px solid #30363d; padding-bottom: 10px;">📚 Helwan Linux Learning Library</h2>
+<div style="background: #ffffff; color: #24292f; padding: 20px; border-radius: 12px; border: 1px dotted #d0d7de; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+    <h2 style="text-align: center; border-bottom: 2px solid #f6f8fa; padding-bottom: 15px; color: #1f2328; font-family: sans-serif;">📚 Helwan Linux Learning Library</h2>
     
     <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 20px;">
-        <div>
-            <label for="book-select" id="label-book">Select Guide:</label>
-            <select id="book-select" onchange="updateBookDisplay()" style="padding: 5px; border-radius: 4px; background: #0d1117; color: white; border: 1px solid #30363d;">
+        <div style="display: flex; flex-direction: column; gap: 5px;">
+            <label for="book-select" id="label-book" style="font-weight: bold; font-size: 14px; color: #57606a;">Select Guide:</label>
+            <select id="book-select" onchange="updateBookDisplay()" style="padding: 8px 12px; border-radius: 6px; background: #f6f8fa; color: #24292f; border: 1px solid #d0d7de; outline: none; cursor: pointer;">
                 <option value="distro">Distro Building (Archiso)</option>
                 <option value="pkgbuild">Packaging Mastery (PKGBUILD)</option>
             </select>
         </div>
 
-        <div>
-            <label for="language-select" id="label-lang">Language:</label>
-            <select id="language-select" onchange="updateBookDisplay()" style="padding: 5px; border-radius: 4px; background: #0d1117; color: white; border: 1px solid #30363d;">
+        <div style="display: flex; flex-direction: column; gap: 5px;">
+            <label for="language-select" id="label-lang" style="font-weight: bold; font-size: 14px; color: #57606a;">Language:</label>
+            <select id="language-select" onchange="updateBookDisplay()" style="padding: 8px 12px; border-radius: 6px; background: #f6f8fa; color: #24292f; border: 1px solid #d0d7de; outline: none; cursor: pointer;">
                 <option value="en">English</option>
                 <option value="ar">العربية</option>
                 <option value="es">Español</option>
@@ -191,18 +191,18 @@
         </div>
     </div>
 
-    <p id="book-description" style="text-align: center; color: #8b949e; margin-top: 15px; font-style: italic;">
+    <p id="book-description" style="text-align: center; color: #6e7781; margin-top: 20px; font-style: italic; font-size: 15px;">
         A comprehensive guide to building your own Arch-based distro.
     </p>
 
-    <div id="download-button-container" style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
-        <a id="download-link" href="#" target="_blank" style="display: inline-block; background: #238636; color: white; padding: 12px 25px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 16px;">
+    <div id="download-button-container" style="text-align: center; margin-top: 25px; margin-bottom: 25px;">
+        <a id="download-link" href="#" target="_blank" style="display: inline-block; background: #2da44e; color: white; padding: 12px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; transition: background 0.2s;">
             ⬇️ Download PDF
         </a>
     </div>
 
     <div id="pdf-viewer-container" style="text-align: center;">
-        <iframe id="book-iframe" src="" width="90%" height="600px" style="border: 1px solid #30363d; border-radius: 6px; background: white;">
+        <iframe id="book-iframe" src="" width="95%" height="700px" style="border: 1px solid #d0d7de; border-radius: 8px; background: #ffffff; box-shadow: inset 0 0 10px rgba(0,0,0,0.02);">
             Your browser does not support PDFs.
         </iframe>
     </div>
@@ -228,7 +228,7 @@
             },
             en: "https://raw.githack.com/helwan-linux/pkgbuild-book/main/build-book%20EN.pdf",
             ar: "https://raw.githack.com/helwan-linux/pkgbuild-book/main/build-book%20AR.pdf",
-            es: "https://raw.githack.com/helwan-linux/pkgbuild-book/main/build-book%20EN.pdf" // Defaulting to EN for ES if not available
+            es: "https://raw.githack.com/helwan-linux/pkgbuild-book/main/build-book%20EN.pdf" 
         }
     };
 
@@ -242,12 +242,10 @@
         const selectedUrl = library[bookType][lang];
         const rawUrl = selectedUrl.replace('raw.githack.com', 'raw.githubusercontent.com');
 
-        // Update URLs
         iframe.src = selectedUrl;
         downloadLink.href = rawUrl;
         description.textContent = library[bookType].desc[lang];
 
-        // UI Translation
         if (lang === 'ar') {
             document.getElementById('label-book').textContent = 'اختر الكتاب:';
             document.getElementById('label-lang').textContent = 'اللغة:';
