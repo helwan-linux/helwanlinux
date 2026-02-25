@@ -167,86 +167,112 @@
 
     <hr>
 
-    <!-- the book -->
+<!-- the book -->
     
-<h2>📚 Custom Linux Distro Building Book</h2>
-<p>
-  A comprehensive guide to building your own Arch-based distro, featuring an inside look at how Helwan Linux is made.
-</p>
+<div style="background: #161b22; color: #e6edf3; padding: 20px; border-radius: 8px; border: 1px solid #30363d;">
+    <h2 style="text-align: center; border-bottom: 1px solid #30363d; padding-bottom: 10px;">📚 Helwan Linux Learning Library</h2>
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 20px;">
+        <div>
+            <label for="book-select" id="label-book">Select Guide:</label>
+            <select id="book-select" onchange="updateBookDisplay()" style="padding: 5px; border-radius: 4px; background: #0d1117; color: white; border: 1px solid #30363d;">
+                <option value="distro">Distro Building (Archiso)</option>
+                <option value="pkgbuild">Packaging Mastery (PKGBUILD)</option>
+            </select>
+        </div>
 
-<div>
-  <label for="language-select">Choose language:</label>
-  <select id="language-select" onchange="updateBookDisplay()">
-    <option value="en">English</option>
-    <option value="ar">العربية</option>
-        <option value="es">Español</option>
-  </select>
-</div>
+        <div>
+            <label for="language-select" id="label-lang">Language:</label>
+            <select id="language-select" onchange="updateBookDisplay()" style="padding: 5px; border-radius: 4px; background: #0d1117; color: white; border: 1px solid #30363d;">
+                <option value="en">English</option>
+                <option value="ar">العربية</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
+    </div>
 
-<div id="download-button-container" style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
-  <a id="download-link" href="#" target="_blank" style="display: inline-block; background: #30363d; color: white; padding: 12px 25px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 16px;">
-    ⬇️ Download Book
-  </a>
-</div>
+    <p id="book-description" style="text-align: center; color: #8b949e; margin-top: 15px; font-style: italic;">
+        A comprehensive guide to building your own Arch-based distro.
+    </p>
 
-<div id="pdf-viewer-container" style="margin-top: 30px; text-align: center;">
-  <iframe id="book-iframe" src="" width="90%" height="600px" style="border: 1px solid #ddd; border-radius: 6px;">
-    Your browser does not support PDFs.
-    <a id="iframe-download-link" href="#">Download the PDF</a>.
-  </iframe>
+    <div id="download-button-container" style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+        <a id="download-link" href="#" target="_blank" style="display: inline-block; background: #238636; color: white; padding: 12px 25px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 16px;">
+            ⬇️ Download PDF
+        </a>
+    </div>
+
+    <div id="pdf-viewer-container" style="text-align: center;">
+        <iframe id="book-iframe" src="" width="90%" height="600px" style="border: 1px solid #30363d; border-radius: 6px; background: white;">
+            Your browser does not support PDFs.
+        </iframe>
+    </div>
 </div>
 
 <script>
-  // تعريف الروابط للثلاث نسخ
-  const bookUrls = {
-    en: {
-      pdf: "https://raw.githubusercontent.com/helwan-linux/archiso-book/main/helwan%20book.pdf",
-      githack: "https://raw.githack.com/helwan-linux/archiso-book/main/helwan%20book.pdf"
-    },
-    ar: {
-      pdf: "https://raw.githubusercontent.com/helwan-linux/archiso-book/main/archiso%20Ar.pdf",
-      githack: "https://raw.githack.com/helwan-linux/archiso-book/main/archiso%20Ar.pdf"
-    },
-    // تم إضافة الروابط الخاصة بالنسخة الإسبانية هنا
-    es: {
-        pdf: "https://raw.githubusercontent.com/helwan-linux/archiso-book/main/archiao%20ES.pdf",
-        githack: "https://raw.githack.com/helwan-linux/archiso-book/main/archiao%20ES.pdf"
+    const library = {
+        distro: {
+            desc: {
+                en: "A comprehensive guide to building your own Arch-based distro.",
+                ar: "دليل شامل لبناء توزيعتك الخاصة المبنية على آرتش لينكس.",
+                es: "Una guía completa para construir tu propia distribución basada en Arch."
+            },
+            en: "https://raw.githack.com/helwan-linux/archiso-book/main/helwan%20book.pdf",
+            ar: "https://raw.githack.com/helwan-linux/archiso-book/main/archiso%20Ar.pdf",
+            es: "https://raw.githack.com/helwan-linux/archiso-book/main/archiao%20ES.pdf"
+        },
+        pkgbuild: {
+            desc: {
+                en: "Master the art of Linux packaging and PKGBUILD creation.",
+                ar: "احترف فن تغليف الحزم وإنشاء ملفات PKGBUILD.",
+                es: "Domina el arte del empaquetado en Linux y la creación de PKGBUILD."
+            },
+            en: "https://raw.githack.com/helwan-linux/pkgbuild-book/main/build-book%20EN.pdf",
+            ar: "https://raw.githack.com/helwan-linux/pkgbuild-book/main/build-book%20AR.pdf",
+            es: "https://raw.githack.com/helwan-linux/pkgbuild-book/main/build-book%20EN.pdf" // Defaulting to EN for ES if not available
+        }
+    };
+
+    function updateBookDisplay() {
+        const bookType = document.getElementById('book-select').value;
+        const lang = document.getElementById('language-select').value;
+        const downloadLink = document.getElementById('download-link');
+        const iframe = document.getElementById('book-iframe');
+        const description = document.getElementById('book-description');
+        
+        const selectedUrl = library[bookType][lang];
+        const rawUrl = selectedUrl.replace('raw.githack.com', 'raw.githubusercontent.com');
+
+        // Update URLs
+        iframe.src = selectedUrl;
+        downloadLink.href = rawUrl;
+        description.textContent = library[bookType].desc[lang];
+
+        // UI Translation
+        if (lang === 'ar') {
+            document.getElementById('label-book').textContent = 'اختر الكتاب:';
+            document.getElementById('label-lang').textContent = 'اللغة:';
+            downloadLink.innerHTML = '⬇️ تحميل الكتاب (PDF)';
+            document.querySelectorAll('#book-select option')[0].text = 'بناء التوزيعات (Archiso)';
+            document.querySelectorAll('#book-select option')[1].text = 'احتراف التغليف (PKGBUILD)';
+        } else if (lang === 'es') {
+            document.getElementById('label-book').textContent = 'Seleccionar guía:';
+            document.getElementById('label-lang').textContent = 'Idioma:';
+            downloadLink.innerHTML = '⬇️ Descargar Libro';
+            document.querySelectorAll('#book-select option')[0].text = 'Construcción de Distros';
+            document.querySelectorAll('#book-select option')[1].text = 'Maestría en Empaquetado';
+        } else {
+            document.getElementById('label-book').textContent = 'Select Guide:';
+            document.getElementById('label-lang').textContent = 'Language:';
+            downloadLink.innerHTML = '⬇️ Download PDF';
+            document.querySelectorAll('#book-select option')[0].text = 'Distro Building (Archiso)';
+            document.querySelectorAll('#book-select option')[1].text = 'Packaging Mastery (PKGBUILD)';
+        }
     }
-  };
 
-  const downloadLink = document.getElementById('download-link');
-  const iframe = document.getElementById('book-iframe');
-  const iframeDownloadLink = document.getElementById('iframe-download-link');
-  const languageSelect = document.getElementById('language-select');
-  const languageLabel = document.querySelector('label[for="language-select"]');
-
-  function updateBookDisplay() {
-    const selectedLanguage = languageSelect.value;
-    const urls = bookUrls[selectedLanguage];
-
-    // تحديث رابط التنزيل الرئيسي
-    downloadLink.href = urls.pdf;
-
-    // تحديث رابط الـ iframe ورابط التنزيل الخاص به
-    iframe.src = urls.githack;
-    iframeDownloadLink.href = urls.pdf;
-
-    // تحديث نص رابط التنزيل وتسمية اللغة
-    if (selectedLanguage === 'ar') {
-      downloadLink.innerHTML = '⬇️ تحميل الكتاب';
-      languageLabel.textContent = 'اختر اللغة:';
-    } else if (selectedLanguage === 'es') {
-      downloadLink.innerHTML = '⬇️ Descargar libro';
-      languageLabel.textContent = 'Elige el idioma:';
-    } else {
-      downloadLink.innerHTML = '⬇️ Download Book';
-      languageLabel.textContent = 'Choose language:';
-    }
-  }
-
-  // استدعاء الدالة عند تحميل الصفحة لتعيين اللغة الافتراضية (الإنجليزية)
-  window.onload = updateBookDisplay;
+    window.onload = updateBookDisplay;
 </script>
+
+
 
 <hr>
  <!-- Developer LTS v 3.0-->
