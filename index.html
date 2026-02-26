@@ -344,19 +344,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   const source = document.getElementById('audio-source');
   const dynamicLink = document.getElementById('dynamic-source-link');
 
-  selector.addEventListener('change', function() {
-    const selectedOption = this.options[this.selectedIndex];
-    
-    // تحديث ملف الصوت
-    source.src = this.value;
-    
-    // تحديث الرابط والنص أسفل المشغل
-    dynamicLink.href = selectedOption.getAttribute('data-link');
-    dynamicLink.innerHTML = `<strong>${selectedOption.text}</strong>`;
-    
-    // إعادة تحميل المشغل
-    player.load();
-  });
+  // إضافة ميزة بسيطة لإخفاء الرابط إذا لم يوجد
+	selector.addEventListener('change', function() {
+		const selectedOption = this.options[this.selectedIndex];
+		const link = selectedOption.getAttribute('data-link');
+		
+		source.src = this.value;
+		
+		if (link) {
+			dynamicLink.style.display = 'inline-block';
+			dynamicLink.href = link;
+			dynamicLink.innerHTML = `<strong>${selectedOption.text}</strong>`;
+		} else {
+			// إخفاء الرابط إذا كانت مجرد أغنية (مثل Anthem)
+			dynamicLink.style.display = 'none';
+		}
+		
+		player.load();
+		player.play(); // اختيار اختياري: البدء فور الاختيار
+	});
 </script>
 
 
