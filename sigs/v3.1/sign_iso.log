@@ -1,0 +1,31 @@
+2026-02-26T21:06:36.234147Z  Starting process
+2026-02-26T21:06:36.235194Z  Working — The output will be in: /home/sma/Desktop/y/Helwan-Linux-Dev-LTS-v3.1-x86_64
+2026-02-26T21:06:38.590361Z  No secret key found — Auto-generating an unprotected key for signing (Security Warning).
+2026-02-26T21:06:38.592163Z  Executing: gpg --batch --gen-key /tmp/tmp4h5ytz4w
+2026-02-26T21:06:44.556476Z  Command Output:
+
+2026-02-26T21:06:44.596509Z  Using key FPR=C7F5287B39BFC2F8A717C4ADCAD54C20F4560BD9 LONG=CAD54C20F4560BD9
+2026-02-26T21:06:44.596655Z  Creating signatures...
+2026-02-26T21:06:44.597323Z  Executing: gpg --output /home/sma/Desktop/y/Helwan-Linux-Dev-LTS-v3.1-x86_64/Helwan-Linux-Dev-LTS-v3.1-x86_64.iso.sig --detach-sign --local-user C7F5287B39BFC2F8A717C4ADCAD54C20F4560BD9 /home/sma/Downloads/Helwan-Linux-Dev-LTS-v3.1-x86_64.iso
+2026-02-26T21:08:49.928801Z  Command Output:
+
+2026-02-26T21:08:49.946512Z  Executing: gpg --armor --output /home/sma/Desktop/y/Helwan-Linux-Dev-LTS-v3.1-x86_64/Helwan-Linux-Dev-LTS-v3.1-x86_64.iso.sig.asc --detach-sign --local-user C7F5287B39BFC2F8A717C4ADCAD54C20F4560BD9 /home/sma/Downloads/Helwan-Linux-Dev-LTS-v3.1-x86_64.iso
+2026-02-26T21:10:18.791620Z  Command Output:
+
+2026-02-26T21:10:18.809525Z  Signatures created successfully.
+2026-02-26T21:10:18.811465Z  Exporting Public Key to: helwan-key.asc
+2026-02-26T21:10:18.811791Z  Executing: gpg --armor --output /home/sma/Desktop/y/Helwan-Linux-Dev-LTS-v3.1-x86_64/helwan-key.asc --export C7F5287B39BFC2F8A717C4ADCAD54C20F4560BD9
+2026-02-26T21:10:18.826895Z  Command Output:
+
+2026-02-26T21:10:18.827032Z  Public key exported: /home/sma/Desktop/y/Helwan-Linux-Dev-LTS-v3.1-x86_64/helwan-key.asc
+2026-02-26T21:10:18.827117Z  Calculating hashes (may take a while)...
+2026-02-26T21:10:18.827343Z  Calculating OPENSSL_SHA256...
+2026-02-26T21:11:52.373661Z  Calculating OPENSSL_SHA512...
+2026-02-26T21:13:24.412695Z  Calculating OPENSSL_SHA3_512...
+2026-02-26T21:15:11.749272Z  Calculating BLAKE2B...
+2026-02-26T21:16:38.737510Z  Calculating OPENSSL_SHA1...
+2026-02-26T21:18:04.767984Z  Calculating OPENSSL_MD5...
+2026-02-26T21:19:30.265928Z  All selected hashes calculated.
+2026-02-26T21:19:30.289340Z  Report written.
+2026-02-26T21:33:42.468359Z  ISO copy placed at Helwan-Linux-Dev-LTS-v3.1-x86_64.iso
+2026-02-26T21:33:42.522961Z  Process finished successfully.
