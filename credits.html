@@ -60,42 +60,28 @@
     <li><a href="download.html">Download</a></li>
     <li><a href="helwan-tools.html">Hel-Tools</a></li>
 
-    <li class="dropdown">
-      <a href="#">Documentation ▼</a>
-      <ul class="submenu">
-        <li><a href="philosophy.html">Philosophy</a></li>
-        <li><a href="helwan-comparison.html">Helwan vs Others</a></li>
-        <li><a href="documentation.html">Documentation</a></li>
-        <li><a href="packages.html">Packages</a></li>
-      </ul>
-    </li>
+    <!-- Documentation Items (Expanded) -->
+    <li><a href="philosophy.html">Philosophy</a></li>
+    <li><a href="helwan-comparison.html">Helwan vs Others</a></li>
+    <li><a href="documentation.html">Documentation</a></li>
+    <li><a href="packages.html">Packages</a></li>
 
-    <li class="dropdown">
-      <a href="#">Community ▼</a>
-      <ul class="submenu">
-        <li><a href="news.html">News</a></li>
-        <li><a href="assistant.html">Assistant</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="Contributing.html">Join Us</a></li>
-      </ul>
-    </li>
+    <!-- Community Items (Expanded) -->
+    <li><a href="news.html">News</a></li>
+    <li><a href="assistant.html">Assistant</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="Contributing.html">Join Us</a></li>
 
     <li><a href="donate.html">Donate</a></li>
 
-    <li class="dropdown">
-      <a href="#">Extras ▼</a>
-      <ul class="submenu">
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="nostalgia.html">Nostalgia</a></li>
-        <li><a href="hel-tribute-hall.html">Tribute Hall</a></li>
-        <li><a href="credits.html">Credits</a></li>
-        <li><a href="archive.html">Archive</a></li>
-        <!--<li><a href="helwan-tools.html">Helwan Tools</a></li>-->
-      </ul>
-    </li>
+    <!-- Extras Items (Expanded) -->
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="nostalgia.html">Nostalgia</a></li>
+    <li><a href="hel-tribute-hall.html">Tribute Hall</a></li>
+    <li><a href="credits.html">Credits</a></li>
+    <li><a href="archive.html">Archive</a></li>
   </ul>
 </nav>
-
 
 <style>
   nav ul.menu {
@@ -104,7 +90,8 @@
     margin: 0;
     display: inline-flex;
     flex-wrap: wrap;
-    gap: 10px;
+    justify-content: center;
+    gap: 8px;
   }
 
   nav ul.menu li {
@@ -115,42 +102,19 @@
     text-decoration: none;
     padding: 8px 12px;
     display: block;
-    color: #000;
+    color: #c9d1d9;
     font-weight: bold;
+    background-color: #3b4654;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
+    border: 1px solid #283039;
   }
 
-  nav ul.menu li:hover > a {
-    background-color: #eee;
-    border-radius: 4px;
-  }
-
-  /* Submenu */
-  ul.submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    min-width: 180px;
-    z-index: 100;
-  }
-
-  ul.submenu li a {
-    padding: 8px 12px;
-    color: #000;
-  }
-
-  ul.submenu li a:hover {
-    background-color: #eee;
-  }
-
-  /* Show submenu on hover */
-  li.dropdown:hover > ul.submenu {
-    display: block;
+  nav ul.menu li a:hover {
+    background-color: #4a5563;
+    color: #ffffff;
+    border-color: #5c697b;
   }
 </style>
 
