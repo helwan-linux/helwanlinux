@@ -97,10 +97,10 @@
 
   <h1>📰 News & Updates</h1>
 
-	<div class="news-card">
+<div class="hpi-news-card">
     <h2>Helwan Package Installer: Simple Package Installation, the Helwan Way</h2>
 
-
+```
 <p>
     Installing local Arch Linux packages should not require opening a terminal
     or remembering complicated commands. That is why we created
@@ -123,41 +123,14 @@
 </p>
 
 <ul>
-    <li>
-        <strong>One-click package opening</strong> — Double-click a
-        <code>.pkg.tar.zst</code> file and HPI opens automatically.
-    </li>
-    <li>
-        <strong>Dependency handling</strong> — HPI works with Pacman to
-        handle required dependencies from configured repositories.
-    </li>
-    <li>
-        <strong>Offline-friendly</strong> — Packages and dependencies that
-        are already available locally can be installed without an Internet
-        connection.
-    </li>
-    <li>
-        <strong>Clear package information</strong> — Review package details
-        before starting the installation.
-    </li>
-    <li>
-        <strong>No terminal required</strong> — Users do not need to
-        manually run <code>pacman -U</code> or deal with administrative
-        commands.
-    </li>
-    <li>
-        <strong>Nemo integration</strong> — Right-click a package and choose
-        <em>Install Package (zst)</em>.
-    </li>
-    <li>
-        <strong>Native desktop integration</strong> — HPI registers the
-        package format with the desktop so local packages behave like
-        normal installable files.
-    </li>
-    <li>
-        <strong>No background service</strong> — HPI does not need a daemon,
-        tray process, or permanent background service.
-    </li>
+    <li><strong>One-click package opening</strong> — Double-click a <code>.pkg.tar.zst</code> file and HPI opens automatically.</li>
+    <li><strong>Dependency handling</strong> — HPI works with Pacman to handle required dependencies from configured repositories.</li>
+    <li><strong>Offline-friendly</strong> — Packages and dependencies already available locally can be installed without an Internet connection.</li>
+    <li><strong>Clear package information</strong> — Review package details before starting the installation.</li>
+    <li><strong>No terminal required</strong> — Users do not need to manually run <code>pacman -U</code> or administrative commands.</li>
+    <li><strong>Nemo integration</strong> — Right-click a package and choose <em>Install Package (zst)</em>.</li>
+    <li><strong>Native desktop integration</strong> — HPI registers the package format with the desktop so local packages behave like normal installable files.</li>
+    <li><strong>No background service</strong> — HPI does not need a daemon, tray process, or permanent background service.</li>
 </ul>
 
 <h3>From a complicated command to a simple click</h3>
@@ -186,9 +159,71 @@
 <p>
     <strong>Helwan Package Installer — powerful underneath, simple on the surface.</strong>
 </p>
-
+```
 
 </div>
+
+<style>
+.hpi-news-card {
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 24px;
+
+    padding: 32px;
+    margin: 30px auto;
+
+    max-width: 950px;
+
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+
+    color: inherit;
+}
+
+.hpi-news-card h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.hpi-news-card h3 {
+    margin-top: 30px;
+}
+
+.hpi-news-card p,
+.hpi-news-card li {
+    line-height: 1.7;
+}
+
+.hpi-news-card ul {
+    padding-left: 24px;
+}
+
+.hpi-news-card li {
+    margin-bottom: 12px;
+}
+
+.hpi-news-card code {
+    background: rgba(0, 0, 0, 0.18);
+    padding: 3px 7px;
+    border-radius: 6px;
+}
+
+.hpi-news-card pre {
+    background: rgba(0, 0, 0, 0.22);
+    border-radius: 12px;
+    padding: 16px;
+    overflow-x: auto;
+}
+
+.hpi-news-card strong {
+    font-weight: 700;
+}
+</style>
+
 
 <br><br>
 	
