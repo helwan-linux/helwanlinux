@@ -96,54 +96,57 @@
   <h2 style="color:#333;">Support the Helwan Linux Ecosystem</h2>
   <p style="color:#666;">Choose your preferred platform to help us reach our goals</p>
   
-  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 30px; flex-wrap: wrap;">
-    
-    <a href="https://buymeacoffee.com/helwanlinux" target="_blank" style="text-decoration:none;">
-      <div style="background:#FFDD00; color:#000; padding:15px 25px; border-radius:10px; font-weight:bold; display:flex; align-items:center; gap:10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-        <span style="font-size:20px;">☕</span> Buy Me a Coffee
-      </div>
+ 
+
+
+<div class="donation-section" id="support-helwan">
+  <div class="donation-content">
+    <h2>Support Helwan Linux</h2>
+
+    <p>
+      Helwan Linux is an independent open-source project built
+      to make Linux simpler, more accessible, and more useful
+      for everyone.
+    </p>
+
+    <p>
+      Your contribution helps support ongoing development,
+      maintain our repositories, improve existing applications,
+      and build new tools for the Helwan Linux community.
+    </p>
+
+    <p>
+      Every contribution matters. If you cannot donate, sharing
+      the project, testing it, and reporting bugs are valuable
+      ways to help.
+    </p>
+
+    <h3>International Bank Transfer Bank Transfer</h3>
+    <p><strong>Account Number:</strong> [161010116001]</p>
+    <p><strong>Bank:</strong> [AlexBank]</p>
+    <p><strong>IBAN:</strong> [EG890005106100000161010116001]</p>
+    <p><strong>SWIFT/BIC:</strong> [ALEXEGCXXXX]</p>
+
+    <h3>Orange Cash</h3>
+    <p><strong>For Donations from Egypt Wallet Number:</strong> [01284852117]</p>
+
+    <p class="donation-thanks">
+      Thank you for supporting independent open-source
+      software and helping Helwan Linux move forward.
+    </p>
+
+    <a href="https://github.com/helwan-linux"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="donation-button">
+      Explore Our Projects
     </a>
 
-    <a href="https://ko-fi.com/helwanlinux" target="_blank" style="text-decoration:none;">
-      <div style="background:#13C3FF; color:#fff; padding:15px 25px; border-radius:10px; font-weight:bold; display:flex; align-items:center; gap:10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-        <span style="font-size:20px;">❤️</span> Support on Ko-fi
-      </div>
-    </a>
-
+    <p class="donation-slogan">
+      Arch Power, Helwan Simplicity
+    </p>
   </div>
-
-  <p style="margin-top:40px; font-size:14px; color:#000;">
-    All donations go directly towards server costs and developing <strong>hel-tools</strong>.
-  </p>
 </div>
-
-
-<!-- Progress Bar -->
-<div style="background:#ddd; border-radius:12px; overflow:hidden; max-width:600px; margin:20px auto; height:20px;">
-  <div id="progress" style="background:#4caf50; height:100%; width:0%; transition:width 0.5s;"></div>
-</div>
-<p id="progress-text">$0 / $1000 collected</p>
-
-<!-- Honor Roll -->
-<div style="max-width:600px; margin:20px auto; text-align:left; background:white; padding:20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-  <h2 style="text-align:center;">🌟 Honor Roll of Supporters 🌟</h2>
-  <ul id="supporters-list" style="list-style:none; padding:0;">
-    <li>No supporters yet — be the first! ❤️</li>
-  </ul>
-</div>
-
-<footer style="font-size:small; margin-top:50px; color:#555;">
-  Made with love by the Helwan Linux Team.
-</footer>
-
-
-<script>
-  // Progress Bar Logic
-  const current = 0; // المبلغ الحالي
-  const goal = 1000; // الهدف
-  const percent = (current / goal) * 100;
-  document.getElementById('progress').style.width = percent + '%';
-</script>
 
 
 
