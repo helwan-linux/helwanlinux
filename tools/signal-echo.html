@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signal Echo - User Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="container">
+  <h1 id="signal-echo">Signal Echo (v1.0.0)</h1>
+
+  <section>
+    <h2>Overview</h2>
+    <p>
+      2D acoustic stealth puzzle game built in Go with Ebitengine.
+    </p>
+  </section>
+
+  <section>
+    <h2>Features</h2>
+    <ul>
+      <li>Grid-based BFS pathfinding so hunters route around walls toward sounds.</li>
+      <li>6 progressive sectors with 1 to 3 hunters, varying speeds, and hearing ranges.</li>
+      <li>Sector Select screen with automatic unlock progression.</li>
+      <li>7 persistent JSON achievements with live unlock notifications.</li>
+      <li>Help &amp; Field Manual, About screen, and Settings (Sound, Level Tips, Progress Reset).</li>
+      <li>100% procedural PCM audio and embedded icon (zero external asset dependencies).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <ul>
+      <li><strong>WASD / Arrow Keys:</strong> Move silently.</li>
+      <li><strong>Shift:</strong> Sprint (faster movement, emits footstep sound ripples).</li>
+      <li><strong>Space:</strong> Emit Sonar Pulse (reveals walls/items, alerts nearby hunters).</li>
+      <li><strong>Q:</strong> Throw Decoy Pulse (distracts hunters).</li>
+      <li><strong>ESC:</strong> Pause / Back.</li>
+      <li><strong>R:</strong> Restart Level.</li>
+      <li><strong>F10:</strong> Mute / Unmute.</li>
+    </ul>
+  </section>
+
+  <a href="../helwan-tools.html">Back</a>
+</main>
+
+</body>
+</html>

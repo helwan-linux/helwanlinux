@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helwan Penguin - User Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="container">
+  <h1 id="helwan-penguin">Helwan Penguin</h1>
+
+  <section>
+    <h2>Overview</h2>
+    <p>
+      An original 2D platform game built with Go and Ebitengine, targeting Linux and Windows.
+    </p>
+    <p>
+      <strong>Helwan Penguin is currently under active development.</strong>
+      The game is playable, but some features are still being developed and tested.
+      Feedback, bug reports, and suggestions are welcome and can help improve the game.
+    </p>
+  </section>
+
+  <section>
+    <h2>Project Status</h2>
+    <ul>
+      <li><strong>30 planned levels</strong> across six worlds, with five levels per world.</li>
+      <li><strong>Current playable milestone:</strong> Five playable layouts in World 1, Snowy Beginnings.</li>
+      <li>Local save support is implemented as a reusable package; integration with gameplay is planned for a later milestone.</li>
+      <li>English-first, designed to work offline at runtime.</li>
+      <li>The game is under development, so some mechanics, levels, and features may change as development progresses.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Requirements</h2>
+    <ul>
+      <li>Go 1.23 or newer.</li>
+      <li>Ebitengine dependencies, downloaded during the first build.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Run</h2>
+    <pre><code>go mod tidy
+go run ./cmd/helwan-penguin</code></pre>
+  </section>
+
+  <section>
+    <h2>Build on Linux</h2>
+    <pre><code>go build -o helwan-penguin ./cmd/helwan-penguin</code></pre>
+  </section>
+
+  <section>
+    <h2>Build on Windows PowerShell</h2>
+    <pre><code>go build -o helwan-penguin.exe ./cmd/helwan-penguin</code></pre>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <ul>
+      <li><strong>Move:</strong> Left/Right arrows or A/D.</li>
+      <li><strong>Jump:</strong> Space, Up, or W.</li>
+      <li><strong>Complete a level:</strong> Reach the green flag.</li>
+      <li><strong>Continue or restart after a result:</strong> Enter.</li>
+      <li><strong>Quit:</strong> Escape.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Graphics and Assets</h2>
+    <p>
+      The five levels currently implemented in World 1 use artwork drawn directly
+      in code, so external image assets are not required for this milestone.
+    </p>
+    <p>
+      Other world files and game systems remain in the project's fixed structure
+      for future development.
+    </p>
+  </section>
+
+  <section>
+    <h2>Feedback and Bug Reports</h2>
+    <p>
+      Feedback is welcome! If you encounter a bug, find a gameplay issue, or have
+      an idea that could improve Helwan Penguin, please report it through the
+      project's GitHub Issues page.
+    </p>
+    <p>
+      Constructive feedback helps identify problems, improve gameplay, and make
+      future releases better.
+    </p>
+  </section>
+
+  <section>
+    <h2>Development Notice</h2>
+    <p>
+      This is an evolving project, and build and runtime testing should be performed
+      on systems with the required Ebitengine dependencies available. Features and
+      behavior may change as development continues.
+    </p>
+  </section>
+
+  <a href="../helwan-tools.html">Back</a>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helwan Shooter - User Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="container">
+  <h1 id="helwan-shooter">Helwan Shooter</h1>
+
+  <section>
+    <h2>Overview</h2>
+    <p><strong>Part of Helwan Linux</strong></p>
+    <p><strong>Development Status: Work in Progress</strong></p>
+    <p>
+      Helwan Shooter is currently under active development. Features, gameplay,
+      and other aspects of the game may change as development continues.
+    </p>
+    <p>
+      Helwan Shooter is a mouse-aim arcade target-shooting game written in Go
+      using Ebiten 2.8.8. It supports Linux and Windows.
+    </p>
+  </section>
+
+  <section>
+    <h2>Gameplay</h2>
+    <ul>
+      <li>25 stages across 5 worlds.</li>
+      <li>Multiple waves in regular stages, with a boss fight at the end of each world.</li>
+      <li>Bosses have a vulnerable core; hitting the outer armor does not damage them.</li>
+      <li>Different target types, including moving, fading, armored, fast, bonus, hazard, and ammunition targets.</li>
+      <li>Limited ammunition and a countdown timer.</li>
+      <li>Three-star stage results, best scores, unlocked-stage progress, and saved statistics.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Action</th>
+          <th>Control</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Aim</td>
+          <td>Move the mouse</td>
+        </tr>
+        <tr>
+          <td>Shoot</td>
+          <td>Left mouse button</td>
+        </tr>
+        <tr>
+          <td>Pause</td>
+          <td><code>Escape</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Requirements</h2>
+    <ul>
+      <li>Go 1.23 or newer.</li>
+      <li>Internet access for the first build so Go can download Ebiten and its dependencies.</li>
+    </ul>
+  </section>
+
+  <a href="../helwan-tools.html">Back</a>
+</main>
+
+</body>
+</html>
