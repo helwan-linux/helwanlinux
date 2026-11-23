@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Helwan Screen Recorder - User Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 id="hsr">Helwan Screen Recorder</h1>
+
+<main>
+
+    <section>
+        <h2>Overview</h2>
+        <p>A simple, lightweight, and practical screen and audio recorder for Linux.</p>
+        <p>Helwan Screen Recorder is a GTK3 desktop application written in Go for recording the desktop, microphone, and system audio on Linux.</p>
+        <p>It is designed around a simple idea:</p>
+        <p><strong>Press Record. Capture what you need. Pause when you want. Save a clean recording.</strong></p>
+        <p>Helwan Screen Recorder uses FFmpeg for recording and encoding, while providing a simple GTK3 interface without the complexity of a full production-oriented recording suite.</p>
+    </section>
+
+    <section>
+        <h2>Features</h2>
+
+        <h3>Screen Recording</h3>
+        <ul>
+            <li>Full-screen recording at the native X11 desktop resolution.</li>
+            <li>Custom recording-area selection using slop.</li>
+            <li>30 FPS or 60 FPS.</li>
+            <li>X11 screen capture through FFmpeg x11grab.</li>
+            <li>Automatic desktop-resolution detection using xrandr, with xdpyinfo fallback.</li>
+            <li>Automatic validation of the selected recording resolution.</li>
+        </ul>
+
+        <h3>Audio Recording</h3>
+        <ul>
+            <li>Microphone recording.</li>
+            <li>System audio recording.</li>
+            <li>Microphone + system audio recording at the same time.</li>
+            <li>Selection of the microphone source.</li>
+            <li>Selection of the system-audio monitor source.</li>
+            <li>PulseAudio/Pulse-compatible source detection through pactl.</li>
+            <li>Automatic detection of muted microphones.</li>
+            <li>Option to unmute the selected microphone before recording.</li>
+            <li>Separate microphone and system-audio inputs.</li>
+            <li>Automatic mixing of microphone and system audio when both are enabled.</li>
+            <li>AAC audio for MP4/MKV.</li>
+            <li>Opus audio for WebM.</li>
+            <li>192 kbps audio encoding.</li>
+        </ul>
+
+        <h3>Reliable Audio Recording, Without Guesswork</h3>
+        <p>Audio reliability is a core design priority in Helwan Screen Recorder.</p>
+        <ul>
+            <li>Explicit microphone and system-audio source selection.</li>
+            <li>Microphone mute detection before recording starts.</li>
+            <li>Clear handling of muted microphone states.</li>
+            <li>Independent audio inputs with controlled mixing.</li>
+            <li>Audio muting and restoration during Pause and Resume.</li>
+            <li>Clear recording status and error reporting.</li>
+        </ul>
+        <p>The goal is to help prevent silent recordings and unexpected audio interruptions through proactive source detection and validation.</p>
+
+        <h3>Designed for Everyday Use</h3>
+        <p>You don't need to understand FFmpeg or complicated recording settings.</p>
+        <ul>
+            <li>Choose what you want to record.</li>
+            <li>Select your audio sources.</li>
+            <li>Press Record.</li>
+            <li>Pause, resume, or stop whenever you need.</li>
+        </ul>
+        <p><strong>Simple controls. Clear feedback. No unnecessary complexity.</strong></p>
+    </section>
+
+    <section>
+        <h2>Recording Formats</h2>
+
+        <h3>MP4</h3>
+        <ul>
+            <li>H.264 video.</li>
+            <li>AAC audio.</li>
+            <li>faststart enabled for better playback/streaming compatibility.</li>
+        </ul>
+
+        <h3>MKV</h3>
+        <ul>
+            <li>H.264 video.</li>
+            <li>AAC audio.</li>
+            <li>Useful when recording stability and container resilience are important.</li>
+        </ul>
+
+        <h3>WebM</h3>
+        <ul>
+            <li>VP9 video.</li>
+            <li>Opus audio.</li>
+            <li>Suitable for web-oriented recordings.</li>
+        </ul>
+
+        <h3>Animated GIF</h3>
+        <ul>
+            <li>15 FPS.</li>
+            <li>720px output width.</li>
+            <li>Automatic palette generation and palette usage for better GIF quality.</li>
+            <li>Intended for short clips.</li>
+            <li>Audio recording is disabled for GIF output.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Pause &amp; Resume</h2>
+        <p>Helwan Screen Recorder uses a segment-based Pause/Resume system.</p>
+
+        <p><strong>When recording is paused:</strong></p>
+        <ul>
+            <li>The current FFmpeg recording process is cleanly closed.</li>
+            <li>The current recording part is preserved.</li>
+            <li>Audio sources are muted when applicable.</li>
+            <li>Recording can later be resumed as a new segment.</li>
+        </ul>
+
+        <p>When recording ends, the recorded segments are joined automatically.</p>
+        <p>This avoids relying on a fragile in-process pause mechanism and allows the recording session to continue across multiple segments.</p>
+        <p>The final result is presented as a single recording file.</p>
+    </section>
+
+    <section>
+        <h2>Hardware Acceleration</h2>
+        <p>Helwan Screen Recorder automatically checks for a usable VAAPI H.264 encoder.</p>
+        <p>It searches available DRM render devices under:</p>
+        <p><strong>/dev/dri/renderD*</strong></p>
+        <p>and performs an actual FFmpeg encoding test before selecting VAAPI.</p>
+
+        <p><strong>If a working VAAPI device is found:</strong></p>
+        <p><strong>h264_vaapi</strong></p>
+        <p>is used.</p>
+
+        <p>Otherwise, the recorder automatically falls back to:</p>
+        <p><strong>libx264</strong></p>
+
+        <p>This means the application does not simply assume that hardware encoding is available.</p>
+    </section>
+
+    <section>
+        <h2>Webcam</h2>
+        <p>If <strong>/dev/video0</strong> is available, Helwan Screen Recorder provides a webcam preview option.</p>
+
+        <p><strong>Available preview sizes:</strong></p>
+        <ul>
+            <li>240 × 180</li>
+            <li>320 × 240</li>
+            <li>480 × 360</li>
+        </ul>
+
+        <p><strong>Available positions:</strong></p>
+        <ul>
+            <li>Bottom-Right</li>
+            <li>Bottom-Left</li>
+            <li>Top-Right</li>
+            <li>Top-Left</li>
+        </ul>
+
+        <p>The webcam preview uses ffplay and remains on top of other windows.</p>
+        <p><strong>Note:</strong> The current C003 implementation provides a live webcam preview window. The webcam stream is not composited into the recorded video file itself.</p>
+    </section>
+
+    <section>
+        <h2>Keystroke Display</h2>
+        <p>Optional on-screen keyboard visualization is provided through Screenkey.</p>
+        <p>Enable:</p>
+        <p><strong>Show Keystrokes on screen</strong></p>
+        <p>when you want keyboard actions to appear during a recording.</p>
+
+        <p><strong>This is useful for:</strong></p>
+        <ul>
+            <li>Tutorials</li>
+            <li>Software demonstrations</li>
+            <li>Programming videos</li>
+            <li>Linux tutorials</li>
+            <li>Educational recordings</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Floating Recording OSD</h2>
+        <p>During recording, Helwan Screen Recorder displays a small floating status control.</p>
+        <p><strong>Example:</strong></p>
+        <p><strong>🔴 REC 00:12:34 &nbsp;&nbsp; ⏸ &nbsp;&nbsp; ⏹</strong></p>
+        <p>While paused:</p>
+        <p><strong>⏸ PAUSED 00:12:34</strong></p>
+
+        <p><strong>The OSD provides quick access to:</strong></p>
+        <ul>
+            <li>Pause / Resume</li>
+            <li>Stop</li>
+        </ul>
+
+        <p>without requiring the main application window to remain visible.</p>
+    </section>
+
+    <section>
+        <h2>Countdown</h2>
+        <p>Recording can start after an optional countdown:</p>
+        <ul>
+            <li>No Countdown</li>
+            <li>3 seconds</li>
+            <li>5 seconds</li>
+            <li>10 seconds</li>
+        </ul>
+        <p>The countdown is displayed in a large on-screen window.</p>
+        <p>The countdown can also be cancelled before recording begins.</p>
+    </section>
+
+    <section>
+        <h2>Automatic Minimize</h2>
+        <p>Helwan Screen Recorder can automatically minimize its main window when recording starts.</p>
+        <p>This keeps the recorder itself out of the captured desktop area.</p>
+        <p>The window is restored automatically when the recording finishes.</p>
+    </section>
+
+    <section>
+        <h2>Global Keyboard Shortcuts</h2>
+        <p>The recorder provides global X11 shortcuts.</p>
+
+        <table>
+            <tr>
+                <th>Shortcut</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>Ctrl + R</td>
+                <td>Start recording</td>
+            </tr>
+            <tr>
+                <td>Ctrl + E</td>
+                <td>Pause / Resume</td>
+            </tr>
+            <tr>
+                <td>Ctrl + Q</td>
+                <td>Stop and save</td>
+            </tr>
+            <tr>
+                <td>Ctrl + G</td>
+                <td>Toggle magnifier</td>
+            </tr>
+        </table>
+
+        <p>These shortcuts work outside the recorder's main window.</p>
+        <p>The shortcuts are implemented directly through X11 global key grabs.</p>
+    </section>
+
+    <section>
+        <h2>Magnifier</h2>
+        <p>Ctrl + G launches or closes KMag.</p>
+        <p><strong>This can be useful when demonstrating:</strong></p>
+        <ul>
+            <li>Small UI elements</li>
+            <li>Desktop settings</li>
+            <li>Terminal commands</li>
+            <li>Accessibility features</li>
+            <li>Detailed interface operations</li>
+        </ul>
+    </section>
+
+</main>
+
+<hr>
+
+<a href="../helwan-tools.html">Back</a>
+
+</body>
+</html>
