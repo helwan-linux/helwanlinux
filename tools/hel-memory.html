@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helwan Memory Game - Ultimate Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Helwan Memory Game - Ultimate Edition</h1>
+
+        <section>
+            <h2>Overview</h2>
+            <p>Helwan Memory Game is a timed card-matching game developed and adapted for Helwan Linux. Find matching number pairs before the timer runs out, build combo streaks, and unlock the secret Helwan Core difficulty.</p>
+        </section>
+
+        <section>
+            <h2>Difficulty Levels</h2>
+            <ul>
+                <li><strong>Easy:</strong> 2×4 grid with a 30-second time limit.</li>
+                <li><strong>Normal:</strong> 4×4 grid with a 50-second time limit.</li>
+                <li><strong>Hard:</strong> 4×4 grid with a 70-second time limit.</li>
+                <li><strong>Helwan Core:</strong> Secret 4×6 grid with a 90-second time limit. It unlocks after completing the Hard level.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Gameplay and Scoring</h2>
+            <ul>
+                <li>Click two cards to reveal their numbers and find matching pairs.</li>
+                <li>A correct match earns 50 points multiplied by the current combo count.</li>
+                <li>Consecutive matches increase the combo multiplier.</li>
+                <li>An incorrect pair resets the combo and deducts 15 points, without allowing the score to fall below zero.</li>
+                <li>Incorrect cards remain visible for one second before turning face down.</li>
+                <li>Completing the board adds a time bonus of 10 points for each second remaining.</li>
+                <li>A wrong match triggers a brief screen shake and a short background flash.</li>
+                <li>The game ends when the timer reaches zero or when all pairs are matched.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Progress and High Scores</h2>
+            <ul>
+                <li>High scores are stored separately for Easy, Normal, Hard, and Helwan Core.</li>
+                <li>The game saves its data in <code>~/.local/share/helwan-memory/game_data.json</code>.</li>
+                <li>Completing Hard unlocks the Helwan Core secret level.</li>
+                <li>Unlocked progress and high scores are retained between game sessions.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Controls</h2>
+            <table>
+                <thead>
+                    <tr><th>Control</th><th>Action</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Mouse click</td><td>Select menu options and reveal cards</td></tr>
+                    <tr><td>Pause button</td><td>Pause the game</td></tr>
+                    <tr><td>Resume button</td><td>Continue a paused game</td></tr>
+                    <tr><td>Menu button</td><td>Return to the main menu</td></tr>
+                    <tr><td>Enter</td><td>Return to the main menu after winning or losing</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Game Menus</h2>
+            <ul>
+                <li><strong>Main Menu:</strong> Start a difficulty level, view High Scores, open About, or Exit.</li>
+                <li><strong>High Scores:</strong> View the saved best score for each difficulty.</li>
+                <li><strong>About:</strong> Displays the game edition and its key features.</li>
+                <li><strong>In-Game:</strong> Use Menu to return to the main menu or Pause to pause the game. The Pause button changes to Resume while paused.</li>
+                <li><strong>Victory / Game Over:</strong> Displays the result and final score.</li>
+            </ul>
+        </section>
+
+        <a href="../helwan-tools.html">Back</a>
+    </main>
+</body>
+</html>
